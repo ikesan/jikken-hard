@@ -62,7 +62,6 @@ set_global_assignment -name HEX_FILE meirei.hex
 set_global_assignment -name QIP_FILE ram2.qip
 set_global_assignment -name CDF_FILE output_files/Chain3.cdf
 set_global_assignment -name CDF_FILE output_files/Chain5.cdf
-set_global_assignment -name BDF_FILE ../kadai/4bitcount.bdf
 set_global_assignment -name BDF_FILE "half-add.bdf"
 set_global_assignment -name BDF_FILE "all-add.bdf"
 set_global_assignment -name BDF_FILE 16bitadd.bdf
