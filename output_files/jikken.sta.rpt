@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for jikken
-Fri Jun 10 16:59:56 2016
+Fri Jun 10 17:39:32 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -16,17 +16,13 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   8. Recovery Summary
   9. Removal Summary
  10. Minimum Pulse Width Summary
- 11. Setup: 'clock'
- 12. Hold: 'clock'
- 13. Minimum Pulse Width: 'clock'
- 14. Clock to Output Times
- 15. Minimum Clock to Output Times
- 16. Setup Transfers
- 17. Hold Transfers
- 18. Report TCCS
- 19. Report RSKM
- 20. Unconstrained Paths
- 21. TimeQuest Timing Analyzer Messages
+ 11. Minimum Pulse Width: 'altera_reserved_tck'
+ 12. Datasheet Report
+ 13. Clock Transfers
+ 14. Report TCCS
+ 15. Report RSKM
+ 16. Unconstrained Paths
+ 17. TimeQuest Timing Analyzer Messages
 
 
 
@@ -79,41 +75,31 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                            ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
-; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
-; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                    ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; Clock Name          ; Type ; Period  ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                 ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; altera_reserved_tck ; Base ; 100.000 ; 10.0 MHz  ; 0.000 ; 50.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { altera_reserved_tck } ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Fmax Summary                                                                                      ;
-+------------+-----------------+------------+-------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                  ;
-+------------+-----------------+------------+-------------------------------------------------------+
-; 300.57 MHz ; 275.03 MHz      ; clock      ; limit due to high minimum pulse width violation (tch) ;
-+------------+-----------------+------------+-------------------------------------------------------+
-This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+----------------
+; Fmax Summary ;
+----------------
+No paths to report.
 
 
-+--------------------------------+
-; Setup Summary                  ;
-+-------+--------+---------------+
-; Clock ; Slack  ; End Point TNS ;
-+-------+--------+---------------+
-; clock ; -2.327 ; -28.019       ;
-+-------+--------+---------------+
+-----------------
+; Setup Summary ;
+-----------------
+No paths to report.
 
 
-+-------------------------------+
-; Hold Summary                  ;
-+-------+-------+---------------+
-; Clock ; Slack ; End Point TNS ;
-+-------+-------+---------------+
-; clock ; 0.822 ; 0.000         ;
-+-------+-------+---------------+
+----------------
+; Hold Summary ;
+----------------
+No paths to report.
 
 
 --------------------
@@ -128,398 +114,34 @@ No paths to report.
 No paths to report.
 
 
-+--------------------------------+
-; Minimum Pulse Width Summary    ;
-+-------+--------+---------------+
-; Clock ; Slack  ; End Point TNS ;
-+-------+--------+---------------+
-; clock ; -1.583 ; -43.759       ;
-+-------+--------+---------------+
++----------------------------------------------+
+; Minimum Pulse Width Summary                  ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; altera_reserved_tck ; 97.417 ; 0.000         ;
++---------------------+--------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Setup: 'clock'                                                                                                       ;
-+--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
-; -2.327 ; pc:pchan|test[2]  ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.290      ;
-; -2.325 ; pc:pchan|test[2]  ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.288      ;
-; -2.315 ; pc:pchan|test[2]  ; pc:pchan|test[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.278      ;
-; -2.314 ; pc:pchan|test[2]  ; pc:pchan|test[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.277      ;
-; -2.311 ; pc:pchan|test[2]  ; pc:pchan|test[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.274      ;
-; -2.291 ; pc:pchan|test[2]  ; pc:pchan|test[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 3.254      ;
-; -2.173 ; pc:pchan|test[0]  ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.136      ;
-; -2.171 ; pc:pchan|test[0]  ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.134      ;
-; -2.161 ; pc:pchan|test[0]  ; pc:pchan|test[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.124      ;
-; -2.160 ; pc:pchan|test[0]  ; pc:pchan|test[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.123      ;
-; -2.157 ; pc:pchan|test[0]  ; pc:pchan|test[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.120      ;
-; -2.137 ; pc:pchan|test[0]  ; pc:pchan|test[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 3.100      ;
-; -2.053 ; pc:pchan|test[2]  ; pc:pchan|test[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.016      ;
-; -2.048 ; pc:pchan|test[1]  ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.011      ;
-; -2.046 ; pc:pchan|test[1]  ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.009      ;
-; -2.036 ; pc:pchan|test[1]  ; pc:pchan|test[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.999      ;
-; -2.035 ; pc:pchan|test[1]  ; pc:pchan|test[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.998      ;
-; -2.034 ; pc:pchan|test[3]  ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.997      ;
-; -2.032 ; pc:pchan|test[3]  ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.995      ;
-; -2.032 ; pc:pchan|test[1]  ; pc:pchan|test[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.995      ;
-; -2.025 ; pc:pchan|test[2]  ; pc:pchan|test[9]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.988      ;
-; -2.022 ; pc:pchan|test[2]  ; pc:pchan|test[8]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.985      ;
-; -2.022 ; pc:pchan|test[3]  ; pc:pchan|test[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.985      ;
-; -2.021 ; pc:pchan|test[3]  ; pc:pchan|test[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.984      ;
-; -2.019 ; pc:pchan|test[2]  ; pc:pchan|test[7]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.982      ;
-; -2.018 ; pc:pchan|test[3]  ; pc:pchan|test[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.981      ;
-; -2.012 ; pc:pchan|test[1]  ; pc:pchan|test[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.975      ;
-; -1.998 ; pc:pchan|test[3]  ; pc:pchan|test[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.961      ;
-; -1.966 ; pc:pchan|test[5]  ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.929      ;
-; -1.964 ; pc:pchan|test[5]  ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.927      ;
-; -1.954 ; pc:pchan|test[5]  ; pc:pchan|test[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.917      ;
-; -1.953 ; pc:pchan|test[5]  ; pc:pchan|test[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.916      ;
-; -1.950 ; pc:pchan|test[5]  ; pc:pchan|test[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.913      ;
-; -1.899 ; pc:pchan|test[0]  ; pc:pchan|test[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.862      ;
-; -1.871 ; pc:pchan|test[0]  ; pc:pchan|test[9]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.834      ;
-; -1.868 ; pc:pchan|test[0]  ; pc:pchan|test[8]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.831      ;
-; -1.865 ; pc:pchan|test[0]  ; pc:pchan|test[7]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.828      ;
-; -1.810 ; pc:pchan|test[4]  ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.773      ;
-; -1.808 ; pc:pchan|test[4]  ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.771      ;
-; -1.798 ; pc:pchan|test[4]  ; pc:pchan|test[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.761      ;
-; -1.797 ; pc:pchan|test[4]  ; pc:pchan|test[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.760      ;
-; -1.794 ; pc:pchan|test[4]  ; pc:pchan|test[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.757      ;
-; -1.774 ; pc:pchan|test[1]  ; pc:pchan|test[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.737      ;
-; -1.760 ; pc:pchan|test[3]  ; pc:pchan|test[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.723      ;
-; -1.757 ; pc:pchan|test[2]  ; pc:pchan|test[5]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.720      ;
-; -1.746 ; pc:pchan|test[1]  ; pc:pchan|test[9]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.709      ;
-; -1.743 ; pc:pchan|test[1]  ; pc:pchan|test[8]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.706      ;
-; -1.740 ; pc:pchan|test[1]  ; pc:pchan|test[7]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.703      ;
-; -1.732 ; pc:pchan|test[3]  ; pc:pchan|test[9]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.695      ;
-; -1.729 ; pc:pchan|test[3]  ; pc:pchan|test[8]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.692      ;
-; -1.728 ; pc:pchan|test[2]  ; pc:pchan|test[4]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.691      ;
-; -1.726 ; pc:pchan|test[3]  ; pc:pchan|test[7]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.689      ;
-; -1.692 ; pc:pchan|test[5]  ; pc:pchan|test[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.655      ;
-; -1.678 ; pc:pchan|test[9]  ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.641      ;
-; -1.676 ; pc:pchan|test[9]  ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.639      ;
-; -1.666 ; pc:pchan|test[9]  ; pc:pchan|test[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.629      ;
-; -1.665 ; pc:pchan|test[9]  ; pc:pchan|test[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.628      ;
-; -1.664 ; pc:pchan|test[5]  ; pc:pchan|test[9]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.627      ;
-; -1.662 ; pc:pchan|test[9]  ; pc:pchan|test[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.625      ;
-; -1.661 ; pc:pchan|test[5]  ; pc:pchan|test[8]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.624      ;
-; -1.658 ; pc:pchan|test[5]  ; pc:pchan|test[7]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.621      ;
-; -1.636 ; pc:pchan|test[6]  ; pc:pchan|test[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.599      ;
-; -1.603 ; pc:pchan|test[0]  ; pc:pchan|test[5]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.566      ;
-; -1.574 ; pc:pchan|test[0]  ; pc:pchan|test[4]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.537      ;
-; -1.536 ; pc:pchan|test[4]  ; pc:pchan|test[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.499      ;
-; -1.508 ; pc:pchan|test[4]  ; pc:pchan|test[9]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.471      ;
-; -1.505 ; pc:pchan|test[4]  ; pc:pchan|test[8]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.468      ;
-; -1.502 ; pc:pchan|test[4]  ; pc:pchan|test[7]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.465      ;
-; -1.493 ; pc:pchan|test[8]  ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.456      ;
-; -1.491 ; pc:pchan|test[8]  ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.454      ;
-; -1.481 ; pc:pchan|test[8]  ; pc:pchan|test[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.444      ;
-; -1.480 ; pc:pchan|test[8]  ; pc:pchan|test[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.443      ;
-; -1.478 ; pc:pchan|test[1]  ; pc:pchan|test[5]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.441      ;
-; -1.477 ; pc:pchan|test[8]  ; pc:pchan|test[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.440      ;
-; -1.464 ; pc:pchan|test[3]  ; pc:pchan|test[5]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.427      ;
-; -1.452 ; pc:pchan|test[4]  ; pc:pchan|test[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.415      ;
-; -1.449 ; pc:pchan|test[1]  ; pc:pchan|test[4]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.412      ;
-; -1.435 ; pc:pchan|test[3]  ; pc:pchan|test[4]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.398      ;
-; -1.404 ; pc:pchan|test[9]  ; pc:pchan|test[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.367      ;
-; -1.382 ; pc:pchan|test[7]  ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.345      ;
-; -1.380 ; pc:pchan|test[7]  ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.343      ;
-; -1.374 ; pc:pchan|test[12] ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.337      ;
-; -1.372 ; pc:pchan|test[12] ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.335      ;
-; -1.370 ; pc:pchan|test[7]  ; pc:pchan|test[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.333      ;
-; -1.369 ; pc:pchan|test[7]  ; pc:pchan|test[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.332      ;
-; -1.366 ; pc:pchan|test[7]  ; pc:pchan|test[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.329      ;
-; -1.296 ; pc:pchan|test[5]  ; pc:pchan|test[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.259      ;
-; -1.225 ; pc:pchan|test[10] ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.188      ;
-; -1.223 ; pc:pchan|test[10] ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.186      ;
-; -1.219 ; pc:pchan|test[8]  ; pc:pchan|test[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.182      ;
-; -1.177 ; pc:pchan|test[10] ; pc:pchan|test[12] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.140      ;
-; -1.117 ; pc:pchan|test[11] ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.080      ;
-; -1.115 ; pc:pchan|test[11] ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.078      ;
-; -1.108 ; pc:pchan|test[7]  ; pc:pchan|test[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.071      ;
-; -1.100 ; pc:pchan|test[12] ; pc:pchan|test[14] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.063      ;
-; -1.020 ; pc:pchan|test[10] ; pc:pchan|test[11] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.983      ;
-; -0.996 ; pc:pchan|test[6]  ; pc:pchan|test[15] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.959      ;
-; -0.994 ; pc:pchan|test[6]  ; pc:pchan|test[13] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.957      ;
-; -0.987 ; pc:pchan|test[1]  ; pc:pchan|test[2]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.950      ;
-; -0.984 ; pc:pchan|test[6]  ; pc:pchan|test[10] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.947      ;
-+--------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'altera_reserved_tck'                                                                  ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; Slack  ; Actual Width ; Required Width ; Type      ; Clock               ; Clock Edge ; Target              ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; 97.417 ; 100.000      ; 2.583          ; Port Rate ; altera_reserved_tck ; Rise       ; altera_reserved_tck ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Hold: 'clock'                                                                                                       ;
-+-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
-; 0.822 ; pc:pchan|test[13] ; pc:pchan|test[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 0.822 ; pc:pchan|test[14] ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 0.822 ; pc:pchan|test[15] ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 0.822 ; pc:pchan|test[10] ; pc:pchan|test[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 0.822 ; pc:pchan|test[11] ; pc:pchan|test[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 0.822 ; pc:pchan|test[12] ; pc:pchan|test[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 0.822 ; pc:pchan|test[7]  ; pc:pchan|test[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 0.822 ; pc:pchan|test[8]  ; pc:pchan|test[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 0.822 ; pc:pchan|test[9]  ; pc:pchan|test[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 0.822 ; pc:pchan|test[4]  ; pc:pchan|test[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 0.822 ; pc:pchan|test[5]  ; pc:pchan|test[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
-; 1.076 ; pc:pchan|test[0]  ; pc:pchan|test[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.091      ;
-; 1.086 ; pc:pchan|test[0]  ; pc:pchan|test[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.101      ;
-; 1.316 ; pc:pchan|test[8]  ; pc:pchan|test[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.331      ;
-; 1.323 ; pc:pchan|test[11] ; pc:pchan|test[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.338      ;
-; 1.323 ; pc:pchan|test[4]  ; pc:pchan|test[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.338      ;
-; 1.334 ; pc:pchan|test[14] ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.349      ;
-; 1.340 ; pc:pchan|test[3]  ; pc:pchan|test[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.355      ;
-; 1.467 ; pc:pchan|test[0]  ; pc:pchan|test[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.482      ;
-; 1.487 ; pc:pchan|test[7]  ; pc:pchan|test[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.502      ;
-; 1.490 ; pc:pchan|test[7]  ; pc:pchan|test[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.505      ;
-; 1.499 ; pc:pchan|test[13] ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.514      ;
-; 1.501 ; pc:pchan|test[13] ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.516      ;
-; 1.506 ; pc:pchan|test[2]  ; pc:pchan|test[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.521      ;
-; 1.507 ; pc:pchan|test[2]  ; pc:pchan|test[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.522      ;
-; 1.565 ; pc:pchan|test[1]  ; pc:pchan|test[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.580      ;
-; 1.632 ; pc:pchan|test[0]  ; pc:pchan|test[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.647      ;
-; 1.636 ; pc:pchan|test[6]  ; pc:pchan|test[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.651      ;
-; 1.639 ; pc:pchan|test[6]  ; pc:pchan|test[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.654      ;
-; 1.642 ; pc:pchan|test[6]  ; pc:pchan|test[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.657      ;
-; 1.670 ; pc:pchan|test[6]  ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.685      ;
-; 1.681 ; pc:pchan|test[1]  ; pc:pchan|test[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.696      ;
-; 1.791 ; pc:pchan|test[11] ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.806      ;
-; 1.899 ; pc:pchan|test[10] ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.914      ;
-; 1.928 ; pc:pchan|test[6]  ; pc:pchan|test[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.943      ;
-; 1.931 ; pc:pchan|test[6]  ; pc:pchan|test[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.946      ;
-; 1.932 ; pc:pchan|test[6]  ; pc:pchan|test[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.947      ;
-; 1.935 ; pc:pchan|test[1]  ; pc:pchan|test[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.950      ;
-; 1.942 ; pc:pchan|test[6]  ; pc:pchan|test[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.957      ;
-; 1.944 ; pc:pchan|test[6]  ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.959      ;
-; 1.968 ; pc:pchan|test[10] ; pc:pchan|test[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.983      ;
-; 2.048 ; pc:pchan|test[12] ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.063      ;
-; 2.056 ; pc:pchan|test[7]  ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.071      ;
-; 2.063 ; pc:pchan|test[11] ; pc:pchan|test[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.078      ;
-; 2.065 ; pc:pchan|test[11] ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.080      ;
-; 2.125 ; pc:pchan|test[10] ; pc:pchan|test[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.140      ;
-; 2.167 ; pc:pchan|test[8]  ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.182      ;
-; 2.171 ; pc:pchan|test[10] ; pc:pchan|test[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.186      ;
-; 2.173 ; pc:pchan|test[10] ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.188      ;
-; 2.244 ; pc:pchan|test[5]  ; pc:pchan|test[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.259      ;
-; 2.314 ; pc:pchan|test[7]  ; pc:pchan|test[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.329      ;
-; 2.317 ; pc:pchan|test[7]  ; pc:pchan|test[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.332      ;
-; 2.318 ; pc:pchan|test[7]  ; pc:pchan|test[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.333      ;
-; 2.320 ; pc:pchan|test[12] ; pc:pchan|test[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.335      ;
-; 2.322 ; pc:pchan|test[12] ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.337      ;
-; 2.328 ; pc:pchan|test[7]  ; pc:pchan|test[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.343      ;
-; 2.330 ; pc:pchan|test[7]  ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.345      ;
-; 2.352 ; pc:pchan|test[9]  ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.367      ;
-; 2.383 ; pc:pchan|test[3]  ; pc:pchan|test[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.398      ;
-; 2.397 ; pc:pchan|test[1]  ; pc:pchan|test[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.412      ;
-; 2.400 ; pc:pchan|test[4]  ; pc:pchan|test[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.415      ;
-; 2.412 ; pc:pchan|test[3]  ; pc:pchan|test[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.427      ;
-; 2.425 ; pc:pchan|test[8]  ; pc:pchan|test[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.440      ;
-; 2.426 ; pc:pchan|test[1]  ; pc:pchan|test[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.441      ;
-; 2.428 ; pc:pchan|test[8]  ; pc:pchan|test[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.443      ;
-; 2.429 ; pc:pchan|test[8]  ; pc:pchan|test[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.444      ;
-; 2.439 ; pc:pchan|test[8]  ; pc:pchan|test[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.454      ;
-; 2.441 ; pc:pchan|test[8]  ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.456      ;
-; 2.450 ; pc:pchan|test[4]  ; pc:pchan|test[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.465      ;
-; 2.453 ; pc:pchan|test[4]  ; pc:pchan|test[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.468      ;
-; 2.456 ; pc:pchan|test[4]  ; pc:pchan|test[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.471      ;
-; 2.484 ; pc:pchan|test[4]  ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.499      ;
-; 2.522 ; pc:pchan|test[0]  ; pc:pchan|test[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.537      ;
-; 2.551 ; pc:pchan|test[0]  ; pc:pchan|test[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.566      ;
-; 2.584 ; pc:pchan|test[6]  ; pc:pchan|test[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.599      ;
-; 2.606 ; pc:pchan|test[5]  ; pc:pchan|test[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.621      ;
-; 2.609 ; pc:pchan|test[5]  ; pc:pchan|test[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.624      ;
-; 2.610 ; pc:pchan|test[9]  ; pc:pchan|test[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.625      ;
-; 2.612 ; pc:pchan|test[5]  ; pc:pchan|test[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.627      ;
-; 2.613 ; pc:pchan|test[9]  ; pc:pchan|test[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.628      ;
-; 2.614 ; pc:pchan|test[9]  ; pc:pchan|test[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.629      ;
-; 2.624 ; pc:pchan|test[9]  ; pc:pchan|test[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.639      ;
-; 2.626 ; pc:pchan|test[9]  ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.641      ;
-; 2.640 ; pc:pchan|test[5]  ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.655      ;
-; 2.674 ; pc:pchan|test[3]  ; pc:pchan|test[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.689      ;
-; 2.676 ; pc:pchan|test[2]  ; pc:pchan|test[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.691      ;
-; 2.677 ; pc:pchan|test[3]  ; pc:pchan|test[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.692      ;
-; 2.680 ; pc:pchan|test[3]  ; pc:pchan|test[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.695      ;
-; 2.688 ; pc:pchan|test[1]  ; pc:pchan|test[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.703      ;
-; 2.691 ; pc:pchan|test[1]  ; pc:pchan|test[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.706      ;
-; 2.694 ; pc:pchan|test[1]  ; pc:pchan|test[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.709      ;
-; 2.705 ; pc:pchan|test[2]  ; pc:pchan|test[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.720      ;
-; 2.708 ; pc:pchan|test[3]  ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.723      ;
-; 2.722 ; pc:pchan|test[1]  ; pc:pchan|test[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.737      ;
-; 2.742 ; pc:pchan|test[4]  ; pc:pchan|test[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.757      ;
-; 2.745 ; pc:pchan|test[4]  ; pc:pchan|test[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.760      ;
-; 2.746 ; pc:pchan|test[4]  ; pc:pchan|test[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.761      ;
-; 2.756 ; pc:pchan|test[4]  ; pc:pchan|test[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.771      ;
-; 2.758 ; pc:pchan|test[4]  ; pc:pchan|test[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.773      ;
-; 2.813 ; pc:pchan|test[0]  ; pc:pchan|test[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.828      ;
-+-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+--------------------
+; Datasheet Report ;
+--------------------
+Nothing to report.
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Minimum Pulse Width: 'clock'                                                                        ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target             ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------+
-; -1.583 ; 1.000        ; 2.583          ; Port Rate        ; clock ; Rise       ; clock              ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[0]   ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[0]   ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[10]  ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[10]  ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[11]  ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[11]  ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[12]  ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[12]  ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[13]  ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[13]  ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[14]  ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[14]  ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[15]  ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[15]  ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[1]   ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[1]   ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[2]   ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[2]   ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[3]   ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[3]   ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[4]   ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[4]   ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[5]   ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[5]   ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[6]   ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[6]   ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[7]   ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[7]   ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[8]   ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[8]   ;
-; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; pc:pchan|test[9]   ;
-; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; pc:pchan|test[9]   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[0]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[0]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[10]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[10]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[11]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[11]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[12]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[12]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[13]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[13]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[14]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[14]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[15]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[15]|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[1]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[1]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[2]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[2]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[3]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[3]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[4]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[4]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[5]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[5]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[6]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[6]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[7]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[7]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[8]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[8]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; pchan|test[9]|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; pchan|test[9]|clk  ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------+
-
-
-+--------------------------------------------------------------------------+
-; Clock to Output Times                                                    ;
-+------------+------------+--------+--------+------------+-----------------+
-; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+------------+------------+--------+--------+------------+-----------------+
-; over       ; clock      ; 10.970 ; 10.970 ; Rise       ; clock           ;
-; pin_name1  ; clock      ; 11.420 ; 11.420 ; Rise       ; clock           ;
-; pin_name2  ; clock      ; 11.416 ; 11.416 ; Rise       ; clock           ;
-; pin_name3  ; clock      ; 11.847 ; 11.847 ; Rise       ; clock           ;
-; pin_name4  ; clock      ; 11.857 ; 11.857 ; Rise       ; clock           ;
-; pin_name5  ; clock      ; 11.862 ; 11.862 ; Rise       ; clock           ;
-; pin_name6  ; clock      ; 11.856 ; 11.856 ; Rise       ; clock           ;
-; pin_name7  ; clock      ; 11.863 ; 11.863 ; Rise       ; clock           ;
-; pin_name8  ; clock      ; 11.508 ; 11.508 ; Rise       ; clock           ;
-; pin_name10 ; clock      ; 10.598 ; 10.598 ; Rise       ; clock           ;
-; pin_name11 ; clock      ; 11.112 ; 11.112 ; Rise       ; clock           ;
-; pin_name12 ; clock      ; 11.114 ; 11.114 ; Rise       ; clock           ;
-; pin_name13 ; clock      ; 11.112 ; 11.112 ; Rise       ; clock           ;
-; pin_name15 ; clock      ; 11.563 ; 11.563 ; Rise       ; clock           ;
-; pin_name16 ; clock      ; 11.540 ; 11.540 ; Rise       ; clock           ;
-; pin_name17 ; clock      ; 11.215 ; 11.215 ; Rise       ; clock           ;
-; pin_name18 ; clock      ; 11.197 ; 11.197 ; Rise       ; clock           ;
-; pin_name19 ; clock      ; 10.888 ; 10.888 ; Rise       ; clock           ;
-; pin_name20 ; clock      ; 10.888 ; 10.888 ; Rise       ; clock           ;
-; pin_name21 ; clock      ; 10.887 ; 10.887 ; Rise       ; clock           ;
-; pin_name22 ; clock      ; 10.746 ; 10.746 ; Rise       ; clock           ;
-; pin_name26 ; clock      ; 10.752 ; 10.752 ; Rise       ; clock           ;
-; pin_name27 ; clock      ; 8.886  ; 8.886  ; Rise       ; clock           ;
-; pin_name28 ; clock      ; 8.567  ; 8.567  ; Rise       ; clock           ;
-; pin_name29 ; clock      ; 8.565  ; 8.565  ; Rise       ; clock           ;
-; pin_name31 ; clock      ; 8.564  ; 8.564  ; Rise       ; clock           ;
-; pin_name32 ; clock      ; 8.591  ; 8.591  ; Rise       ; clock           ;
-; pin_name36 ; clock      ; 8.589  ; 8.589  ; Rise       ; clock           ;
-; pin_name37 ; clock      ; 8.568  ; 8.568  ; Rise       ; clock           ;
-+------------+------------+--------+--------+------------+-----------------+
-
-
-+------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                          ;
-+------------+------------+-------+-------+------------+-----------------+
-; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+------------+------------+-------+-------+------------+-----------------+
-; over       ; clock      ; 8.410 ; 8.410 ; Rise       ; clock           ;
-; pin_name1  ; clock      ; 8.196 ; 8.196 ; Rise       ; clock           ;
-; pin_name2  ; clock      ; 8.196 ; 8.196 ; Rise       ; clock           ;
-; pin_name3  ; clock      ; 8.647 ; 8.647 ; Rise       ; clock           ;
-; pin_name4  ; clock      ; 8.645 ; 8.645 ; Rise       ; clock           ;
-; pin_name5  ; clock      ; 8.646 ; 8.646 ; Rise       ; clock           ;
-; pin_name6  ; clock      ; 8.648 ; 8.648 ; Rise       ; clock           ;
-; pin_name7  ; clock      ; 8.635 ; 8.635 ; Rise       ; clock           ;
-; pin_name8  ; clock      ; 8.590 ; 8.590 ; Rise       ; clock           ;
-; pin_name10 ; clock      ; 7.019 ; 7.019 ; Rise       ; clock           ;
-; pin_name11 ; clock      ; 8.195 ; 8.195 ; Rise       ; clock           ;
-; pin_name12 ; clock      ; 8.197 ; 8.197 ; Rise       ; clock           ;
-; pin_name13 ; clock      ; 8.194 ; 8.194 ; Rise       ; clock           ;
-; pin_name15 ; clock      ; 8.646 ; 8.646 ; Rise       ; clock           ;
-; pin_name16 ; clock      ; 8.631 ; 8.631 ; Rise       ; clock           ;
-; pin_name17 ; clock      ; 8.750 ; 8.750 ; Rise       ; clock           ;
-; pin_name18 ; clock      ; 8.732 ; 8.732 ; Rise       ; clock           ;
-; pin_name19 ; clock      ; 8.419 ; 8.419 ; Rise       ; clock           ;
-; pin_name20 ; clock      ; 8.419 ; 8.419 ; Rise       ; clock           ;
-; pin_name21 ; clock      ; 8.419 ; 8.419 ; Rise       ; clock           ;
-; pin_name22 ; clock      ; 8.283 ; 8.283 ; Rise       ; clock           ;
-; pin_name26 ; clock      ; 8.271 ; 8.271 ; Rise       ; clock           ;
-; pin_name27 ; clock      ; 8.218 ; 8.218 ; Rise       ; clock           ;
-; pin_name28 ; clock      ; 7.898 ; 7.898 ; Rise       ; clock           ;
-; pin_name29 ; clock      ; 7.895 ; 7.895 ; Rise       ; clock           ;
-; pin_name31 ; clock      ; 7.900 ; 7.900 ; Rise       ; clock           ;
-; pin_name32 ; clock      ; 7.926 ; 7.926 ; Rise       ; clock           ;
-; pin_name36 ; clock      ; 7.918 ; 7.918 ; Rise       ; clock           ;
-; pin_name37 ; clock      ; 7.899 ; 7.899 ; Rise       ; clock           ;
-+------------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------+
-; Setup Transfers                                                   ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; clock      ; clock    ; 136      ; 0        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------+
-; Hold Transfers                                                    ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; clock      ; clock    ; 136      ; 0        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
 
 
 ---------------
@@ -540,11 +162,11 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Clocks            ; 1     ; 1    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 29    ; 29   ;
-; Unconstrained Output Port Paths ; 296   ; 296  ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 112   ; 112  ;
 +---------------------------------+-------+------+
 
 
@@ -554,36 +176,32 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Jun 10 16:59:55 2016
+    Info: Processing started: Fri Jun 10 17:39:31 2016
 Info: Command: quartus_sta jikken -c jikken
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity sld_jtag_hub
+        Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
+        Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'jikken.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name clock clock
+Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.327
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -2.327       -28.019 clock 
-Info (332146): Worst-case hold slack is 0.822
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):     0.822         0.000 clock 
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -1.583
+Info (332146): Worst-case minimum pulse width slack is 97.417
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.583       -43.759 clock 
+    Info (332119):    97.417         0.000 altera_reserved_tck 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 295 megabytes
-    Info: Processing ended: Fri Jun 10 16:59:56 2016
+    Info: Processing ended: Fri Jun 10 17:39:32 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

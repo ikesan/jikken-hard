@@ -1,37 +1,984 @@
 |jikken
-over <= pc:pchan.pcover
-clock => pc:pchan.clk
-pin_name1 <= kadai1:4noketa.y0
-pin_name2 <= kadai1:4noketa.y1
-pin_name3 <= kadai1:4noketa.y2
-pin_name4 <= kadai1:4noketa.y3
-pin_name5 <= kadai1:4noketa.y4
-pin_name6 <= kadai1:4noketa.y5
-pin_name7 <= kadai1:4noketa.y6
-pin_name8 <= kadai1:3noketa.y0
-pin_name10 <= kadai1:3noketa.y1
-pin_name11 <= kadai1:3noketa.y2
-pin_name12 <= kadai1:3noketa.y3
-pin_name13 <= kadai1:3noketa.y4
-pin_name15 <= kadai1:3noketa.y5
-pin_name16 <= kadai1:3noketa.y6
-pin_name17 <= kadai1:ninoketast4.y0
-pin_name18 <= kadai1:ninoketast4.y1
-pin_name19 <= kadai1:ninoketast4.y2
-pin_name20 <= kadai1:ninoketast4.y3
-pin_name21 <= kadai1:ninoketast4.y4
-pin_name22 <= kadai1:ninoketast4.y5
-pin_name26 <= kadai1:ninoketast4.y6
-pin_name27 <= kadai1:inoketa.y0
-pin_name28 <= kadai1:inoketa.y1
-pin_name29 <= kadai1:inoketa.y2
-pin_name31 <= kadai1:inoketa.y3
-pin_name32 <= kadai1:inoketa.y4
-pin_name36 <= kadai1:inoketa.y5
-pin_name37 <= kadai1:inoketa.y6
+pin_name1 <= kadai1:out1.y0
+clk => ram2:ram2.clock
+clk => pc:Pchan.clk
+pin_name2 <= kadai1:out1.y1
+pin_name3 <= kadai1:out1.y2
+pin_name4 <= kadai1:out1.y3
+pin_name5 <= kadai1:out1.y4
+pin_name6 <= kadai1:out1.y5
+pin_name8 <= kadai1:out1.y6
+pin_name9 <= kadai1:out2.y0
+pin_name10 <= kadai1:out2.y1
+pin_name11 <= kadai1:out2.y2
+pin_name12 <= kadai1:out2.y3
+pin_name14 <= kadai1:out2.y4
+pin_name15 <= kadai1:out2.y5
+pin_name16 <= kadai1:out2.y6
+pin_name17 <= kadai1:out3.y0
+pin_name18 <= kadai1:out3.y1
+pin_name19 <= kadai1:out3.y2
+pin_name20 <= kadai1:out3.y3
+pin_name21 <= kadai1:out3.y4
+pin_name22 <= kadai1:out3.y5
+pin_name23 <= kadai1:out3.y6
+pin_name24 <= kadai1:out4.y0
+pin_name25 <= kadai1:out4.y1
+pin_name26 <= kadai1:out4.y2
+pin_name28 <= kadai1:out4.y3
+pin_name29 <= kadai1:out4.y4
+pin_name30 <= kadai1:out4.y5
+pin_name31 <= kadai1:out4.y6
 
 
-|jikken|pc:pchan
+|jikken|kadai1:out1
+y0 <= y0noor.DB_MAX_OUTPUT_PORT_TYPE
+a => y0noor.IN0
+a => atob.IN0
+a => ~a.IN0
+a => ab.IN0
+a => a~d.IN0
+a => ac.IN0
+a => a~c.IN0
+b => btoc.IN0
+b => atob.IN1
+b => bc.IN0
+b => ab.IN1
+b => ~b.IN0
+b => bd.IN0
+b => btod.IN1
+c => btoc.IN1
+c => c~d.IN0
+c => ~c.IN0
+c => bc.IN1
+c => ac.IN1
+c => cbtod.IN0
+c => ctodnot.IN0
+c => ~ac.IN1
+d => ~d.IN0
+d => bd.IN1
+d => btod.IN0
+d => ~cd.IN1
+d => ~ad.IN0
+d => a~cd.IN1
+d => ctodnot.IN1
+y1 <= y1noor.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2noor.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= y3noor.DB_MAX_OUTPUT_PORT_TYPE
+y4 <= y4noor.DB_MAX_OUTPUT_PORT_TYPE
+y5 <= y5noor.DB_MAX_OUTPUT_PORT_TYPE
+y6 <= y6noor.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|ram2:ram2
+address[0] => altsyncram:altsyncram_component.address_a[0]
+address[1] => altsyncram:altsyncram_component.address_a[1]
+address[2] => altsyncram:altsyncram_component.address_a[2]
+address[3] => altsyncram:altsyncram_component.address_a[3]
+address[4] => altsyncram:altsyncram_component.address_a[4]
+address[5] => altsyncram:altsyncram_component.address_a[5]
+address[6] => altsyncram:altsyncram_component.address_a[6]
+address[7] => altsyncram:altsyncram_component.address_a[7]
+address[8] => altsyncram:altsyncram_component.address_a[8]
+address[9] => altsyncram:altsyncram_component.address_a[9]
+address[10] => altsyncram:altsyncram_component.address_a[10]
+address[11] => altsyncram:altsyncram_component.address_a[11]
+clock => altsyncram:altsyncram_component.clock0
+data[0] => altsyncram:altsyncram_component.data_a[0]
+data[1] => altsyncram:altsyncram_component.data_a[1]
+data[2] => altsyncram:altsyncram_component.data_a[2]
+data[3] => altsyncram:altsyncram_component.data_a[3]
+data[4] => altsyncram:altsyncram_component.data_a[4]
+data[5] => altsyncram:altsyncram_component.data_a[5]
+data[6] => altsyncram:altsyncram_component.data_a[6]
+data[7] => altsyncram:altsyncram_component.data_a[7]
+data[8] => altsyncram:altsyncram_component.data_a[8]
+data[9] => altsyncram:altsyncram_component.data_a[9]
+data[10] => altsyncram:altsyncram_component.data_a[10]
+data[11] => altsyncram:altsyncram_component.data_a[11]
+data[12] => altsyncram:altsyncram_component.data_a[12]
+data[13] => altsyncram:altsyncram_component.data_a[13]
+data[14] => altsyncram:altsyncram_component.data_a[14]
+data[15] => altsyncram:altsyncram_component.data_a[15]
+wren => altsyncram:altsyncram_component.wren_a
+q[0] <= altsyncram:altsyncram_component.q_a[0]
+q[1] <= altsyncram:altsyncram_component.q_a[1]
+q[2] <= altsyncram:altsyncram_component.q_a[2]
+q[3] <= altsyncram:altsyncram_component.q_a[3]
+q[4] <= altsyncram:altsyncram_component.q_a[4]
+q[5] <= altsyncram:altsyncram_component.q_a[5]
+q[6] <= altsyncram:altsyncram_component.q_a[6]
+q[7] <= altsyncram:altsyncram_component.q_a[7]
+q[8] <= altsyncram:altsyncram_component.q_a[8]
+q[9] <= altsyncram:altsyncram_component.q_a[9]
+q[10] <= altsyncram:altsyncram_component.q_a[10]
+q[11] <= altsyncram:altsyncram_component.q_a[11]
+q[12] <= altsyncram:altsyncram_component.q_a[12]
+q[13] <= altsyncram:altsyncram_component.q_a[13]
+q[14] <= altsyncram:altsyncram_component.q_a[14]
+q[15] <= altsyncram:altsyncram_component.q_a[15]
+
+
+|jikken|ram2:ram2|altsyncram:altsyncram_component
+wren_a => altsyncram_obh1:auto_generated.wren_a
+rden_a => ~NO_FANOUT~
+wren_b => ~NO_FANOUT~
+rden_b => ~NO_FANOUT~
+data_a[0] => altsyncram_obh1:auto_generated.data_a[0]
+data_a[1] => altsyncram_obh1:auto_generated.data_a[1]
+data_a[2] => altsyncram_obh1:auto_generated.data_a[2]
+data_a[3] => altsyncram_obh1:auto_generated.data_a[3]
+data_a[4] => altsyncram_obh1:auto_generated.data_a[4]
+data_a[5] => altsyncram_obh1:auto_generated.data_a[5]
+data_a[6] => altsyncram_obh1:auto_generated.data_a[6]
+data_a[7] => altsyncram_obh1:auto_generated.data_a[7]
+data_a[8] => altsyncram_obh1:auto_generated.data_a[8]
+data_a[9] => altsyncram_obh1:auto_generated.data_a[9]
+data_a[10] => altsyncram_obh1:auto_generated.data_a[10]
+data_a[11] => altsyncram_obh1:auto_generated.data_a[11]
+data_a[12] => altsyncram_obh1:auto_generated.data_a[12]
+data_a[13] => altsyncram_obh1:auto_generated.data_a[13]
+data_a[14] => altsyncram_obh1:auto_generated.data_a[14]
+data_a[15] => altsyncram_obh1:auto_generated.data_a[15]
+data_b[0] => ~NO_FANOUT~
+address_a[0] => altsyncram_obh1:auto_generated.address_a[0]
+address_a[1] => altsyncram_obh1:auto_generated.address_a[1]
+address_a[2] => altsyncram_obh1:auto_generated.address_a[2]
+address_a[3] => altsyncram_obh1:auto_generated.address_a[3]
+address_a[4] => altsyncram_obh1:auto_generated.address_a[4]
+address_a[5] => altsyncram_obh1:auto_generated.address_a[5]
+address_a[6] => altsyncram_obh1:auto_generated.address_a[6]
+address_a[7] => altsyncram_obh1:auto_generated.address_a[7]
+address_a[8] => altsyncram_obh1:auto_generated.address_a[8]
+address_a[9] => altsyncram_obh1:auto_generated.address_a[9]
+address_a[10] => altsyncram_obh1:auto_generated.address_a[10]
+address_a[11] => altsyncram_obh1:auto_generated.address_a[11]
+address_b[0] => ~NO_FANOUT~
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_obh1:auto_generated.clock0
+clock1 => ~NO_FANOUT~
+clocken0 => ~NO_FANOUT~
+clocken1 => ~NO_FANOUT~
+clocken2 => ~NO_FANOUT~
+clocken3 => ~NO_FANOUT~
+aclr0 => ~NO_FANOUT~
+aclr1 => ~NO_FANOUT~
+byteena_a[0] => ~NO_FANOUT~
+byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= altsyncram_obh1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_obh1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_obh1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_obh1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_obh1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_obh1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_obh1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_obh1:auto_generated.q_a[7]
+q_a[8] <= altsyncram_obh1:auto_generated.q_a[8]
+q_a[9] <= altsyncram_obh1:auto_generated.q_a[9]
+q_a[10] <= altsyncram_obh1:auto_generated.q_a[10]
+q_a[11] <= altsyncram_obh1:auto_generated.q_a[11]
+q_a[12] <= altsyncram_obh1:auto_generated.q_a[12]
+q_a[13] <= altsyncram_obh1:auto_generated.q_a[13]
+q_a[14] <= altsyncram_obh1:auto_generated.q_a[14]
+q_a[15] <= altsyncram_obh1:auto_generated.q_a[15]
+q_b[0] <= <GND>
+eccstatus[0] <= <GND>
+eccstatus[1] <= <GND>
+eccstatus[2] <= <GND>
+
+
+|jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated
+address_a[0] => altsyncram_rqc2:altsyncram1.address_a[0]
+address_a[1] => altsyncram_rqc2:altsyncram1.address_a[1]
+address_a[2] => altsyncram_rqc2:altsyncram1.address_a[2]
+address_a[3] => altsyncram_rqc2:altsyncram1.address_a[3]
+address_a[4] => altsyncram_rqc2:altsyncram1.address_a[4]
+address_a[5] => altsyncram_rqc2:altsyncram1.address_a[5]
+address_a[6] => altsyncram_rqc2:altsyncram1.address_a[6]
+address_a[7] => altsyncram_rqc2:altsyncram1.address_a[7]
+address_a[8] => altsyncram_rqc2:altsyncram1.address_a[8]
+address_a[9] => altsyncram_rqc2:altsyncram1.address_a[9]
+address_a[10] => altsyncram_rqc2:altsyncram1.address_a[10]
+address_a[11] => altsyncram_rqc2:altsyncram1.address_a[11]
+clock0 => altsyncram_rqc2:altsyncram1.clock0
+data_a[0] => altsyncram_rqc2:altsyncram1.data_a[0]
+data_a[1] => altsyncram_rqc2:altsyncram1.data_a[1]
+data_a[2] => altsyncram_rqc2:altsyncram1.data_a[2]
+data_a[3] => altsyncram_rqc2:altsyncram1.data_a[3]
+data_a[4] => altsyncram_rqc2:altsyncram1.data_a[4]
+data_a[5] => altsyncram_rqc2:altsyncram1.data_a[5]
+data_a[6] => altsyncram_rqc2:altsyncram1.data_a[6]
+data_a[7] => altsyncram_rqc2:altsyncram1.data_a[7]
+data_a[8] => altsyncram_rqc2:altsyncram1.data_a[8]
+data_a[9] => altsyncram_rqc2:altsyncram1.data_a[9]
+data_a[10] => altsyncram_rqc2:altsyncram1.data_a[10]
+data_a[11] => altsyncram_rqc2:altsyncram1.data_a[11]
+data_a[12] => altsyncram_rqc2:altsyncram1.data_a[12]
+data_a[13] => altsyncram_rqc2:altsyncram1.data_a[13]
+data_a[14] => altsyncram_rqc2:altsyncram1.data_a[14]
+data_a[15] => altsyncram_rqc2:altsyncram1.data_a[15]
+q_a[0] <= altsyncram_rqc2:altsyncram1.q_a[0]
+q_a[1] <= altsyncram_rqc2:altsyncram1.q_a[1]
+q_a[2] <= altsyncram_rqc2:altsyncram1.q_a[2]
+q_a[3] <= altsyncram_rqc2:altsyncram1.q_a[3]
+q_a[4] <= altsyncram_rqc2:altsyncram1.q_a[4]
+q_a[5] <= altsyncram_rqc2:altsyncram1.q_a[5]
+q_a[6] <= altsyncram_rqc2:altsyncram1.q_a[6]
+q_a[7] <= altsyncram_rqc2:altsyncram1.q_a[7]
+q_a[8] <= altsyncram_rqc2:altsyncram1.q_a[8]
+q_a[9] <= altsyncram_rqc2:altsyncram1.q_a[9]
+q_a[10] <= altsyncram_rqc2:altsyncram1.q_a[10]
+q_a[11] <= altsyncram_rqc2:altsyncram1.q_a[11]
+q_a[12] <= altsyncram_rqc2:altsyncram1.q_a[12]
+q_a[13] <= altsyncram_rqc2:altsyncram1.q_a[13]
+q_a[14] <= altsyncram_rqc2:altsyncram1.q_a[14]
+q_a[15] <= altsyncram_rqc2:altsyncram1.q_a[15]
+wren_a => altsyncram_rqc2:altsyncram1.wren_a
+
+
+|jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1
+address_a[0] => ram_block3a0.PORTAADDR
+address_a[0] => ram_block3a1.PORTAADDR
+address_a[0] => ram_block3a2.PORTAADDR
+address_a[0] => ram_block3a3.PORTAADDR
+address_a[0] => ram_block3a4.PORTAADDR
+address_a[0] => ram_block3a5.PORTAADDR
+address_a[0] => ram_block3a6.PORTAADDR
+address_a[0] => ram_block3a7.PORTAADDR
+address_a[0] => ram_block3a8.PORTAADDR
+address_a[0] => ram_block3a9.PORTAADDR
+address_a[0] => ram_block3a10.PORTAADDR
+address_a[0] => ram_block3a11.PORTAADDR
+address_a[0] => ram_block3a12.PORTAADDR
+address_a[0] => ram_block3a13.PORTAADDR
+address_a[0] => ram_block3a14.PORTAADDR
+address_a[0] => ram_block3a15.PORTAADDR
+address_a[1] => ram_block3a0.PORTAADDR1
+address_a[1] => ram_block3a1.PORTAADDR1
+address_a[1] => ram_block3a2.PORTAADDR1
+address_a[1] => ram_block3a3.PORTAADDR1
+address_a[1] => ram_block3a4.PORTAADDR1
+address_a[1] => ram_block3a5.PORTAADDR1
+address_a[1] => ram_block3a6.PORTAADDR1
+address_a[1] => ram_block3a7.PORTAADDR1
+address_a[1] => ram_block3a8.PORTAADDR1
+address_a[1] => ram_block3a9.PORTAADDR1
+address_a[1] => ram_block3a10.PORTAADDR1
+address_a[1] => ram_block3a11.PORTAADDR1
+address_a[1] => ram_block3a12.PORTAADDR1
+address_a[1] => ram_block3a13.PORTAADDR1
+address_a[1] => ram_block3a14.PORTAADDR1
+address_a[1] => ram_block3a15.PORTAADDR1
+address_a[2] => ram_block3a0.PORTAADDR2
+address_a[2] => ram_block3a1.PORTAADDR2
+address_a[2] => ram_block3a2.PORTAADDR2
+address_a[2] => ram_block3a3.PORTAADDR2
+address_a[2] => ram_block3a4.PORTAADDR2
+address_a[2] => ram_block3a5.PORTAADDR2
+address_a[2] => ram_block3a6.PORTAADDR2
+address_a[2] => ram_block3a7.PORTAADDR2
+address_a[2] => ram_block3a8.PORTAADDR2
+address_a[2] => ram_block3a9.PORTAADDR2
+address_a[2] => ram_block3a10.PORTAADDR2
+address_a[2] => ram_block3a11.PORTAADDR2
+address_a[2] => ram_block3a12.PORTAADDR2
+address_a[2] => ram_block3a13.PORTAADDR2
+address_a[2] => ram_block3a14.PORTAADDR2
+address_a[2] => ram_block3a15.PORTAADDR2
+address_a[3] => ram_block3a0.PORTAADDR3
+address_a[3] => ram_block3a1.PORTAADDR3
+address_a[3] => ram_block3a2.PORTAADDR3
+address_a[3] => ram_block3a3.PORTAADDR3
+address_a[3] => ram_block3a4.PORTAADDR3
+address_a[3] => ram_block3a5.PORTAADDR3
+address_a[3] => ram_block3a6.PORTAADDR3
+address_a[3] => ram_block3a7.PORTAADDR3
+address_a[3] => ram_block3a8.PORTAADDR3
+address_a[3] => ram_block3a9.PORTAADDR3
+address_a[3] => ram_block3a10.PORTAADDR3
+address_a[3] => ram_block3a11.PORTAADDR3
+address_a[3] => ram_block3a12.PORTAADDR3
+address_a[3] => ram_block3a13.PORTAADDR3
+address_a[3] => ram_block3a14.PORTAADDR3
+address_a[3] => ram_block3a15.PORTAADDR3
+address_a[4] => ram_block3a0.PORTAADDR4
+address_a[4] => ram_block3a1.PORTAADDR4
+address_a[4] => ram_block3a2.PORTAADDR4
+address_a[4] => ram_block3a3.PORTAADDR4
+address_a[4] => ram_block3a4.PORTAADDR4
+address_a[4] => ram_block3a5.PORTAADDR4
+address_a[4] => ram_block3a6.PORTAADDR4
+address_a[4] => ram_block3a7.PORTAADDR4
+address_a[4] => ram_block3a8.PORTAADDR4
+address_a[4] => ram_block3a9.PORTAADDR4
+address_a[4] => ram_block3a10.PORTAADDR4
+address_a[4] => ram_block3a11.PORTAADDR4
+address_a[4] => ram_block3a12.PORTAADDR4
+address_a[4] => ram_block3a13.PORTAADDR4
+address_a[4] => ram_block3a14.PORTAADDR4
+address_a[4] => ram_block3a15.PORTAADDR4
+address_a[5] => ram_block3a0.PORTAADDR5
+address_a[5] => ram_block3a1.PORTAADDR5
+address_a[5] => ram_block3a2.PORTAADDR5
+address_a[5] => ram_block3a3.PORTAADDR5
+address_a[5] => ram_block3a4.PORTAADDR5
+address_a[5] => ram_block3a5.PORTAADDR5
+address_a[5] => ram_block3a6.PORTAADDR5
+address_a[5] => ram_block3a7.PORTAADDR5
+address_a[5] => ram_block3a8.PORTAADDR5
+address_a[5] => ram_block3a9.PORTAADDR5
+address_a[5] => ram_block3a10.PORTAADDR5
+address_a[5] => ram_block3a11.PORTAADDR5
+address_a[5] => ram_block3a12.PORTAADDR5
+address_a[5] => ram_block3a13.PORTAADDR5
+address_a[5] => ram_block3a14.PORTAADDR5
+address_a[5] => ram_block3a15.PORTAADDR5
+address_a[6] => ram_block3a0.PORTAADDR6
+address_a[6] => ram_block3a1.PORTAADDR6
+address_a[6] => ram_block3a2.PORTAADDR6
+address_a[6] => ram_block3a3.PORTAADDR6
+address_a[6] => ram_block3a4.PORTAADDR6
+address_a[6] => ram_block3a5.PORTAADDR6
+address_a[6] => ram_block3a6.PORTAADDR6
+address_a[6] => ram_block3a7.PORTAADDR6
+address_a[6] => ram_block3a8.PORTAADDR6
+address_a[6] => ram_block3a9.PORTAADDR6
+address_a[6] => ram_block3a10.PORTAADDR6
+address_a[6] => ram_block3a11.PORTAADDR6
+address_a[6] => ram_block3a12.PORTAADDR6
+address_a[6] => ram_block3a13.PORTAADDR6
+address_a[6] => ram_block3a14.PORTAADDR6
+address_a[6] => ram_block3a15.PORTAADDR6
+address_a[7] => ram_block3a0.PORTAADDR7
+address_a[7] => ram_block3a1.PORTAADDR7
+address_a[7] => ram_block3a2.PORTAADDR7
+address_a[7] => ram_block3a3.PORTAADDR7
+address_a[7] => ram_block3a4.PORTAADDR7
+address_a[7] => ram_block3a5.PORTAADDR7
+address_a[7] => ram_block3a6.PORTAADDR7
+address_a[7] => ram_block3a7.PORTAADDR7
+address_a[7] => ram_block3a8.PORTAADDR7
+address_a[7] => ram_block3a9.PORTAADDR7
+address_a[7] => ram_block3a10.PORTAADDR7
+address_a[7] => ram_block3a11.PORTAADDR7
+address_a[7] => ram_block3a12.PORTAADDR7
+address_a[7] => ram_block3a13.PORTAADDR7
+address_a[7] => ram_block3a14.PORTAADDR7
+address_a[7] => ram_block3a15.PORTAADDR7
+address_a[8] => ram_block3a0.PORTAADDR8
+address_a[8] => ram_block3a1.PORTAADDR8
+address_a[8] => ram_block3a2.PORTAADDR8
+address_a[8] => ram_block3a3.PORTAADDR8
+address_a[8] => ram_block3a4.PORTAADDR8
+address_a[8] => ram_block3a5.PORTAADDR8
+address_a[8] => ram_block3a6.PORTAADDR8
+address_a[8] => ram_block3a7.PORTAADDR8
+address_a[8] => ram_block3a8.PORTAADDR8
+address_a[8] => ram_block3a9.PORTAADDR8
+address_a[8] => ram_block3a10.PORTAADDR8
+address_a[8] => ram_block3a11.PORTAADDR8
+address_a[8] => ram_block3a12.PORTAADDR8
+address_a[8] => ram_block3a13.PORTAADDR8
+address_a[8] => ram_block3a14.PORTAADDR8
+address_a[8] => ram_block3a15.PORTAADDR8
+address_a[9] => ram_block3a0.PORTAADDR9
+address_a[9] => ram_block3a1.PORTAADDR9
+address_a[9] => ram_block3a2.PORTAADDR9
+address_a[9] => ram_block3a3.PORTAADDR9
+address_a[9] => ram_block3a4.PORTAADDR9
+address_a[9] => ram_block3a5.PORTAADDR9
+address_a[9] => ram_block3a6.PORTAADDR9
+address_a[9] => ram_block3a7.PORTAADDR9
+address_a[9] => ram_block3a8.PORTAADDR9
+address_a[9] => ram_block3a9.PORTAADDR9
+address_a[9] => ram_block3a10.PORTAADDR9
+address_a[9] => ram_block3a11.PORTAADDR9
+address_a[9] => ram_block3a12.PORTAADDR9
+address_a[9] => ram_block3a13.PORTAADDR9
+address_a[9] => ram_block3a14.PORTAADDR9
+address_a[9] => ram_block3a15.PORTAADDR9
+address_a[10] => ram_block3a0.PORTAADDR10
+address_a[10] => ram_block3a1.PORTAADDR10
+address_a[10] => ram_block3a2.PORTAADDR10
+address_a[10] => ram_block3a3.PORTAADDR10
+address_a[10] => ram_block3a4.PORTAADDR10
+address_a[10] => ram_block3a5.PORTAADDR10
+address_a[10] => ram_block3a6.PORTAADDR10
+address_a[10] => ram_block3a7.PORTAADDR10
+address_a[10] => ram_block3a8.PORTAADDR10
+address_a[10] => ram_block3a9.PORTAADDR10
+address_a[10] => ram_block3a10.PORTAADDR10
+address_a[10] => ram_block3a11.PORTAADDR10
+address_a[10] => ram_block3a12.PORTAADDR10
+address_a[10] => ram_block3a13.PORTAADDR10
+address_a[10] => ram_block3a14.PORTAADDR10
+address_a[10] => ram_block3a15.PORTAADDR10
+address_a[11] => ram_block3a0.PORTAADDR11
+address_a[11] => ram_block3a1.PORTAADDR11
+address_a[11] => ram_block3a2.PORTAADDR11
+address_a[11] => ram_block3a3.PORTAADDR11
+address_a[11] => ram_block3a4.PORTAADDR11
+address_a[11] => ram_block3a5.PORTAADDR11
+address_a[11] => ram_block3a6.PORTAADDR11
+address_a[11] => ram_block3a7.PORTAADDR11
+address_a[11] => ram_block3a8.PORTAADDR11
+address_a[11] => ram_block3a9.PORTAADDR11
+address_a[11] => ram_block3a10.PORTAADDR11
+address_a[11] => ram_block3a11.PORTAADDR11
+address_a[11] => ram_block3a12.PORTAADDR11
+address_a[11] => ram_block3a13.PORTAADDR11
+address_a[11] => ram_block3a14.PORTAADDR11
+address_a[11] => ram_block3a15.PORTAADDR11
+address_b[0] => ram_block3a0.PORTBADDR
+address_b[0] => ram_block3a1.PORTBADDR
+address_b[0] => ram_block3a2.PORTBADDR
+address_b[0] => ram_block3a3.PORTBADDR
+address_b[0] => ram_block3a4.PORTBADDR
+address_b[0] => ram_block3a5.PORTBADDR
+address_b[0] => ram_block3a6.PORTBADDR
+address_b[0] => ram_block3a7.PORTBADDR
+address_b[0] => ram_block3a8.PORTBADDR
+address_b[0] => ram_block3a9.PORTBADDR
+address_b[0] => ram_block3a10.PORTBADDR
+address_b[0] => ram_block3a11.PORTBADDR
+address_b[0] => ram_block3a12.PORTBADDR
+address_b[0] => ram_block3a13.PORTBADDR
+address_b[0] => ram_block3a14.PORTBADDR
+address_b[0] => ram_block3a15.PORTBADDR
+address_b[1] => ram_block3a0.PORTBADDR1
+address_b[1] => ram_block3a1.PORTBADDR1
+address_b[1] => ram_block3a2.PORTBADDR1
+address_b[1] => ram_block3a3.PORTBADDR1
+address_b[1] => ram_block3a4.PORTBADDR1
+address_b[1] => ram_block3a5.PORTBADDR1
+address_b[1] => ram_block3a6.PORTBADDR1
+address_b[1] => ram_block3a7.PORTBADDR1
+address_b[1] => ram_block3a8.PORTBADDR1
+address_b[1] => ram_block3a9.PORTBADDR1
+address_b[1] => ram_block3a10.PORTBADDR1
+address_b[1] => ram_block3a11.PORTBADDR1
+address_b[1] => ram_block3a12.PORTBADDR1
+address_b[1] => ram_block3a13.PORTBADDR1
+address_b[1] => ram_block3a14.PORTBADDR1
+address_b[1] => ram_block3a15.PORTBADDR1
+address_b[2] => ram_block3a0.PORTBADDR2
+address_b[2] => ram_block3a1.PORTBADDR2
+address_b[2] => ram_block3a2.PORTBADDR2
+address_b[2] => ram_block3a3.PORTBADDR2
+address_b[2] => ram_block3a4.PORTBADDR2
+address_b[2] => ram_block3a5.PORTBADDR2
+address_b[2] => ram_block3a6.PORTBADDR2
+address_b[2] => ram_block3a7.PORTBADDR2
+address_b[2] => ram_block3a8.PORTBADDR2
+address_b[2] => ram_block3a9.PORTBADDR2
+address_b[2] => ram_block3a10.PORTBADDR2
+address_b[2] => ram_block3a11.PORTBADDR2
+address_b[2] => ram_block3a12.PORTBADDR2
+address_b[2] => ram_block3a13.PORTBADDR2
+address_b[2] => ram_block3a14.PORTBADDR2
+address_b[2] => ram_block3a15.PORTBADDR2
+address_b[3] => ram_block3a0.PORTBADDR3
+address_b[3] => ram_block3a1.PORTBADDR3
+address_b[3] => ram_block3a2.PORTBADDR3
+address_b[3] => ram_block3a3.PORTBADDR3
+address_b[3] => ram_block3a4.PORTBADDR3
+address_b[3] => ram_block3a5.PORTBADDR3
+address_b[3] => ram_block3a6.PORTBADDR3
+address_b[3] => ram_block3a7.PORTBADDR3
+address_b[3] => ram_block3a8.PORTBADDR3
+address_b[3] => ram_block3a9.PORTBADDR3
+address_b[3] => ram_block3a10.PORTBADDR3
+address_b[3] => ram_block3a11.PORTBADDR3
+address_b[3] => ram_block3a12.PORTBADDR3
+address_b[3] => ram_block3a13.PORTBADDR3
+address_b[3] => ram_block3a14.PORTBADDR3
+address_b[3] => ram_block3a15.PORTBADDR3
+address_b[4] => ram_block3a0.PORTBADDR4
+address_b[4] => ram_block3a1.PORTBADDR4
+address_b[4] => ram_block3a2.PORTBADDR4
+address_b[4] => ram_block3a3.PORTBADDR4
+address_b[4] => ram_block3a4.PORTBADDR4
+address_b[4] => ram_block3a5.PORTBADDR4
+address_b[4] => ram_block3a6.PORTBADDR4
+address_b[4] => ram_block3a7.PORTBADDR4
+address_b[4] => ram_block3a8.PORTBADDR4
+address_b[4] => ram_block3a9.PORTBADDR4
+address_b[4] => ram_block3a10.PORTBADDR4
+address_b[4] => ram_block3a11.PORTBADDR4
+address_b[4] => ram_block3a12.PORTBADDR4
+address_b[4] => ram_block3a13.PORTBADDR4
+address_b[4] => ram_block3a14.PORTBADDR4
+address_b[4] => ram_block3a15.PORTBADDR4
+address_b[5] => ram_block3a0.PORTBADDR5
+address_b[5] => ram_block3a1.PORTBADDR5
+address_b[5] => ram_block3a2.PORTBADDR5
+address_b[5] => ram_block3a3.PORTBADDR5
+address_b[5] => ram_block3a4.PORTBADDR5
+address_b[5] => ram_block3a5.PORTBADDR5
+address_b[5] => ram_block3a6.PORTBADDR5
+address_b[5] => ram_block3a7.PORTBADDR5
+address_b[5] => ram_block3a8.PORTBADDR5
+address_b[5] => ram_block3a9.PORTBADDR5
+address_b[5] => ram_block3a10.PORTBADDR5
+address_b[5] => ram_block3a11.PORTBADDR5
+address_b[5] => ram_block3a12.PORTBADDR5
+address_b[5] => ram_block3a13.PORTBADDR5
+address_b[5] => ram_block3a14.PORTBADDR5
+address_b[5] => ram_block3a15.PORTBADDR5
+address_b[6] => ram_block3a0.PORTBADDR6
+address_b[6] => ram_block3a1.PORTBADDR6
+address_b[6] => ram_block3a2.PORTBADDR6
+address_b[6] => ram_block3a3.PORTBADDR6
+address_b[6] => ram_block3a4.PORTBADDR6
+address_b[6] => ram_block3a5.PORTBADDR6
+address_b[6] => ram_block3a6.PORTBADDR6
+address_b[6] => ram_block3a7.PORTBADDR6
+address_b[6] => ram_block3a8.PORTBADDR6
+address_b[6] => ram_block3a9.PORTBADDR6
+address_b[6] => ram_block3a10.PORTBADDR6
+address_b[6] => ram_block3a11.PORTBADDR6
+address_b[6] => ram_block3a12.PORTBADDR6
+address_b[6] => ram_block3a13.PORTBADDR6
+address_b[6] => ram_block3a14.PORTBADDR6
+address_b[6] => ram_block3a15.PORTBADDR6
+address_b[7] => ram_block3a0.PORTBADDR7
+address_b[7] => ram_block3a1.PORTBADDR7
+address_b[7] => ram_block3a2.PORTBADDR7
+address_b[7] => ram_block3a3.PORTBADDR7
+address_b[7] => ram_block3a4.PORTBADDR7
+address_b[7] => ram_block3a5.PORTBADDR7
+address_b[7] => ram_block3a6.PORTBADDR7
+address_b[7] => ram_block3a7.PORTBADDR7
+address_b[7] => ram_block3a8.PORTBADDR7
+address_b[7] => ram_block3a9.PORTBADDR7
+address_b[7] => ram_block3a10.PORTBADDR7
+address_b[7] => ram_block3a11.PORTBADDR7
+address_b[7] => ram_block3a12.PORTBADDR7
+address_b[7] => ram_block3a13.PORTBADDR7
+address_b[7] => ram_block3a14.PORTBADDR7
+address_b[7] => ram_block3a15.PORTBADDR7
+address_b[8] => ram_block3a0.PORTBADDR8
+address_b[8] => ram_block3a1.PORTBADDR8
+address_b[8] => ram_block3a2.PORTBADDR8
+address_b[8] => ram_block3a3.PORTBADDR8
+address_b[8] => ram_block3a4.PORTBADDR8
+address_b[8] => ram_block3a5.PORTBADDR8
+address_b[8] => ram_block3a6.PORTBADDR8
+address_b[8] => ram_block3a7.PORTBADDR8
+address_b[8] => ram_block3a8.PORTBADDR8
+address_b[8] => ram_block3a9.PORTBADDR8
+address_b[8] => ram_block3a10.PORTBADDR8
+address_b[8] => ram_block3a11.PORTBADDR8
+address_b[8] => ram_block3a12.PORTBADDR8
+address_b[8] => ram_block3a13.PORTBADDR8
+address_b[8] => ram_block3a14.PORTBADDR8
+address_b[8] => ram_block3a15.PORTBADDR8
+address_b[9] => ram_block3a0.PORTBADDR9
+address_b[9] => ram_block3a1.PORTBADDR9
+address_b[9] => ram_block3a2.PORTBADDR9
+address_b[9] => ram_block3a3.PORTBADDR9
+address_b[9] => ram_block3a4.PORTBADDR9
+address_b[9] => ram_block3a5.PORTBADDR9
+address_b[9] => ram_block3a6.PORTBADDR9
+address_b[9] => ram_block3a7.PORTBADDR9
+address_b[9] => ram_block3a8.PORTBADDR9
+address_b[9] => ram_block3a9.PORTBADDR9
+address_b[9] => ram_block3a10.PORTBADDR9
+address_b[9] => ram_block3a11.PORTBADDR9
+address_b[9] => ram_block3a12.PORTBADDR9
+address_b[9] => ram_block3a13.PORTBADDR9
+address_b[9] => ram_block3a14.PORTBADDR9
+address_b[9] => ram_block3a15.PORTBADDR9
+address_b[10] => ram_block3a0.PORTBADDR10
+address_b[10] => ram_block3a1.PORTBADDR10
+address_b[10] => ram_block3a2.PORTBADDR10
+address_b[10] => ram_block3a3.PORTBADDR10
+address_b[10] => ram_block3a4.PORTBADDR10
+address_b[10] => ram_block3a5.PORTBADDR10
+address_b[10] => ram_block3a6.PORTBADDR10
+address_b[10] => ram_block3a7.PORTBADDR10
+address_b[10] => ram_block3a8.PORTBADDR10
+address_b[10] => ram_block3a9.PORTBADDR10
+address_b[10] => ram_block3a10.PORTBADDR10
+address_b[10] => ram_block3a11.PORTBADDR10
+address_b[10] => ram_block3a12.PORTBADDR10
+address_b[10] => ram_block3a13.PORTBADDR10
+address_b[10] => ram_block3a14.PORTBADDR10
+address_b[10] => ram_block3a15.PORTBADDR10
+address_b[11] => ram_block3a0.PORTBADDR11
+address_b[11] => ram_block3a1.PORTBADDR11
+address_b[11] => ram_block3a2.PORTBADDR11
+address_b[11] => ram_block3a3.PORTBADDR11
+address_b[11] => ram_block3a4.PORTBADDR11
+address_b[11] => ram_block3a5.PORTBADDR11
+address_b[11] => ram_block3a6.PORTBADDR11
+address_b[11] => ram_block3a7.PORTBADDR11
+address_b[11] => ram_block3a8.PORTBADDR11
+address_b[11] => ram_block3a9.PORTBADDR11
+address_b[11] => ram_block3a10.PORTBADDR11
+address_b[11] => ram_block3a11.PORTBADDR11
+address_b[11] => ram_block3a12.PORTBADDR11
+address_b[11] => ram_block3a13.PORTBADDR11
+address_b[11] => ram_block3a14.PORTBADDR11
+address_b[11] => ram_block3a15.PORTBADDR11
+clock0 => ram_block3a0.CLK0
+clock0 => ram_block3a1.CLK0
+clock0 => ram_block3a2.CLK0
+clock0 => ram_block3a3.CLK0
+clock0 => ram_block3a4.CLK0
+clock0 => ram_block3a5.CLK0
+clock0 => ram_block3a6.CLK0
+clock0 => ram_block3a7.CLK0
+clock0 => ram_block3a8.CLK0
+clock0 => ram_block3a9.CLK0
+clock0 => ram_block3a10.CLK0
+clock0 => ram_block3a11.CLK0
+clock0 => ram_block3a12.CLK0
+clock0 => ram_block3a13.CLK0
+clock0 => ram_block3a14.CLK0
+clock0 => ram_block3a15.CLK0
+clock1 => ram_block3a0.CLK1
+clock1 => ram_block3a1.CLK1
+clock1 => ram_block3a2.CLK1
+clock1 => ram_block3a3.CLK1
+clock1 => ram_block3a4.CLK1
+clock1 => ram_block3a5.CLK1
+clock1 => ram_block3a6.CLK1
+clock1 => ram_block3a7.CLK1
+clock1 => ram_block3a8.CLK1
+clock1 => ram_block3a9.CLK1
+clock1 => ram_block3a10.CLK1
+clock1 => ram_block3a11.CLK1
+clock1 => ram_block3a12.CLK1
+clock1 => ram_block3a13.CLK1
+clock1 => ram_block3a14.CLK1
+clock1 => ram_block3a15.CLK1
+data_a[0] => ram_block3a0.PORTADATAIN
+data_a[1] => ram_block3a1.PORTADATAIN
+data_a[2] => ram_block3a2.PORTADATAIN
+data_a[3] => ram_block3a3.PORTADATAIN
+data_a[4] => ram_block3a4.PORTADATAIN
+data_a[5] => ram_block3a5.PORTADATAIN
+data_a[6] => ram_block3a6.PORTADATAIN
+data_a[7] => ram_block3a7.PORTADATAIN
+data_a[8] => ram_block3a8.PORTADATAIN
+data_a[9] => ram_block3a9.PORTADATAIN
+data_a[10] => ram_block3a10.PORTADATAIN
+data_a[11] => ram_block3a11.PORTADATAIN
+data_a[12] => ram_block3a12.PORTADATAIN
+data_a[13] => ram_block3a13.PORTADATAIN
+data_a[14] => ram_block3a14.PORTADATAIN
+data_a[15] => ram_block3a15.PORTADATAIN
+data_b[0] => ram_block3a0.PORTBDATAIN
+data_b[1] => ram_block3a1.PORTBDATAIN
+data_b[2] => ram_block3a2.PORTBDATAIN
+data_b[3] => ram_block3a3.PORTBDATAIN
+data_b[4] => ram_block3a4.PORTBDATAIN
+data_b[5] => ram_block3a5.PORTBDATAIN
+data_b[6] => ram_block3a6.PORTBDATAIN
+data_b[7] => ram_block3a7.PORTBDATAIN
+data_b[8] => ram_block3a8.PORTBDATAIN
+data_b[9] => ram_block3a9.PORTBDATAIN
+data_b[10] => ram_block3a10.PORTBDATAIN
+data_b[11] => ram_block3a11.PORTBDATAIN
+data_b[12] => ram_block3a12.PORTBDATAIN
+data_b[13] => ram_block3a13.PORTBDATAIN
+data_b[14] => ram_block3a14.PORTBDATAIN
+data_b[15] => ram_block3a15.PORTBDATAIN
+q_a[0] <= ram_block3a0.PORTADATAOUT
+q_a[1] <= ram_block3a1.PORTADATAOUT
+q_a[2] <= ram_block3a2.PORTADATAOUT
+q_a[3] <= ram_block3a3.PORTADATAOUT
+q_a[4] <= ram_block3a4.PORTADATAOUT
+q_a[5] <= ram_block3a5.PORTADATAOUT
+q_a[6] <= ram_block3a6.PORTADATAOUT
+q_a[7] <= ram_block3a7.PORTADATAOUT
+q_a[8] <= ram_block3a8.PORTADATAOUT
+q_a[9] <= ram_block3a9.PORTADATAOUT
+q_a[10] <= ram_block3a10.PORTADATAOUT
+q_a[11] <= ram_block3a11.PORTADATAOUT
+q_a[12] <= ram_block3a12.PORTADATAOUT
+q_a[13] <= ram_block3a13.PORTADATAOUT
+q_a[14] <= ram_block3a14.PORTADATAOUT
+q_a[15] <= ram_block3a15.PORTADATAOUT
+q_b[0] <= ram_block3a0.PORTBDATAOUT
+q_b[1] <= ram_block3a1.PORTBDATAOUT
+q_b[2] <= ram_block3a2.PORTBDATAOUT
+q_b[3] <= ram_block3a3.PORTBDATAOUT
+q_b[4] <= ram_block3a4.PORTBDATAOUT
+q_b[5] <= ram_block3a5.PORTBDATAOUT
+q_b[6] <= ram_block3a6.PORTBDATAOUT
+q_b[7] <= ram_block3a7.PORTBDATAOUT
+q_b[8] <= ram_block3a8.PORTBDATAOUT
+q_b[9] <= ram_block3a9.PORTBDATAOUT
+q_b[10] <= ram_block3a10.PORTBDATAOUT
+q_b[11] <= ram_block3a11.PORTBDATAOUT
+q_b[12] <= ram_block3a12.PORTBDATAOUT
+q_b[13] <= ram_block3a13.PORTBDATAOUT
+q_b[14] <= ram_block3a14.PORTBDATAOUT
+q_b[15] <= ram_block3a15.PORTBDATAOUT
+wren_a => ram_block3a0.PORTAWE
+wren_a => ram_block3a1.PORTAWE
+wren_a => ram_block3a2.PORTAWE
+wren_a => ram_block3a3.PORTAWE
+wren_a => ram_block3a4.PORTAWE
+wren_a => ram_block3a5.PORTAWE
+wren_a => ram_block3a6.PORTAWE
+wren_a => ram_block3a7.PORTAWE
+wren_a => ram_block3a8.PORTAWE
+wren_a => ram_block3a9.PORTAWE
+wren_a => ram_block3a10.PORTAWE
+wren_a => ram_block3a11.PORTAWE
+wren_a => ram_block3a12.PORTAWE
+wren_a => ram_block3a13.PORTAWE
+wren_a => ram_block3a14.PORTAWE
+wren_a => ram_block3a15.PORTAWE
+wren_b => ram_block3a0.PORTBRE
+wren_b => ram_block3a1.PORTBRE
+wren_b => ram_block3a2.PORTBRE
+wren_b => ram_block3a3.PORTBRE
+wren_b => ram_block3a4.PORTBRE
+wren_b => ram_block3a5.PORTBRE
+wren_b => ram_block3a6.PORTBRE
+wren_b => ram_block3a7.PORTBRE
+wren_b => ram_block3a8.PORTBRE
+wren_b => ram_block3a9.PORTBRE
+wren_b => ram_block3a10.PORTBRE
+wren_b => ram_block3a11.PORTBRE
+wren_b => ram_block3a12.PORTBRE
+wren_b => ram_block3a13.PORTBRE
+wren_b => ram_block3a14.PORTBRE
+wren_b => ram_block3a15.PORTBRE
+
+
+|jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2
+tck_usr <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
+address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+address[2] <= ram_rom_addr_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+address[3] <= ram_rom_addr_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+address[4] <= ram_rom_addr_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+address[5] <= ram_rom_addr_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+address[6] <= ram_rom_addr_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+address[7] <= ram_rom_addr_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+address[8] <= ram_rom_addr_reg[8].DB_MAX_OUTPUT_PORT_TYPE
+address[9] <= ram_rom_addr_reg[9].DB_MAX_OUTPUT_PORT_TYPE
+address[10] <= ram_rom_addr_reg[10].DB_MAX_OUTPUT_PORT_TYPE
+address[11] <= ram_rom_addr_reg[11].DB_MAX_OUTPUT_PORT_TYPE
+enable_write <= enable_write.DB_MAX_OUTPUT_PORT_TYPE
+data_write[0] <= ram_rom_data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_write[1] <= ram_rom_data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_write[2] <= ram_rom_data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_write[3] <= ram_rom_data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+data_write[4] <= ram_rom_data_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+data_write[5] <= ram_rom_data_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+data_write[6] <= ram_rom_data_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+data_write[7] <= ram_rom_data_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+data_write[8] <= ram_rom_data_reg[8].DB_MAX_OUTPUT_PORT_TYPE
+data_write[9] <= ram_rom_data_reg[9].DB_MAX_OUTPUT_PORT_TYPE
+data_write[10] <= ram_rom_data_reg[10].DB_MAX_OUTPUT_PORT_TYPE
+data_write[11] <= ram_rom_data_reg[11].DB_MAX_OUTPUT_PORT_TYPE
+data_write[12] <= ram_rom_data_reg[12].DB_MAX_OUTPUT_PORT_TYPE
+data_write[13] <= ram_rom_data_reg[13].DB_MAX_OUTPUT_PORT_TYPE
+data_write[14] <= ram_rom_data_reg[14].DB_MAX_OUTPUT_PORT_TYPE
+data_write[15] <= ram_rom_data_reg[15].DB_MAX_OUTPUT_PORT_TYPE
+data_read[0] => ram_rom_data_reg.DATAB
+data_read[1] => ram_rom_data_reg.DATAB
+data_read[2] => ram_rom_data_reg.DATAB
+data_read[3] => ram_rom_data_reg.DATAB
+data_read[4] => ram_rom_data_reg.DATAB
+data_read[5] => ram_rom_data_reg.DATAB
+data_read[6] => ram_rom_data_reg.DATAB
+data_read[7] => ram_rom_data_reg.DATAB
+data_read[8] => ram_rom_data_reg.DATAB
+data_read[9] => ram_rom_data_reg.DATAB
+data_read[10] => ram_rom_data_reg.DATAB
+data_read[11] => ram_rom_data_reg.DATAB
+data_read[12] => ram_rom_data_reg.DATAB
+data_read[13] => ram_rom_data_reg.DATAB
+data_read[14] => ram_rom_data_reg.DATAB
+data_read[15] => ram_rom_data_reg.DATAB
+raw_tck => is_in_use_reg.CLK
+raw_tck => bypass_reg_out.CLK
+raw_tck => ir_loaded_address_reg[0].CLK
+raw_tck => ir_loaded_address_reg[1].CLK
+raw_tck => ir_loaded_address_reg[2].CLK
+raw_tck => ir_loaded_address_reg[3].CLK
+raw_tck => ram_rom_data_shift_cntr_reg[0].CLK
+raw_tck => ram_rom_data_shift_cntr_reg[1].CLK
+raw_tck => ram_rom_data_shift_cntr_reg[2].CLK
+raw_tck => ram_rom_data_shift_cntr_reg[3].CLK
+raw_tck => ram_rom_data_shift_cntr_reg[4].CLK
+raw_tck => ram_rom_data_reg[0].CLK
+raw_tck => ram_rom_data_reg[1].CLK
+raw_tck => ram_rom_data_reg[2].CLK
+raw_tck => ram_rom_data_reg[3].CLK
+raw_tck => ram_rom_data_reg[4].CLK
+raw_tck => ram_rom_data_reg[5].CLK
+raw_tck => ram_rom_data_reg[6].CLK
+raw_tck => ram_rom_data_reg[7].CLK
+raw_tck => ram_rom_data_reg[8].CLK
+raw_tck => ram_rom_data_reg[9].CLK
+raw_tck => ram_rom_data_reg[10].CLK
+raw_tck => ram_rom_data_reg[11].CLK
+raw_tck => ram_rom_data_reg[12].CLK
+raw_tck => ram_rom_data_reg[13].CLK
+raw_tck => ram_rom_data_reg[14].CLK
+raw_tck => ram_rom_data_reg[15].CLK
+raw_tck => ram_rom_addr_reg[0].CLK
+raw_tck => ram_rom_addr_reg[1].CLK
+raw_tck => ram_rom_addr_reg[2].CLK
+raw_tck => ram_rom_addr_reg[3].CLK
+raw_tck => ram_rom_addr_reg[4].CLK
+raw_tck => ram_rom_addr_reg[5].CLK
+raw_tck => ram_rom_addr_reg[6].CLK
+raw_tck => ram_rom_addr_reg[7].CLK
+raw_tck => ram_rom_addr_reg[8].CLK
+raw_tck => ram_rom_addr_reg[9].CLK
+raw_tck => ram_rom_addr_reg[10].CLK
+raw_tck => ram_rom_addr_reg[11].CLK
+raw_tck => sld_rom_sr:ram_rom_logic_gen:no_name_gen:info_rom_sr.TCK
+raw_tck => tck_usr.DATAIN
+tdi => ram_rom_addr_reg.DATAB
+tdi => ram_rom_data_reg.DATAB
+tdi => sld_rom_sr:ram_rom_logic_gen:no_name_gen:info_rom_sr.TDI
+tdi => bypass_reg_out.DATAIN
+usr1 => sld_rom_sr:ram_rom_logic_gen:no_name_gen:info_rom_sr.USR1
+usr1 => dr_scan.IN0
+usr1 => no_name_gen.IN0
+jtag_state_cdr => no_name_gen.IN0
+jtag_state_sdr => sdr.IN1
+jtag_state_sdr => no_name_gen.IN1
+jtag_state_sdr => sld_rom_sr:ram_rom_logic_gen:no_name_gen:info_rom_sr.SHIFT
+jtag_state_e1dr => ram_rom_update_write_ena.IN1
+jtag_state_udr => udr.IN1
+jtag_state_udr => sld_rom_sr:ram_rom_logic_gen:no_name_gen:info_rom_sr.UPDATE
+jtag_state_uir => ~NO_FANOUT~
+clr => is_in_use_reg.ACLR
+clr => bypass_reg_out.ACLR
+ena => dr_scan.IN1
+ena => no_name_gen.IN1
+ena => bypass_reg_out.ENA
+ir_in[0] => process_0.IN0
+ir_in[0] => tdo.OUTPUTSELECT
+ir_in[0] => is_in_use_reg.OUTPUTSELECT
+ir_in[0] => ram_rom_addr_reg[0].ACLR
+ir_in[0] => ram_rom_addr_reg[1].ACLR
+ir_in[0] => ram_rom_addr_reg[2].ACLR
+ir_in[0] => ram_rom_addr_reg[3].ACLR
+ir_in[0] => ram_rom_addr_reg[4].ACLR
+ir_in[0] => ram_rom_addr_reg[5].ACLR
+ir_in[0] => ram_rom_addr_reg[6].ACLR
+ir_in[0] => ram_rom_addr_reg[7].ACLR
+ir_in[0] => ram_rom_addr_reg[8].ACLR
+ir_in[0] => ram_rom_addr_reg[9].ACLR
+ir_in[0] => ram_rom_addr_reg[10].ACLR
+ir_in[0] => ram_rom_addr_reg[11].ACLR
+ir_in[1] => process_0.IN1
+ir_in[1] => process_0.IN0
+ir_in[1] => ram_rom_incr_addr.IN1
+ir_in[2] => process_0.IN1
+ir_in[2] => ram_rom_incr_addr.IN1
+ir_in[2] => enable_write.IN1
+ir_in[3] => process_0.IN1
+ir_in[3] => process_0.IN1
+ir_in[3] => process_0.IN1
+ir_in[3] => ram_rom_data_shift_cntr_reg[0].ACLR
+ir_in[3] => ram_rom_data_shift_cntr_reg[1].ACLR
+ir_in[3] => ram_rom_data_shift_cntr_reg[2].ACLR
+ir_in[3] => ram_rom_data_shift_cntr_reg[3].ACLR
+ir_in[3] => ram_rom_data_shift_cntr_reg[4].ACLR
+ir_in[4] => process_0.IN1
+ir_in[4] => is_in_use_reg.OUTPUTSELECT
+ir_out[0] <= is_in_use_reg.DB_MAX_OUTPUT_PORT_TYPE
+ir_out[1] <= ir_loaded_address_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+ir_out[2] <= ir_loaded_address_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+ir_out[3] <= ir_loaded_address_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+ir_out[4] <= ir_loaded_address_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+tdo <= tdo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr
+ROM_DATA[0] => Mux3.IN66
+ROM_DATA[1] => Mux2.IN66
+ROM_DATA[2] => Mux1.IN66
+ROM_DATA[3] => Mux0.IN66
+ROM_DATA[4] => Mux3.IN62
+ROM_DATA[5] => Mux2.IN62
+ROM_DATA[6] => Mux1.IN62
+ROM_DATA[7] => Mux0.IN62
+ROM_DATA[8] => Mux3.IN58
+ROM_DATA[9] => Mux2.IN58
+ROM_DATA[10] => Mux1.IN58
+ROM_DATA[11] => Mux0.IN58
+ROM_DATA[12] => Mux3.IN54
+ROM_DATA[13] => Mux2.IN54
+ROM_DATA[14] => Mux1.IN54
+ROM_DATA[15] => Mux0.IN54
+ROM_DATA[16] => Mux3.IN50
+ROM_DATA[17] => Mux2.IN50
+ROM_DATA[18] => Mux1.IN50
+ROM_DATA[19] => Mux0.IN50
+ROM_DATA[20] => Mux3.IN46
+ROM_DATA[21] => Mux2.IN46
+ROM_DATA[22] => Mux1.IN46
+ROM_DATA[23] => Mux0.IN46
+ROM_DATA[24] => Mux3.IN42
+ROM_DATA[25] => Mux2.IN42
+ROM_DATA[26] => Mux1.IN42
+ROM_DATA[27] => Mux0.IN42
+ROM_DATA[28] => Mux3.IN38
+ROM_DATA[29] => Mux2.IN38
+ROM_DATA[30] => Mux1.IN38
+ROM_DATA[31] => Mux0.IN38
+ROM_DATA[32] => Mux3.IN34
+ROM_DATA[33] => Mux2.IN34
+ROM_DATA[34] => Mux1.IN34
+ROM_DATA[35] => Mux0.IN34
+ROM_DATA[36] => Mux3.IN30
+ROM_DATA[37] => Mux2.IN30
+ROM_DATA[38] => Mux1.IN30
+ROM_DATA[39] => Mux0.IN30
+ROM_DATA[40] => Mux3.IN26
+ROM_DATA[41] => Mux2.IN26
+ROM_DATA[42] => Mux1.IN26
+ROM_DATA[43] => Mux0.IN26
+ROM_DATA[44] => Mux3.IN22
+ROM_DATA[45] => Mux2.IN22
+ROM_DATA[46] => Mux1.IN22
+ROM_DATA[47] => Mux0.IN22
+TCK => WORD_SR[0].CLK
+TCK => WORD_SR[1].CLK
+TCK => WORD_SR[2].CLK
+TCK => WORD_SR[3].CLK
+TCK => word_counter[0].CLK
+TCK => word_counter[1].CLK
+TCK => word_counter[2].CLK
+TCK => word_counter[3].CLK
+SHIFT => word_counter.OUTPUTSELECT
+SHIFT => word_counter.OUTPUTSELECT
+SHIFT => word_counter.OUTPUTSELECT
+SHIFT => word_counter.OUTPUTSELECT
+SHIFT => WORD_SR.OUTPUTSELECT
+SHIFT => WORD_SR.OUTPUTSELECT
+SHIFT => WORD_SR.OUTPUTSELECT
+SHIFT => WORD_SR.OUTPUTSELECT
+UPDATE => clear_signal.IN0
+USR1 => clear_signal.IN1
+ENA => word_counter.OUTPUTSELECT
+ENA => word_counter.OUTPUTSELECT
+ENA => word_counter.OUTPUTSELECT
+ENA => word_counter.OUTPUTSELECT
+ENA => WORD_SR.OUTPUTSELECT
+ENA => WORD_SR.OUTPUTSELECT
+ENA => WORD_SR.OUTPUTSELECT
+ENA => WORD_SR.OUTPUTSELECT
+TDI => WORD_SR.DATAA
+TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc:Pchan
 pcover <= 16bitadd2:add2.overflow
 clk => dffqq[15].CLK
 clk => dffqq[14].CLK
@@ -83,7 +1030,7 @@ PC[14] <= 16bitadd2:add2.OUT[14]
 PC[15] <= 16bitadd2:add2.OUT[15]
 
 
-|jikken|pc:pchan|16bitadd2:add2
+|jikken|pc:Pchan|16bitadd2:add2
 overflow <= 16bitadd:inst.overflow
 INa[0] => 16bitadd:inst.a1
 INa[1] => 16bitadd:inst.a2
@@ -135,7 +1082,7 @@ OUT[14] <= 16bitadd:inst.15
 OUT[15] <= 16bitadd:inst.16
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst
 overflow <= all-add:inst9.C
 a16 => all-add:inst9.a
 b16 => all-add:inst9.b
@@ -187,7 +1134,7 @@ b1 => half-add:inst.b
 1 <= half-add:inst.S
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -195,7 +1142,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -204,7 +1151,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -213,7 +1160,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst10
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst10
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -221,7 +1168,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst10|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst10|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -230,7 +1177,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst10|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst10|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -239,7 +1186,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst11
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst11
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -247,7 +1194,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst11|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst11|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -256,7 +1203,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst11|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst11|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -265,7 +1212,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst12
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst12
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -273,7 +1220,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst12|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst12|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -282,7 +1229,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst12|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst12|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -291,7 +1238,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst13
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst13
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -299,7 +1246,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst13|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst13|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -308,7 +1255,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst13|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst13|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -317,7 +1264,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst14
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst14
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -325,7 +1272,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst14|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst14|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -334,7 +1281,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst14|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst14|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -343,7 +1290,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst15
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst15
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -351,7 +1298,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst15|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst15|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -360,7 +1307,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst15|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst15|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -369,7 +1316,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst16
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst16
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -377,7 +1324,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst16|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst16|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -386,7 +1333,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst16|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst16|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -395,7 +1342,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst8
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst8
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -403,7 +1350,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst8|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst8|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -412,7 +1359,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst8|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst8|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -421,7 +1368,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst7
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst7
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -429,7 +1376,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst7|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst7|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -438,7 +1385,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst7|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst7|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -447,7 +1394,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst6
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst6
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -455,7 +1402,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst6|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst6|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -464,7 +1411,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst6|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst6|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -473,7 +1420,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst5
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst5
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -481,7 +1428,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst5|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst5|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -490,7 +1437,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst5|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst5|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -499,7 +1446,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst4
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst4
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -507,7 +1454,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst4|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst4|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -516,7 +1463,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst4|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst4|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -525,7 +1472,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst3
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst3
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -533,7 +1480,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst3|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst3|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -542,7 +1489,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst3|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst3|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -551,7 +1498,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst2
 S <= half-add:half1.S
 a => half-add:half2.a
 b => half-add:half2.b
@@ -559,7 +1506,7 @@ x => half-add:half1.b
 C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst2|half-add:half1
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst2|half-add:half1
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -568,7 +1515,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst2|half-add:half2
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst2|half-add:half2
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -577,7 +1524,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|half-add:inst
+|jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|half-add:inst
 S <= inst.DB_MAX_OUTPUT_PORT_TYPE
 a => inst.IN0
 a => inst2.IN0
@@ -586,7 +1533,7 @@ b => inst2.IN1
 Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|kadai1:4noketa
+|jikken|kadai1:out2
 y0 <= y0noor.DB_MAX_OUTPUT_PORT_TYPE
 a => y0noor.IN0
 a => atob.IN0
@@ -625,7 +1572,7 @@ y5 <= y5noor.DB_MAX_OUTPUT_PORT_TYPE
 y6 <= y6noor.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|kadai1:3noketa
+|jikken|kadai1:out3
 y0 <= y0noor.DB_MAX_OUTPUT_PORT_TYPE
 a => y0noor.IN0
 a => atob.IN0
@@ -664,46 +1611,7 @@ y5 <= y5noor.DB_MAX_OUTPUT_PORT_TYPE
 y6 <= y6noor.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|kadai1:ninoketast4
-y0 <= y0noor.DB_MAX_OUTPUT_PORT_TYPE
-a => y0noor.IN0
-a => atob.IN0
-a => ~a.IN0
-a => ab.IN0
-a => a~d.IN0
-a => ac.IN0
-a => a~c.IN0
-b => btoc.IN0
-b => atob.IN1
-b => bc.IN0
-b => ab.IN1
-b => ~b.IN0
-b => bd.IN0
-b => btod.IN1
-c => btoc.IN1
-c => c~d.IN0
-c => ~c.IN0
-c => bc.IN1
-c => ac.IN1
-c => cbtod.IN0
-c => ctodnot.IN0
-c => ~ac.IN1
-d => ~d.IN0
-d => bd.IN1
-d => btod.IN0
-d => ~cd.IN1
-d => ~ad.IN0
-d => a~cd.IN1
-d => ctodnot.IN1
-y1 <= y1noor.DB_MAX_OUTPUT_PORT_TYPE
-y2 <= y2noor.DB_MAX_OUTPUT_PORT_TYPE
-y3 <= y3noor.DB_MAX_OUTPUT_PORT_TYPE
-y4 <= y4noor.DB_MAX_OUTPUT_PORT_TYPE
-y5 <= y5noor.DB_MAX_OUTPUT_PORT_TYPE
-y6 <= y6noor.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|jikken|kadai1:inoketa
+|jikken|kadai1:out4
 y0 <= y0noor.DB_MAX_OUTPUT_PORT_TYPE
 a => y0noor.IN0
 a => atob.IN0

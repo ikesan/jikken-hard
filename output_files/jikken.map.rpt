@@ -1,5 +1,5 @@
 Analysis & Synthesis report for jikken
-Fri Jun 10 16:59:45 2016
+Fri Jun 10 17:39:19 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -13,10 +13,18 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1
+ 15. Parameter Settings for User Entity Instance: ram2:ram2|altsyncram:altsyncram_component
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. In-System Memory Content Editor Settings
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -42,15 +50,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                   ;
 +-----------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Jun 10 16:59:45 2016            ;
+; Analysis & Synthesis Status ; Successful - Fri Jun 10 17:39:19 2016            ;
 ; Quartus II 32-bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name               ; jikken                                           ;
 ; Top-level Entity Name       ; jikken                                           ;
 ; Family                      ; Cyclone                                          ;
-; Total logic elements        ; 61                                               ;
-; Total pins                  ; 30                                               ;
+; Total logic elements        ; 273                                              ;
+; Total pins                  ; 29                                               ;
 ; Total virtual pins          ; 0                                                ;
-; Total memory bits           ; 0                                                ;
+; Total memory bits           ; 65,536                                           ;
 ; Total PLLs                  ; 0                                                ;
 +-----------------------------+--------------------------------------------------+
 
@@ -154,96 +162,139 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------------------+----------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                 ; Library ;
-+----------------------------------+-----------------+------------------------------------------+----------------------------------------------+---------+
-; jikken.bdf                       ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/jikken.bdf    ;         ;
-; half-add.bdf                     ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/half-add.bdf  ;         ;
-; all-add.bdf                      ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/all-add.bdf   ;         ;
-; 16bitadd.bdf                     ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/16bitadd.bdf  ;         ;
-; 16bitadd2.bdf                    ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/16bitadd2.bdf ;         ;
-; pc.bdf                           ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/pc.bdf        ;         ;
-; kadai1.bdf                       ; yes             ; Auto-Found Block Diagram/Schematic File  ; /home/014/a0147044/jikken-hard/kadai1.bdf    ;         ;
-+----------------------------------+-----------------+------------------------------------------+----------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path               ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                              ; Library ;
++------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------+---------+
+; jikken.bdf                                     ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/jikken.bdf                                 ;         ;
+; ram2.vhd                                       ; yes             ; User Wizard-Generated File               ; /home/014/a0147044/jikken-hard/ram2.vhd                                   ;         ;
+; half-add.bdf                                   ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/half-add.bdf                               ;         ;
+; all-add.bdf                                    ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/all-add.bdf                                ;         ;
+; 16bitadd.bdf                                   ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/16bitadd.bdf                               ;         ;
+; 16bitadd2.bdf                                  ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/16bitadd2.bdf                              ;         ;
+; pc.bdf                                         ; yes             ; User Block Diagram/Schematic File        ; /home/014/a0147044/jikken-hard/pc.bdf                                     ;         ;
+; kadai1.bdf                                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; /home/014/a0147044/jikken-hard/kadai1.bdf                                 ;         ;
+; altsyncram.tdf                                 ; yes             ; Megafunction                             ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc                          ; yes             ; Megafunction                             ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                                    ; yes             ; Megafunction                             ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                                 ; yes             ; Megafunction                             ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                                 ; yes             ; Megafunction                             ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                                  ; yes             ; Megafunction                             ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                                     ; yes             ; Megafunction                             ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                                     ; yes             ; Megafunction                             ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                                   ; yes             ; Megafunction                             ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_obh1.tdf                         ; yes             ; Auto-Generated Megafunction              ; /home/014/a0147044/jikken-hard/db/altsyncram_obh1.tdf                     ;         ;
+; db/altsyncram_rqc2.tdf                         ; yes             ; Auto-Generated Megafunction              ; /home/014/a0147044/jikken-hard/db/altsyncram_rqc2.tdf                     ;         ;
+; /export/home/014/a0147044/processer/meirei.hex ; yes             ; Auto-Found Memory Initialization File    ; /export/home/014/a0147044/processer/meirei.hex                            ;         ;
+; sld_mod_ram_rom.vhd                            ; yes             ; Encrypted Megafunction                   ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd   ;         ;
+; sld_rom_sr.vhd                                 ; yes             ; Encrypted Megafunction                   ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/sld_rom_sr.vhd        ;         ;
+; sld_hub.vhd                                    ; yes             ; Encrypted Megafunction                   ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/sld_hub.vhd           ;         ;
+; sld_jtag_hub.vhd                               ; yes             ; Encrypted Megafunction                   ; /opt/altera/13.0sp1/quartus/libraries/megafunctions/sld_jtag_hub.vhd      ;         ;
++------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Total logic elements                        ; 61    ;
-;     -- Combinational with no register       ; 45    ;
-;     -- Register only                        ; 12    ;
-;     -- Combinational with a register        ; 4     ;
-;                                             ;       ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 38    ;
-;     -- 3 input functions                    ; 5     ;
-;     -- 2 input functions                    ; 5     ;
-;     -- 1 input functions                    ; 1     ;
-;     -- 0 input functions                    ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 61    ;
-;     -- arithmetic mode                      ; 0     ;
-;     -- qfbk mode                            ; 0     ;
-;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 16    ;
-; I/O pins                                    ; 30    ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 16    ;
-; Total fan-out                               ; 235   ;
-; Average fan-out                             ; 2.58  ;
-+---------------------------------------------+-------+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Total logic elements                        ; 273                      ;
+;     -- Combinational with no register       ; 134                      ;
+;     -- Register only                        ; 39                       ;
+;     -- Combinational with a register        ; 100                      ;
+;                                             ;                          ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 105                      ;
+;     -- 3 input functions                    ; 56                       ;
+;     -- 2 input functions                    ; 60                       ;
+;     -- 1 input functions                    ; 11                       ;
+;     -- 0 input functions                    ; 2                        ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 250                      ;
+;     -- arithmetic mode                      ; 23                       ;
+;     -- qfbk mode                            ; 0                        ;
+;     -- register cascade mode                ; 0                        ;
+;     -- synchronous clear/load mode          ; 37                       ;
+;     -- asynchronous clear/load mode         ; 51                       ;
+;                                             ;                          ;
+; Total registers                             ; 139                      ;
+; Total logic cells in carry chains           ; 27                       ;
+; I/O pins                                    ; 29                       ;
+; Total memory bits                           ; 65536                    ;
+; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
+; Maximum fan-out                             ; 150                      ;
+; Total fan-out                               ; 1549                     ;
+; Average fan-out                             ; 4.80                     ;
++---------------------------------------------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
-+---------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                         ; Library Name ;
-+---------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------+--------------+
-; |jikken                         ; 61 (0)      ; 16           ; 0           ; 30   ; 0            ; 45 (0)       ; 12 (0)            ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |jikken                                                                     ; work         ;
-;    |kadai1:3noketa|             ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|kadai1:3noketa                                                      ; work         ;
-;    |kadai1:4noketa|             ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|kadai1:4noketa                                                      ; work         ;
-;    |kadai1:inoketa|             ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|kadai1:inoketa                                                      ; work         ;
-;    |kadai1:ninoketast4|         ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|kadai1:ninoketast4                                                  ; work         ;
-;    |pc:pchan|                   ; 33 (16)     ; 16           ; 0           ; 0    ; 0            ; 17 (0)       ; 12 (12)           ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan                                                            ; work         ;
-;       |16bitadd2:add2|          ; 17 (0)      ; 0            ; 0           ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2                                             ; work         ;
-;          |16bitadd:inst|        ; 17 (0)      ; 0            ; 0           ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst                               ; work         ;
-;             |all-add:inst10|    ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst10                ; work         ;
-;                |half-add:half1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst10|half-add:half1 ; work         ;
-;             |all-add:inst11|    ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst11                ; work         ;
-;                |half-add:half1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst11|half-add:half1 ; work         ;
-;             |all-add:inst12|    ; 2 (0)       ; 0            ; 0           ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst12                ; work         ;
-;                |half-add:half1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst12|half-add:half1 ; work         ;
-;             |all-add:inst13|    ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst13                ; work         ;
-;                |half-add:half1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst13|half-add:half1 ; work         ;
-;             |all-add:inst14|    ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst14                ; work         ;
-;                |half-add:half1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst14|half-add:half1 ; work         ;
-;             |all-add:inst15|    ; 2 (0)       ; 0            ; 0           ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst15                ; work         ;
-;                |half-add:half1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst15|half-add:half1 ; work         ;
-;             |all-add:inst16|    ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst16                ; work         ;
-;                |half-add:half1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst16|half-add:half1 ; work         ;
-;             |all-add:inst4|     ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst4                 ; work         ;
-;                |half-add:half1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst4|half-add:half1  ; work         ;
-;             |all-add:inst5|     ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst5                 ; work         ;
-;                |half-add:half1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst5|half-add:half1  ; work         ;
-;             |all-add:inst6|     ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst6                 ; work         ;
-;                |half-add:half1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst6|half-add:half1  ; work         ;
-;             |all-add:inst7|     ; 2 (0)       ; 0            ; 0           ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst7                 ; work         ;
-;                |half-add:half1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst7|half-add:half1  ; work         ;
-;             |all-add:inst8|     ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst8                 ; work         ;
-;                |half-add:half1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst8|half-add:half1  ; work         ;
-;             |all-add:inst9|     ; 2 (0)       ; 0            ; 0           ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9                 ; work         ;
-;                |half-add:half1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9|half-add:half1  ; work         ;
-+---------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                            ;
++------------------------------------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                             ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                                              ; Library Name ;
++------------------------------------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |jikken                                                                ; 273 (1)     ; 139          ; 65536       ; 29   ; 0            ; 134 (1)      ; 39 (0)            ; 100 (0)          ; 27 (0)          ; 0 (0)      ; |jikken                                                                                                                                                          ; work         ;
+;    |kadai1:out1|                                                       ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|kadai1:out1                                                                                                                                              ; work         ;
+;    |kadai1:out2|                                                       ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|kadai1:out2                                                                                                                                              ; work         ;
+;    |kadai1:out3|                                                       ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|kadai1:out3                                                                                                                                              ; work         ;
+;    |kadai1:out4|                                                       ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|kadai1:out4                                                                                                                                              ; work         ;
+;    |pc:Pchan|                                                          ; 27 (13)     ; 12           ; 0           ; 0    ; 0            ; 15 (1)       ; 11 (11)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan                                                                                                                                                 ; work         ;
+;       |16bitadd2:add2|                                                 ; 14 (0)      ; 0            ; 0           ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2                                                                                                                                  ; work         ;
+;          |16bitadd:inst|                                               ; 14 (0)      ; 0            ; 0           ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst                                                                                                                    ; work         ;
+;             |all-add:inst13|                                           ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst13                                                                                                     ; work         ;
+;                |half-add:half1|                                        ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst13|half-add:half1                                                                                      ; work         ;
+;             |all-add:inst14|                                           ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst14                                                                                                     ; work         ;
+;                |half-add:half1|                                        ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst14|half-add:half1                                                                                      ; work         ;
+;             |all-add:inst15|                                           ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst15                                                                                                     ; work         ;
+;                |half-add:half1|                                        ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst15|half-add:half1                                                                                      ; work         ;
+;             |all-add:inst16|                                           ; 2 (0)       ; 0            ; 0           ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst16                                                                                                     ; work         ;
+;                |half-add:half1|                                        ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst16|half-add:half1                                                                                      ; work         ;
+;             |all-add:inst2|                                            ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst2                                                                                                      ; work         ;
+;                |half-add:half1|                                        ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst2|half-add:half1                                                                                       ; work         ;
+;             |all-add:inst3|                                            ; 2 (0)       ; 0            ; 0           ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst3                                                                                                      ; work         ;
+;                |half-add:half1|                                        ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst3|half-add:half1                                                                                       ; work         ;
+;             |all-add:inst4|                                            ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst4                                                                                                      ; work         ;
+;                |half-add:half1|                                        ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst4|half-add:half1                                                                                       ; work         ;
+;             |all-add:inst5|                                            ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst5                                                                                                      ; work         ;
+;                |half-add:half1|                                        ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst5|half-add:half1                                                                                       ; work         ;
+;             |all-add:inst6|                                            ; 2 (0)       ; 0            ; 0           ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst6                                                                                                      ; work         ;
+;                |half-add:half1|                                        ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst6|half-add:half1                                                                                       ; work         ;
+;             |all-add:inst7|                                            ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst7                                                                                                      ; work         ;
+;                |half-add:half1|                                        ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst7|half-add:half1                                                                                       ; work         ;
+;             |all-add:inst8|                                            ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst8                                                                                                      ; work         ;
+;                |half-add:half1|                                        ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst8|half-add:half1                                                                                       ; work         ;
+;    |ram2:ram2|                                                         ; 74 (0)      ; 47           ; 65536       ; 0    ; 0            ; 27 (0)       ; 4 (0)             ; 43 (0)           ; 17 (0)          ; 0 (0)      ; |jikken|ram2:ram2                                                                                                                                                ; work         ;
+;       |altsyncram:altsyncram_component|                                ; 74 (0)      ; 47           ; 65536       ; 0    ; 0            ; 27 (0)       ; 4 (0)             ; 43 (0)           ; 17 (0)          ; 0 (0)      ; |jikken|ram2:ram2|altsyncram:altsyncram_component                                                                                                                ; work         ;
+;          |altsyncram_obh1:auto_generated|                              ; 74 (0)      ; 47           ; 65536       ; 0    ; 0            ; 27 (0)       ; 4 (0)             ; 43 (0)           ; 17 (0)          ; 0 (0)      ; |jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated                                                                                 ; work         ;
+;             |altsyncram_rqc2:altsyncram1|                              ; 0 (0)       ; 0            ; 65536       ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1                                                     ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                ; 74 (58)     ; 47           ; 0           ; 0    ; 0            ; 27 (19)      ; 4 (4)             ; 43 (35)          ; 17 (17)         ; 0 (0)      ; |jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                       ; work         ;
+;                |sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr| ; 16 (16)     ; 8            ; 0           ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr ; work         ;
+;    |sld_hub:auto_hub|                                                  ; 143 (1)     ; 80           ; 0           ; 0    ; 0            ; 63 (1)       ; 24 (0)            ; 56 (0)           ; 10 (0)          ; 0 (0)      ; |jikken|sld_hub:auto_hub                                                                                                                                         ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                   ; 142 (101)   ; 80           ; 0           ; 0    ; 0            ; 62 (49)      ; 24 (22)           ; 56 (30)          ; 10 (5)          ; 0 (0)      ; |jikken|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                            ; work         ;
+;          |sld_rom_sr:hub_info_reg|                                     ; 21 (21)     ; 9            ; 0           ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 9 (9)            ; 5 (5)           ; 0 (0)      ; |jikken|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                    ; work         ;
+;          |sld_shadow_jsm:shadow_jsm|                                   ; 20 (20)     ; 19           ; 0           ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 17 (17)          ; 0 (0)           ; 0 (0)      ; |jikken|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                  ; work         ;
++------------------------------------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                             ;
++-----------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------------------------------------------------+
+; Name                                                                                                            ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                            ;
++-----------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------------------------------------------------+
+; ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 4096         ; 16           ; 4096         ; 16           ; 65536 ; /export/home/014/a0147044/processer/meirei.hex ;
++-----------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                       ;
++--------+--------------+---------+--------------+--------------+-------------------+-----------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance   ; IP Include File                         ;
++--------+--------------+---------+--------------+--------------+-------------------+-----------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |jikken|ram2:ram2 ; /home/014/a0147044/jikken-hard/ram2.vhd ;
++--------+--------------+---------+--------------+--------------+-------------------+-----------------------------------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -251,8 +302,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; pc:pchan|dffqq[0..15]                  ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 16 ;                                        ;
+; pc:Pchan|dffqq[0..11]                  ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 12 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -261,23 +312,154 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 16    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 139   ;
+; Number of registers using Synchronous Clear  ; 14    ;
+; Number of registers using Synchronous Load   ; 23    ;
+; Number of registers using Asynchronous Clear ; 51    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 94    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
++----------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                           ;
++------------------------------------------------------------------------------+---------+
+; Inverted Register                                                            ; Fan out ;
++------------------------------------------------------------------------------+---------+
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2] ; 2       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1] ; 3       ;
+; Total number of inverted registers = 3                                       ;         ;
++------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[9]                                                   ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[0] ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; Yes        ; |jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |jikken|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                                                                                       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |jikken|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                                          ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |jikken|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]                                                                    ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |jikken|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                                                                                                ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |jikken|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                                         ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |jikken|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1 ;
++---------------------------------+--------------------+------+---------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                            ;
++---------------------------------+--------------------+------+---------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                             ;
++---------------------------------+--------------------+------+---------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram2:ram2|altsyncram:altsyncram_component               ;
++------------------------------------+------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                          ; Type           ;
++------------------------------------+------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                              ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                             ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                            ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                             ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                            ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                              ; Untyped        ;
+; OPERATION_MODE                     ; SINGLE_PORT                                    ; Untyped        ;
+; WIDTH_A                            ; 16                                             ; Signed Integer ;
+; WIDTHAD_A                          ; 12                                             ; Signed Integer ;
+; NUMWORDS_A                         ; 4096                                           ; Signed Integer ;
+; OUTDATA_REG_A                      ; CLOCK0                                         ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                           ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                           ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                           ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                           ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                           ; Untyped        ;
+; WIDTH_B                            ; 1                                              ; Untyped        ;
+; WIDTHAD_B                          ; 1                                              ; Untyped        ;
+; NUMWORDS_B                         ; 1                                              ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                         ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                         ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                         ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                         ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                   ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                         ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                           ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                           ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                           ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                           ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                           ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                           ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                              ; Signed Integer ;
+; WIDTH_BYTEENA_B                    ; 1                                              ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                           ; Untyped        ;
+; BYTE_SIZE                          ; 8                                              ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                      ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
+; INIT_FILE                          ; /export/home/014/a0147044/processer/meirei.hex ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                         ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                              ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                          ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                          ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                              ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone                                        ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_obh1                                ; Untyped        ;
++------------------------------------+------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                      ;
++-------------------------------------------+-------------------------------------------+
+; Name                                      ; Value                                     ;
++-------------------------------------------+-------------------------------------------+
+; Number of entity instances                ; 1                                         ;
+; Entity Instance                           ; ram2:ram2|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                               ;
+;     -- WIDTH_A                            ; 16                                        ;
+;     -- NUMWORDS_A                         ; 4096                                      ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                    ;
+;     -- WIDTH_B                            ; 1                                         ;
+;     -- NUMWORDS_B                         ; 1                                         ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                    ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                              ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                      ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                 ;
++-------------------------------------------+-------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; In-System Memory Content Editor Settings                                                                                             ;
++----------------+-------------+-------+-------+------------+--------------------------------------------------------------------------+
+; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                       ;
++----------------+-------------+-------+-------+------------+--------------------------------------------------------------------------+
+; 0              ; NONE        ; 16    ; 4096  ; Read/Write ; ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated ;
++----------------+-------------+-------+-------+------------+--------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; Top              ; 00:00:00     ;
+; sld_hub:auto_hub ; 00:00:00     ;
++------------------+--------------+
 
 
 +-------------------------------+
@@ -286,7 +468,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Jun 10 16:59:42 2016
+    Info: Processing started: Fri Jun 10 17:39:15 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off jikken -c jikken
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file phaze2.bdf
@@ -316,24 +498,66 @@ Info (12021): Found 1 design units, including 1 entities, in source file 16bitad
 Info (12021): Found 1 design units, including 1 entities, in source file pc.bdf
     Info (12023): Found entity 1: pc
 Info (12127): Elaborating entity "jikken" for the top level hierarchy
-Info (12128): Elaborating entity "pc" for hierarchy "pc:pchan"
-Info (12128): Elaborating entity "16bitadd2" for hierarchy "pc:pchan|16bitadd2:add2"
-Info (12128): Elaborating entity "16bitadd" for hierarchy "pc:pchan|16bitadd2:add2|16bitadd:inst"
-Info (12128): Elaborating entity "all-add" for hierarchy "pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9"
-Info (12128): Elaborating entity "half-add" for hierarchy "pc:pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9|half-add:half1"
+Warning (275008): Primitive "GND" of instance "inst" not used
 Warning (12125): Using design file kadai1.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: kadai1
-Info (12128): Elaborating entity "kadai1" for hierarchy "kadai1:4noketa"
+Info (12128): Elaborating entity "kadai1" for hierarchy "kadai1:out1"
+Info (12128): Elaborating entity "ram2" for hierarchy "ram2:ram2"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ram2:ram2|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "ram2:ram2|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "ram2:ram2|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "indata_aclr_a" = "NONE"
+    Info (12134): Parameter "init_file" = "/export/home/014/a0147044/processer/meirei.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=NONE"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "4096"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_obh1.tdf
+    Info (12023): Found entity 1: altsyncram_obh1
+Info (12128): Elaborating entity "altsyncram_obh1" for hierarchy "ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rqc2.tdf
+    Info (12023): Found entity 1: altsyncram_rqc2
+Info (12128): Elaborating entity "altsyncram_rqc2" for hierarchy "ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1"
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info (12130): Elaborated megafunction instantiation "ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info (12133): Instantiated megafunction "ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter:
+    Info (12134): Parameter "CVALUE" = "0000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "0"
+    Info (12134): Parameter "NUMWORDS" = "4096"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "5"
+    Info (12134): Parameter "WIDTH_WORD" = "16"
+    Info (12134): Parameter "WIDTHAD" = "12"
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr"
+Info (12128): Elaborating entity "pc" for hierarchy "pc:Pchan"
+Info (12128): Elaborating entity "16bitadd2" for hierarchy "pc:Pchan|16bitadd2:add2"
+Info (12128): Elaborating entity "16bitadd" for hierarchy "pc:Pchan|16bitadd2:add2|16bitadd:inst"
+Info (12128): Elaborating entity "all-add" for hierarchy "pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9"
+Info (12128): Elaborating entity "half-add" for hierarchy "pc:Pchan|16bitadd2:add2|16bitadd:inst|all-add:inst9|half-add:half1"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
+Info (18000): Registers with preset signals will power-up high
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 91 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Info (21057): Implemented 323 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 61 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 361 megabytes
-    Info: Processing ended: Fri Jun 10 16:59:45 2016
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21061): Implemented 273 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 367 megabytes
+    Info: Processing ended: Fri Jun 10 17:39:19 2016
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
