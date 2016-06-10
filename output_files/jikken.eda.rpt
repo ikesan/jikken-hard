@@ -1,5 +1,5 @@
 EDA Netlist Writer report for jikken
-Fri Jun 10 14:56:57 2016
+Fri Jun 10 17:00:00 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Jun 10 14:56:57 2016 ;
+; EDA Netlist Writer Status ; Successful - Fri Jun 10 17:00:00 2016 ;
 ; Revision Name             ; jikken                                ;
 ; Top-level Entity Name     ; jikken                                ;
 ; Family                    ; Cyclone                               ;
@@ -66,14 +66,14 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-----------------------------------------------------------------+
-; Simulation Generated Files                                      ;
-+-----------------------------------------------------------------+
-; Generated Files                                                 ;
-+-----------------------------------------------------------------+
-; /home/014/a0147044/processer/simulation/modelsim/jikken.vho     ;
-; /home/014/a0147044/processer/simulation/modelsim/jikken_vhd.sdo ;
-+-----------------------------------------------------------------+
++-------------------------------------------------------------------+
+; Simulation Generated Files                                        ;
++-------------------------------------------------------------------+
+; Generated Files                                                   ;
++-------------------------------------------------------------------+
+; /home/014/a0147044/jikken-hard/simulation/modelsim/jikken.vho     ;
+; /home/014/a0147044/jikken-hard/simulation/modelsim/jikken_vhd.sdo ;
++-------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -82,12 +82,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Jun 10 14:56:56 2016
+    Info: Processing started: Fri Jun 10 16:59:59 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off jikken -c jikken
-Info (204018): Generated files "jikken.vho" and "jikken_vhd.sdo" in directory "/home/014/a0147044/processer/simulation/modelsim/" for EDA simulation tool
+Info (204018): Generated files "jikken.vho" and "jikken_vhd.sdo" in directory "/home/014/a0147044/jikken-hard/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 299 megabytes
-    Info: Processing ended: Fri Jun 10 14:56:57 2016
+    Info: Peak virtual memory: 308 megabytes
+    Info: Processing ended: Fri Jun 10 17:00:00 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

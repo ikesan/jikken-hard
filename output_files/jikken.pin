@@ -91,8 +91,8 @@ GND*                         : 23        :        :                   :         
 DATA0                        : 25        : input  :                   :         : 1         :                
 nCONFIG                      : 26        :        :                   :         : 1         :                
 VCCA_PLL1                    : 27        : power  :                   : 1.5V    :           :                
-GND+                         : 28        :        :                   :         : 1         :                
-pin_name1                    : 29        : input  : 3.3-V LVTTL       :         : 1         : N              
+clock                        : 28        : input  : 3.3-V LVTTL       :         : 1         : Y              
+GND+                         : 29        :        :                   :         : 1         :                
 GNDA_PLL1                    : 30        : gnd    :                   :         :           :                
 GNDG_PLL1                    : 31        : gnd    :                   :         :           :                
 nCEO                         : 32        :        :                   :         : 1         :                
@@ -167,58 +167,58 @@ GND*                         : 100       :        :                   :         
 GND*                         : 101       :        :                   :         : 4         :                
 GND*                         : 102       :        :                   :         : 4         :                
 GND*                         : 103       :        :                   :         : 4         :                
-GND*                         : 104       :        :                   :         : 4         :                
-GND*                         : 105       :        :                   :         : 4         :                
-GND*                         : 106       :        :                   :         : 4         :                
-GND*                         : 107       :        :                   :         : 4         :                
-GND*                         : 108       :        :                   :         : 4         :                
+pin_name27                   : 104       : output : 3.3-V LVTTL       :         : 4         : Y              
+pin_name28                   : 105       : output : 3.3-V LVTTL       :         : 4         : Y              
+pin_name29                   : 106       : output : 3.3-V LVTTL       :         : 4         : Y              
+pin_name31                   : 107       : output : 3.3-V LVTTL       :         : 4         : Y              
+pin_name32                   : 108       : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 109       : gnd    :                   :         :           :                
 VCCINT                       : 110       : power  :                   : 1.5V    :           :                
 GND                          : 111       : gnd    :                   :         :           :                
 VCCIO4                       : 112       : power  :                   : 3.3V    : 4         :                
-GND*                         : 113       :        :                   :         : 4         :                
-GND*                         : 114       :        :                   :         : 4         :                
+pin_name36                   : 113       : output : 3.3-V LVTTL       :         : 4         : Y              
+pin_name37                   : 114       : output : 3.3-V LVTTL       :         : 4         : Y              
 GND*                         : 115       :        :                   :         : 4         :                
-GND*                         : 116       :        :                   :         : 4         :                
-GND*                         : 117       :        :                   :         : 4         :                
-GND*                         : 118       :        :                   :         : 4         :                
-GND*                         : 119       :        :                   :         : 4         :                
-GND*                         : 120       :        :                   :         : 4         :                
-GND*                         : 121       :        :                   :         : 3         :                
-GND*                         : 122       :        :                   :         : 3         :                
+pin_name17                   : 116       : output : 3.3-V LVTTL       :         : 4         : Y              
+pin_name18                   : 117       : output : 3.3-V LVTTL       :         : 4         : Y              
+pin_name19                   : 118       : output : 3.3-V LVTTL       :         : 4         : Y              
+pin_name20                   : 119       : output : 3.3-V LVTTL       :         : 4         : Y              
+pin_name21                   : 120       : output : 3.3-V LVTTL       :         : 4         : Y              
+pin_name22                   : 121       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name26                   : 122       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : 123       :        :                   :         : 3         :                
-GND*                         : 124       :        :                   :         : 3         :                
-GND*                         : 125       :        :                   :         : 3         :                
-GND*                         : 126       :        :                   :         : 3         :                
-GND*                         : 127       :        :                   :         : 3         :                
-GND*                         : 128       :        :                   :         : 3         :                
+pin_name8                    : 124       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name10                   : 125       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name11                   : 126       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name12                   : 127       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name13                   : 128       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND                          : 129       : gnd    :                   :         :           :                
 VCCIO3                       : 130       : power  :                   : 3.3V    : 3         :                
-GND*                         : 131       :        :                   :         : 3         :                
-GND*                         : 132       :        :                   :         : 3         :                
-GND*                         : 133       :        :                   :         : 3         :                
-GND*                         : 134       :        :                   :         : 3         :                
-GND*                         : 135       :        :                   :         : 3         :                
-GND*                         : 136       :        :                   :         : 3         :                
-GND*                         : 137       :        :                   :         : 3         :                
-GND*                         : 138       :        :                   :         : 3         :                
-GND*                         : 139       :        :                   :         : 3         :                
-GND*                         : 140       :        :                   :         : 3         :                
+pin_name15                   : 131       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name16                   : 132       : output : 3.3-V LVTTL       :         : 3         : Y              
+over                         : 133       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name1                    : 134       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name2                    : 135       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name3                    : 136       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name4                    : 137       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name5                    : 138       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name6                    : 139       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name7                    : 140       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : 141       :        :                   :         : 3         :                
 GND                          : 142       : gnd    :                   :         :           :                
 GND*                         : 143       :        :                   :         : 3         :                
 GND*                         : 144       :        :                   :         : 3         :                
 CONF_DONE                    : 145       :        :                   :         : 3         :                
 nSTATUS                      : 146       :        :                   :         : 3         :                
-altera_reserved_tck          : 147       : input  : 3.3-V LVTTL       :         : 3         : N              
-altera_reserved_tms          : 148       : input  : 3.3-V LVTTL       :         : 3         : N              
-altera_reserved_tdo          : 149       : output : 3.3-V LVTTL       :         : 3         : N              
+TCK                          : 147       : input  :                   :         : 3         :                
+TMS                          : 148       : input  :                   :         : 3         :                
+TDO                          : 149       : output :                   :         : 3         :                
 GNDG_PLL2                    : 150       : gnd    :                   :         :           :                
 GNDA_PLL2                    : 151       : gnd    :                   :         :           :                
 GND+                         : 152       :        :                   :         : 3         :                
 GND+                         : 153       :        :                   :         : 3         :                
 VCCA_PLL2                    : 154       : power  :                   : 1.5V    :           :                
-altera_reserved_tdi          : 155       : input  : 3.3-V LVTTL       :         : 3         : N              
+TDI                          : 155       : input  :                   :         : 3         :                
 GND*                         : 156       :        :                   :         : 3         :                
 VCCIO3                       : 157       : power  :                   : 3.3V    : 3         :                
 GND*                         : 158       :        :                   :         : 3         :                

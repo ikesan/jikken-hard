@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
 
--- DATE "06/10/2016 14:56:57"
+-- DATE "06/10/2016 17:00:00"
 
 -- 
 -- Device: Altera EP1C6Q240C8 Package PQFP240
@@ -33,20 +33,70 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY 	jikken IS
     PORT (
-	altera_reserved_tms : IN std_logic := '0';
-	altera_reserved_tck : IN std_logic := '0';
-	altera_reserved_tdi : IN std_logic := '0';
-	altera_reserved_tdo : OUT std_logic;
-	pin_name1 : IN std_logic
+	over : OUT std_logic;
+	clock : IN std_logic;
+	pin_name1 : OUT std_logic;
+	pin_name2 : OUT std_logic;
+	pin_name3 : OUT std_logic;
+	pin_name4 : OUT std_logic;
+	pin_name5 : OUT std_logic;
+	pin_name6 : OUT std_logic;
+	pin_name7 : OUT std_logic;
+	pin_name8 : OUT std_logic;
+	pin_name10 : OUT std_logic;
+	pin_name11 : OUT std_logic;
+	pin_name12 : OUT std_logic;
+	pin_name13 : OUT std_logic;
+	pin_name15 : OUT std_logic;
+	pin_name16 : OUT std_logic;
+	pin_name17 : OUT std_logic;
+	pin_name18 : OUT std_logic;
+	pin_name19 : OUT std_logic;
+	pin_name20 : OUT std_logic;
+	pin_name21 : OUT std_logic;
+	pin_name22 : OUT std_logic;
+	pin_name26 : OUT std_logic;
+	pin_name27 : OUT std_logic;
+	pin_name28 : OUT std_logic;
+	pin_name29 : OUT std_logic;
+	pin_name31 : OUT std_logic;
+	pin_name32 : OUT std_logic;
+	pin_name36 : OUT std_logic;
+	pin_name37 : OUT std_logic
 	);
 END jikken;
 
 -- Design Ports Information
--- pin_name1	=>  Location: PIN_29,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- altera_reserved_tms	=>  Location: PIN_148,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- altera_reserved_tck	=>  Location: PIN_147,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- altera_reserved_tdi	=>  Location: PIN_155,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- altera_reserved_tdo	=>  Location: PIN_149,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- over	=>  Location: PIN_133,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name1	=>  Location: PIN_134,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name2	=>  Location: PIN_135,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name3	=>  Location: PIN_136,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name4	=>  Location: PIN_137,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name5	=>  Location: PIN_138,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name6	=>  Location: PIN_139,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name7	=>  Location: PIN_140,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name8	=>  Location: PIN_124,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name10	=>  Location: PIN_125,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name11	=>  Location: PIN_126,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name12	=>  Location: PIN_127,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name13	=>  Location: PIN_128,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name15	=>  Location: PIN_131,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name16	=>  Location: PIN_132,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name17	=>  Location: PIN_116,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name18	=>  Location: PIN_117,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name19	=>  Location: PIN_118,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name20	=>  Location: PIN_119,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name21	=>  Location: PIN_120,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name22	=>  Location: PIN_121,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name26	=>  Location: PIN_122,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name27	=>  Location: PIN_104,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name28	=>  Location: PIN_105,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name29	=>  Location: PIN_106,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name31	=>  Location: PIN_107,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name32	=>  Location: PIN_108,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name36	=>  Location: PIN_113,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- pin_name37	=>  Location: PIN_114,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- clock	=>  Location: PIN_28,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF jikken IS
@@ -59,580 +109,122 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_altera_reserved_tms : std_logic;
-SIGNAL ww_altera_reserved_tck : std_logic;
-SIGNAL ww_altera_reserved_tdi : std_logic;
-SIGNAL ww_altera_reserved_tdo : std_logic;
+SIGNAL ww_over : std_logic;
+SIGNAL ww_clock : std_logic;
 SIGNAL ww_pin_name1 : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTADATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTBDATAIN_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTAADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTBADDR_bus\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTADATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTBDATAOUT_bus\ : std_logic_vector(0 DOWNTO 0);
-SIGNAL \auto_hub|~GND~combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~_wirecell_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]~_wirecell_combout\ : std_logic;
-SIGNAL \altera_reserved_tms~combout\ : std_logic;
-SIGNAL \altera_reserved_tck~combout\ : std_logic;
-SIGNAL \altera_reserved_tdi~combout\ : std_logic;
-SIGNAL \altera_internal_jtag~TDIUTAP\ : std_logic;
-SIGNAL \~GND~combout\ : std_logic;
-SIGNAL \altera_internal_jtag~TMSUTAP\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal0~1\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal0~0\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_dr_scan_proc~0\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal3~1_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal3~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg_proc~0\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~1_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~2_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~4_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg~regout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]~regout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~1_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena_proc~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg~regout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~2_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena_proc~1\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0_regout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2]~regout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|sdr~0_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~8_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~15_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~17COUT1_31\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~2\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~2COUT1_33\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~10_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1]~regout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~0_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[4]~9_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~12\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~12COUT1_35\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~5_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~7\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~7COUT1_37\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~20_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~0_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~1_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~17\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~0_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]~1\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[1]~3\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[1]~3COUT1_36\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[2]~5\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[2]~5COUT1_38\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[3]~7\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[3]~7COUT1_40\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[4]~11\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[4]~11COUT1_42\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[5]~13\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[6]~15\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[6]~15COUT1_44\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[7]~17\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[7]~17COUT1_46\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~19\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~19COUT1_48\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[9]~21\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[9]~21COUT1_50\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[10]~23\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~2_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]~1_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~2_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][4]~regout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~1_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~5_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~6_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|is_in_use_reg~regout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\ : std_logic;
-SIGNAL \pin_name1~combout\ : std_logic;
-SIGNAL \altera_internal_jtag~TCKUTAP\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|clear_signal~combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~4_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~4_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~2_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|Add0~0_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~0_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~1_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]~3_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~5_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|tdo~0_combout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|bypass_reg_out~regout\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|tdo~1_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal~combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~17_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[0]~7\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[0]~7COUT1_24\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~13\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~13COUT1_26\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[2]~5\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[2]~5COUT1_28\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~14_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[3]~9\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[3]~9COUT1_30\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~15_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~16_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~6_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~7_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~10_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~11_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~13_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[1]~15_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~9_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~2_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg~regout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~3_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~11_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~3\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~3COUT1_18\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~1\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~1COUT1_20\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~9\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~9COUT1_22\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~2_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~5\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~5COUT1_24\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~3_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~1_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~12_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~13_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~10_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~11_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~7_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~8_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~9_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~4_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~5_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~6_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~1_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~4_combout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~regout\ : std_logic;
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~_wirecell_combout\ : std_logic;
-SIGNAL \altera_internal_jtag~TDO\ : std_logic;
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|altsyncram1|q_a\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\ : std_logic_vector(9 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\ : std_logic_vector(2 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\ : std_logic_vector(2 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|ALT_INV_virtual_ir_scan_reg~regout\ : std_logic;
-SIGNAL \ALT_INV_altera_internal_jtag~TCKUTAP\ : std_logic;
-SIGNAL \ALT_INV_altera_internal_jtag~TMSUTAP\ : std_logic;
+SIGNAL ww_pin_name2 : std_logic;
+SIGNAL ww_pin_name3 : std_logic;
+SIGNAL ww_pin_name4 : std_logic;
+SIGNAL ww_pin_name5 : std_logic;
+SIGNAL ww_pin_name6 : std_logic;
+SIGNAL ww_pin_name7 : std_logic;
+SIGNAL ww_pin_name8 : std_logic;
+SIGNAL ww_pin_name10 : std_logic;
+SIGNAL ww_pin_name11 : std_logic;
+SIGNAL ww_pin_name12 : std_logic;
+SIGNAL ww_pin_name13 : std_logic;
+SIGNAL ww_pin_name15 : std_logic;
+SIGNAL ww_pin_name16 : std_logic;
+SIGNAL ww_pin_name17 : std_logic;
+SIGNAL ww_pin_name18 : std_logic;
+SIGNAL ww_pin_name19 : std_logic;
+SIGNAL ww_pin_name20 : std_logic;
+SIGNAL ww_pin_name21 : std_logic;
+SIGNAL ww_pin_name22 : std_logic;
+SIGNAL ww_pin_name26 : std_logic;
+SIGNAL ww_pin_name27 : std_logic;
+SIGNAL ww_pin_name28 : std_logic;
+SIGNAL ww_pin_name29 : std_logic;
+SIGNAL ww_pin_name31 : std_logic;
+SIGNAL ww_pin_name32 : std_logic;
+SIGNAL ww_pin_name36 : std_logic;
+SIGNAL ww_pin_name37 : std_logic;
+SIGNAL \clock~combout\ : std_logic;
+SIGNAL \pchan|add2|inst|inst4|half1|inst2~combout\ : std_logic;
+SIGNAL \pchan|add2|inst|inst7|half1|inst~combout\ : std_logic;
+SIGNAL \pchan|add2|inst|inst7|half1|inst2\ : std_logic;
+SIGNAL \pchan|add2|inst|inst15|half1|inst2~combout\ : std_logic;
+SIGNAL \pchan|add2|inst|inst12|half1|inst2~combout\ : std_logic;
+SIGNAL \pchan|add2|inst|inst9|half1|inst2~combout\ : std_logic;
+SIGNAL \pchan|add2|inst|inst9|half1|inst\ : std_logic;
+SIGNAL \pchan|add2|inst|inst10|half1|inst\ : std_logic;
+SIGNAL \pchan|add2|inst|inst11|half1|inst\ : std_logic;
+SIGNAL \pchan|add2|inst|inst12|half1|inst\ : std_logic;
+SIGNAL \4noketa|y0noor~combout\ : std_logic;
+SIGNAL \4noketa|y1noor~combout\ : std_logic;
+SIGNAL \4noketa|y2noor~0_combout\ : std_logic;
+SIGNAL \4noketa|y3noor~0_combout\ : std_logic;
+SIGNAL \4noketa|y4noor~0_combout\ : std_logic;
+SIGNAL \4noketa|y5noor~0_combout\ : std_logic;
+SIGNAL \4noketa|y6noor~0_combout\ : std_logic;
+SIGNAL \pchan|add2|inst|inst14|half1|inst\ : std_logic;
+SIGNAL \pchan|add2|inst|inst15|half1|inst\ : std_logic;
+SIGNAL \pchan|add2|inst|inst13|half1|inst\ : std_logic;
+SIGNAL \pchan|add2|inst|inst16|half1|inst\ : std_logic;
+SIGNAL \3noketa|y0noor~combout\ : std_logic;
+SIGNAL \3noketa|y1noor~combout\ : std_logic;
+SIGNAL \3noketa|y2noor~0_combout\ : std_logic;
+SIGNAL \3noketa|y3noor~0_combout\ : std_logic;
+SIGNAL \3noketa|y4noor~0_combout\ : std_logic;
+SIGNAL \3noketa|y5noor~0_combout\ : std_logic;
+SIGNAL \3noketa|y6noor~0_combout\ : std_logic;
+SIGNAL \pchan|add2|inst|inst8|half1|inst\ : std_logic;
+SIGNAL \pchan|add2|inst|inst5|half1|inst\ : std_logic;
+SIGNAL \pchan|add2|inst|inst6|half1|inst\ : std_logic;
+SIGNAL \ninoketast4|y0noor~combout\ : std_logic;
+SIGNAL \ninoketast4|y1noor~combout\ : std_logic;
+SIGNAL \ninoketast4|y2noor~0_combout\ : std_logic;
+SIGNAL \ninoketast4|y3noor~0_combout\ : std_logic;
+SIGNAL \ninoketast4|y4noor~0_combout\ : std_logic;
+SIGNAL \ninoketast4|y5noor~0_combout\ : std_logic;
+SIGNAL \ninoketast4|y6noor~0_combout\ : std_logic;
+SIGNAL \inoketa|y0noor~0_combout\ : std_logic;
+SIGNAL \inoketa|y1noor~0_combout\ : std_logic;
+SIGNAL \inoketa|y2noor~0_combout\ : std_logic;
+SIGNAL \inoketa|y3noor~0_combout\ : std_logic;
+SIGNAL \inoketa|y4noor~0_combout\ : std_logic;
+SIGNAL \inoketa|y5noor~0_combout\ : std_logic;
+SIGNAL \inoketa|y6noor~0_combout\ : std_logic;
+SIGNAL \pchan|test\ : std_logic_vector(15 DOWNTO 0);
 
 BEGIN
 
-ww_altera_reserved_tms <= altera_reserved_tms;
-ww_altera_reserved_tck <= altera_reserved_tck;
-ww_altera_reserved_tdi <= altera_reserved_tdi;
-altera_reserved_tdo <= ww_altera_reserved_tdo;
-ww_pin_name1 <= pin_name1;
+over <= ww_over;
+ww_clock <= clock;
+pin_name1 <= ww_pin_name1;
+pin_name2 <= ww_pin_name2;
+pin_name3 <= ww_pin_name3;
+pin_name4 <= ww_pin_name4;
+pin_name5 <= ww_pin_name5;
+pin_name6 <= ww_pin_name6;
+pin_name7 <= ww_pin_name7;
+pin_name8 <= ww_pin_name8;
+pin_name10 <= ww_pin_name10;
+pin_name11 <= ww_pin_name11;
+pin_name12 <= ww_pin_name12;
+pin_name13 <= ww_pin_name13;
+pin_name15 <= ww_pin_name15;
+pin_name16 <= ww_pin_name16;
+pin_name17 <= ww_pin_name17;
+pin_name18 <= ww_pin_name18;
+pin_name19 <= ww_pin_name19;
+pin_name20 <= ww_pin_name20;
+pin_name21 <= ww_pin_name21;
+pin_name22 <= ww_pin_name22;
+pin_name26 <= ww_pin_name26;
+pin_name27 <= ww_pin_name27;
+pin_name28 <= ww_pin_name28;
+pin_name29 <= ww_pin_name29;
+pin_name31 <= ww_pin_name31;
+pin_name32 <= ww_pin_name32;
+pin_name36 <= ww_pin_name36;
+pin_name37 <= ww_pin_name37;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(0) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(0) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(1);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(1) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(1) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(2);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(2) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(2) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(3);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(3) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(3) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(4);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(4) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(4) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(5);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(5) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(5) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(6);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(6) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(6) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(7);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(7) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(7) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(8);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(8) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(8) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(9);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(9) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(9) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(10);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(10) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(10) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(11);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(11) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(11) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(12);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(12) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(12) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(13);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(13) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(13) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(14);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(14) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(14) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTBDATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTADATAIN_bus\(0) <= \~GND~combout\;
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTBDATAIN_bus\(0) <= \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(15);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\ & \~GND~combout\
-& \~GND~combout\ & \~GND~combout\);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTBADDR_bus\ <= (\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2) & \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1) & 
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0));
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_a\(15) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTADATAOUT_bus\(0);
-
-\inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(15) <= \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTBDATAOUT_bus\(0);
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(3) <= NOT \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3);
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0) <= NOT \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(0);
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|ALT_INV_virtual_ir_scan_reg~regout\ <= NOT \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\;
-\ALT_INV_altera_internal_jtag~TCKUTAP\ <= NOT \altera_internal_jtag~TCKUTAP\;
-\ALT_INV_altera_internal_jtag~TMSUTAP\ <= NOT \altera_internal_jtag~TMSUTAP\;
-
--- Location: PIN_148,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\altera_reserved_tms~I\ : cyclone_io
+-- Location: PIN_28,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\clock~I\ : cyclone_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -654,690 +246,14 @@ PORT MAP (
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => GND,
-	padio => ww_altera_reserved_tms,
-	combout => \altera_reserved_tms~combout\);
+	padio => ww_clock,
+	combout => \clock~combout\);
 
--- Location: PIN_147,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\altera_reserved_tck~I\ : cyclone_io
--- pragma translate_off
-GENERIC MAP (
-	input_async_reset => "none",
-	input_power_up => "low",
-	input_register_mode => "none",
-	input_sync_reset => "none",
-	oe_async_reset => "none",
-	oe_power_up => "low",
-	oe_register_mode => "none",
-	oe_sync_reset => "none",
-	operation_mode => "input",
-	output_async_reset => "none",
-	output_power_up => "low",
-	output_register_mode => "none",
-	output_sync_reset => "none")
--- pragma translate_on
-PORT MAP (
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	devoe => ww_devoe,
-	oe => GND,
-	padio => ww_altera_reserved_tck,
-	combout => \altera_reserved_tck~combout\);
-
--- Location: PIN_155,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\altera_reserved_tdi~I\ : cyclone_io
--- pragma translate_off
-GENERIC MAP (
-	input_async_reset => "none",
-	input_power_up => "low",
-	input_register_mode => "none",
-	input_sync_reset => "none",
-	oe_async_reset => "none",
-	oe_power_up => "low",
-	oe_register_mode => "none",
-	oe_sync_reset => "none",
-	operation_mode => "input",
-	output_async_reset => "none",
-	output_power_up => "low",
-	output_register_mode => "none",
-	output_sync_reset => "none")
--- pragma translate_on
-PORT MAP (
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	devoe => ww_devoe,
-	oe => GND,
-	padio => ww_altera_reserved_tdi,
-	combout => \altera_reserved_tdi~combout\);
-
--- Location: JTAG_X1_Y10_N1
-altera_internal_jtag : cyclone_jtag
-PORT MAP (
-	tms => \altera_reserved_tms~combout\,
-	tck => \altera_reserved_tck~combout\,
-	tdi => \altera_reserved_tdi~combout\,
-	tdouser => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~_wirecell_combout\,
-	tdo => \altera_internal_jtag~TDO\,
-	tmsutap => \altera_internal_jtag~TMSUTAP\,
-	tckutap => \altera_internal_jtag~TCKUTAP\,
-	tdiutap => \altera_internal_jtag~TDIUTAP\);
-
--- Location: LC_X19_Y12_N2
-\~GND\ : cyclone_lcell
+-- Location: LC_X33_Y2_N0
+\pchan|test[0]\ : cyclone_lcell
 -- Equation(s):
--- \~GND~combout\ = GND
+-- \pchan|test\(0) = DFFEAS((((!\pchan|test\(0)))), GLOBAL(\clock~combout\), VCC, , , , , , )
 
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \~GND~combout\);
-
--- Location: LC_X21_Y9_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[8]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "a8a8",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \altera_internal_jtag~TMSUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(5),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(7),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8));
-
--- Location: LC_X20_Y12_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[9]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f000",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \altera_internal_jtag~TMSUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(2),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena_proc~1\,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(9));
-
--- Location: LC_X23_Y11_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[10]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "3030",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \altera_internal_jtag~TMSUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(9),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(10));
-
--- Location: LC_X24_Y11_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[13]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fff0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(12),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(13),
-	aclr => GND,
-	sclr => \altera_internal_jtag~TMSUTAP\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(13));
-
--- Location: LC_X24_Y11_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[14]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \altera_internal_jtag~TMSUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(13),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(14));
-
--- Location: LC_X24_Y11_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[11]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fffc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(10),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(14),
-	aclr => GND,
-	sclr => \altera_internal_jtag~TMSUTAP\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11));
-
--- Location: LC_X23_Y11_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[12]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fff0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(10),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	aclr => GND,
-	sclr => \ALT_INV_altera_internal_jtag~TMSUTAP\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(12));
-
--- Location: LC_X24_Y11_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[15]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0a0",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(12),
-	datac => \altera_internal_jtag~TMSUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(14),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_dr_scan_proc~0\,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(15));
-
--- Location: LC_X23_Y11_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "00cc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \altera_internal_jtag~TMSUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\(0),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\(0));
-
--- Location: LC_X23_Y11_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "5a5a",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\(0),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\(1),
-	aclr => GND,
-	sclr => \ALT_INV_altera_internal_jtag~TMSUTAP\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\(1));
-
--- Location: LC_X23_Y11_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "6c6c",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\(0),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\(2),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\(1),
-	aclr => GND,
-	sclr => \ALT_INV_altera_internal_jtag~TMSUTAP\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\(2));
-
--- Location: LC_X23_Y11_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "02ff",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(0),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(9),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt\(2),
-	datad => \altera_internal_jtag~TMSUTAP\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(0));
-
--- Location: LC_X24_Y11_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fffd",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(0),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(15),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(1),
-	aclr => GND,
-	sclr => \altera_internal_jtag~TMSUTAP\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(1));
-
--- Location: LC_X20_Y12_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fffc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(15),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(1),
-	aclr => GND,
-	sclr => \ALT_INV_altera_internal_jtag~TMSUTAP\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(2));
-
--- Location: LC_X20_Y12_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0f00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \altera_internal_jtag~TMSUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(2),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3));
-
--- Location: LC_X21_Y9_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[5]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "a8a8",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \altera_internal_jtag~TMSUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(5));
-
--- Location: LC_X21_Y9_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[6]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fcfc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(6),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(5),
-	aclr => GND,
-	sclr => \altera_internal_jtag~TMSUTAP\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(6));
-
--- Location: LC_X21_Y9_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[7]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "aa00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \altera_internal_jtag~TMSUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(6),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(7));
-
--- Location: LC_X21_Y9_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[4]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fffc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(7),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	aclr => GND,
-	sclr => \altera_internal_jtag~TMSUTAP\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4));
-
--- Location: LC_X23_Y12_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[9]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \altera_internal_jtag~TDIUTAP\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(9));
-
--- Location: LC_X23_Y12_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[8]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(6),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(9),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(9),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(7),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal0~0\,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(8));
-
--- Location: LC_X24_Y11_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[7]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(8),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(7));
-
--- Location: LC_X24_Y11_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[6]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0f0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(7),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(6));
-
--- Location: LC_X23_Y12_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[5]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(6),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(5));
-
--- Location: LC_X23_Y12_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[4]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(5),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(4));
-
--- Location: LC_X23_Y12_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(5),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(2),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(4),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal0~1\,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(3));
-
--- Location: LC_X23_Y12_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0f0f",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(3),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(2));
-
--- Location: LC_X23_Y12_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(2),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(1));
-
--- Location: LC_X23_Y12_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]\ : cyclone_lcell
 -- pragma translate_off
 GENERIC MAP (
 	lut_mask => "00ff",
@@ -1348,4226 +264,90 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(1),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(11),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(0));
-
--- Location: LC_X23_Y12_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0400",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(1),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal0~1\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal0~0\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_dr_scan_proc~0\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\);
-
--- Location: LC_X19_Y10_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[5]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ccaa",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	datab => \altera_internal_jtag~TDIUTAP\,
-	datac => \~GND~combout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5));
-
--- Location: LC_X19_Y10_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal3~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "00a0",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(1),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(2),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal3~1_combout\);
-
--- Location: LC_X19_Y11_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal3~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0005",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(1),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(2),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal3~0_combout\);
-
--- Location: LC_X21_Y9_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "a800",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \altera_internal_jtag~TMSUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(5),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(7),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
+	clk => \clock~combout\,
+	datad => \pchan|test\(0),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg_proc~0\,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg~regout\);
+	regout => \pchan|test\(0));
 
--- Location: LC_X19_Y10_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal3~1_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal3~0_combout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg_proc~0\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~1_combout\);
-
--- Location: LC_X19_Y10_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0050",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(1),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(2),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~0_combout\);
-
--- Location: LC_X19_Y10_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~2\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "a000",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(1),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(2),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~2_combout\);
-
--- Location: LC_X19_Y10_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f8d8",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~1_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~0_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(1),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~2_combout\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(1));
-
--- Location: LC_X19_Y10_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~4\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0505",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(1),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~4_combout\);
-
--- Location: LC_X19_Y10_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "88f0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~4_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~2_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(2),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg~regout\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|ALT_INV_virtual_ir_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(2));
-
--- Location: LC_X24_Y11_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(2),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(1),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\);
-
--- Location: LC_X20_Y10_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "cc00",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg_proc~0\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0_combout\);
-
--- Location: LC_X20_Y10_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(0),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\);
-
--- Location: LC_X20_Y10_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(3),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]~regout\);
-
--- Location: LC_X20_Y12_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "accc",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \altera_internal_jtag~TDIUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	datac => \altera_internal_jtag~TMSUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~0_combout\);
-
--- Location: LC_X20_Y12_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1500",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(1),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(2),
-	datac => \altera_internal_jtag~TMSUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~1_combout\);
-
--- Location: LC_X20_Y12_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena_proc~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f000",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \altera_internal_jtag~TMSUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena_proc~0_combout\);
-
--- Location: LC_X23_Y12_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0800",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(1),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal0~1\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal0~0\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(0),
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_dr_scan_proc~0\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg~regout\);
-
--- Location: LC_X20_Y12_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~2\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "b8a8",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena_proc~0_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(15),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~2_combout\);
-
--- Location: LC_X20_Y12_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "88b8",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~1_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena~2_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0_regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena_proc~1\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0_regout\);
-
--- Location: LC_X19_Y9_N0
-\inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0080",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]~regout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0_regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\);
-
--- Location: LC_X20_Y10_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(2),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2]~regout\);
-
--- Location: LC_X20_Y13_N4
-\inst2|altsyncram_component|auto_generated|mgl_prim2|sdr~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0f00",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0_regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|sdr~0_combout\);
-
--- Location: LC_X19_Y9_N1
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~8\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff80",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2]~regout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|sdr~0_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~8_combout\);
-
--- Location: LC_X16_Y9_N0
-\inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~15\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "55aa",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~15_combout\,
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~17\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~17COUT1_31\);
-
--- Location: LC_X16_Y9_N1
-\inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "3c3f",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(1),
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~17\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~17COUT1_31\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~0_combout\,
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~2\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~2COUT1_33\);
-
--- Location: LC_X16_Y9_N2
-\inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~10\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "a50a",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(2),
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~2\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~2COUT1_33\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~10_combout\,
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~12\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~12COUT1_35\);
-
--- Location: LC_X20_Y10_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(1),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1]~regout\);
-
--- Location: LC_X20_Y11_N4
-\inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0033",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1]~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2]~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~0_combout\);
-
--- Location: LC_X20_Y11_N2
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[4]~9\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0020",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0_regout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~0_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[4]~9_combout\);
-
--- Location: LC_X16_Y9_N9
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0c0a",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(2),
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~10_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~1_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[4]~9_combout\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(2));
-
--- Location: LC_X16_Y9_N3
-\inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~5\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "3c3f",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(3),
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~12\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~12COUT1_35\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~5_combout\,
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~7\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~7COUT1_37\);
-
--- Location: LC_X16_Y9_N5
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0e04",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[4]~9_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(3),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~1_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~5_combout\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(3));
-
--- Location: LC_X16_Y9_N4
-\inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~20\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "a5a5",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(4),
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~7\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~7COUT1_37\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~20_combout\);
-
--- Location: LC_X16_Y9_N7
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[4]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "4450",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~1_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~20_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(4),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[4]~9_combout\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(4));
-
--- Location: LC_X16_Y9_N8
-\inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0800",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(2),
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(3),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(4),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~0_combout\);
-
--- Location: LC_X16_Y10_N0
-\inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f000",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~0_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(1),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~1_combout\);
-
--- Location: LC_X16_Y9_N6
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0c0a",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(0),
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~15_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~1_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[4]~9_combout\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(0));
-
--- Location: LC_X16_Y10_N5
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "23a0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|Add1~0_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~0_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[4]~9_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(1),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(1));
-
--- Location: LC_X19_Y9_N3
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "baaa",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~8_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(1),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~0_combout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1]~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\);
-
--- Location: LC_X19_Y9_N5
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin_used => "true",
-	lut_mask => "3c3f",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]~1\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1),
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[1]~3\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[1]~3COUT1_36\);
-
--- Location: LC_X19_Y9_N4
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "33cc",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0),
-	cout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]~1\);
-
--- Location: LC_X19_Y9_N6
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "a50a",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]~1\,
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[1]~3\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[1]~3COUT1_36\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2),
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[2]~5\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[2]~5COUT1_38\);
-
--- Location: LC_X19_Y9_N7
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "5a5f",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]~1\,
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[2]~5\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[2]~5COUT1_38\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3),
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[3]~7\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[3]~7COUT1_40\);
-
--- Location: LC_X19_Y9_N8
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[4]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "c30c",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]~1\,
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[3]~7\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[3]~7COUT1_40\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(4),
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[4]~11\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[4]~11COUT1_42\);
-
--- Location: LC_X19_Y9_N9
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[5]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "5a5f",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[0]~1\,
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[4]~11\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[4]~11COUT1_42\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(5),
-	cout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[5]~13\);
-
--- Location: LC_X19_Y8_N0
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[6]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin_used => "true",
-	lut_mask => "c30c",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[5]~13\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(6),
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[6]~15\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[6]~15COUT1_44\);
-
--- Location: LC_X19_Y8_N1
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[7]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "5a5f",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[5]~13\,
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[6]~15\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[6]~15COUT1_44\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(7),
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[7]~17\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[7]~17COUT1_46\);
-
--- Location: LC_X19_Y8_N2
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "a50a",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[5]~13\,
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[7]~17\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[7]~17COUT1_46\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(8),
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~19\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~19COUT1_48\);
-
--- Location: LC_X19_Y8_N3
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[9]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "3c3f",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[5]~13\,
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~19\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~19COUT1_48\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(9),
-	cout0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[9]~21\,
-	cout1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[9]~21COUT1_50\);
-
--- Location: LC_X19_Y8_N4
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[10]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "c30c",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[5]~13\,
-	cin0 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[9]~21\,
-	cin1 => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[9]~21COUT1_50\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(10),
-	cout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[10]~23\);
-
--- Location: LC_X19_Y8_N5
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[11]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin_used => "true",
-	lut_mask => "0ff0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \altera_internal_jtag~TDIUTAP\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	sload => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~4_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[8]~9_combout\,
-	cin => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg[10]~23\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(11));
-
--- Location: LC_X20_Y9_N8
-\inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~2\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0080",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]~regout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0_regout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(5),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~2_combout\);
-
--- Location: LC_X20_Y9_N5
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(3),
-	aclr => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~1_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\(3));
-
--- Location: LC_X19_Y10_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "44f0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal3~1_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg_proc~0\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(0));
-
--- Location: LC_X20_Y11_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f5a0",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(0),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(3),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]~1_combout\);
-
--- Location: LC_X20_Y9_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~2\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "a088",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]~1_combout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~2_combout\);
-
--- Location: LC_X20_Y9_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ccf0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(4));
-
--- Location: LC_X20_Y10_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][4]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(4),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][4]~regout\);
-
--- Location: LC_X20_Y10_N9
-\inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fff0",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][4]~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~1_combout\);
-
--- Location: LC_X20_Y9_N1
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(2),
-	aclr => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~1_combout\,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\(2));
-
--- Location: LC_X20_Y11_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~5\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0a0a",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~5_combout\);
-
--- Location: LC_X20_Y11_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~6\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "caca",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(3),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(4),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~6_combout\);
-
--- Location: LC_X20_Y11_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "aacc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\(2),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~5_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~6_combout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]~1_combout\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(3),
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(3));
-
--- Location: LC_X20_Y9_N2
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(1),
-	aclr => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~1_combout\,
-	sload => VCC,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\(1));
-
--- Location: LC_X20_Y9_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0aa",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(3),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\(1),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(2));
-
--- Location: LC_X20_Y9_N9
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg\(0),
-	aclr => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~1_combout\,
-	sload => VCC,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\(0));
-
--- Location: LC_X20_Y9_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0aa",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(2),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(1));
-
--- Location: LC_X20_Y10_N2
-\inst2|altsyncram_component|auto_generated|mgl_prim2|is_in_use_reg\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff0a",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|is_in_use_reg~regout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][4]~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|is_in_use_reg~regout\);
-
--- Location: LC_X20_Y9_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(1),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|is_in_use_reg~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(0));
-
--- Location: LC_X16_Y10_N6
-\inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff80",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1]~regout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg\(1),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|Equal1~0_combout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\);
-
--- Location: LC_X19_Y9_N2
-\inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "2000",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(5),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0_regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2]~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\);
-
--- Location: PIN_29,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\pin_name1~I\ : cyclone_io
--- pragma translate_off
-GENERIC MAP (
-	input_async_reset => "none",
-	input_power_up => "low",
-	input_register_mode => "none",
-	input_sync_reset => "none",
-	oe_async_reset => "none",
-	oe_power_up => "low",
-	oe_register_mode => "none",
-	oe_sync_reset => "none",
-	operation_mode => "input",
-	output_async_reset => "none",
-	output_power_up => "low",
-	output_register_mode => "none",
-	output_sync_reset => "none")
--- pragma translate_on
-PORT MAP (
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	devoe => ww_devoe,
-	oe => GND,
-	padio => ww_pin_name1,
-	combout => \pin_name1~combout\);
-
--- Location: M4K_X17_Y14
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 0,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 0,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus\);
-
--- Location: M4K_X17_Y20
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 1,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 1,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a1_PORTBDATAOUT_bus\);
-
--- Location: M4K_X17_Y6
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 3,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 3,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a3_PORTBDATAOUT_bus\);
-
--- Location: M4K_X17_Y11
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000C",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 5,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 5,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a5_PORTBDATAOUT_bus\);
-
--- Location: M4K_X17_Y7
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 10,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 10,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a10_PORTBDATAOUT_bus\);
-
--- Location: M4K_X17_Y5
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 15,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 15,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a15_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y10_N3
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fff0",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shift_cntr_reg[4]~9_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\);
-
--- Location: LC_X16_Y10_N8
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[15]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \altera_internal_jtag~TDIUTAP\,
-	datac => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(15),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(15));
-
--- Location: M4K_X17_Y8
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 14,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 14,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a14_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y10_N4
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[14]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fa50",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(15),
-	datad => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(14),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(14));
-
--- Location: M4K_X17_Y10
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 13,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 13,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a13_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y10_N7
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[13]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(14),
-	datac => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(13),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(13));
-
--- Location: M4K_X17_Y9
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 12,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 12,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a12_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y10_N1
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[12]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fa50",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(13),
-	datad => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(12),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(12));
-
--- Location: M4K_X17_Y17
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 11,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 11,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a11_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y10_N9
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[11]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0aa",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(12),
-	datac => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(11),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(11));
-
--- Location: LC_X16_Y10_N2
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[10]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f5a0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(10),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(11),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(10));
-
--- Location: M4K_X17_Y16
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 9,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 9,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a9_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y12_N1
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[9]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(10),
-	datac => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(9),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(9));
-
--- Location: M4K_X17_Y18
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 8,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 8,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a8_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y12_N7
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[8]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ee44",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(9),
-	datad => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(8),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(8));
-
--- Location: M4K_X17_Y15
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 7,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 7,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a7_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y12_N8
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[7]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fa50",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(8),
-	datad => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(7),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(7));
-
--- Location: M4K_X17_Y19
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 6,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 6,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a6_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y12_N2
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[6]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(7),
-	datac => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(6),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(6));
-
--- Location: LC_X16_Y12_N0
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[5]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ccf0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(5),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(6),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(5));
-
--- Location: M4K_X17_Y13
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000A",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 4,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 4,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a4_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y12_N9
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[4]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fa50",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(5),
-	datad => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(4),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(4));
-
--- Location: LC_X16_Y12_N4
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ccf0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(3),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(4),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(3));
-
--- Location: M4K_X17_Y12
-\inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2\ : cyclone_ram_block
--- pragma translate_off
-GENERIC MAP (
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	mem_init0 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-	data_interleave_offset_in_bits => 1,
-	data_interleave_width_in_bits => 1,
-	init_file => "/export/home/014/a0147044/processer/meirei.hex",
-	init_file_layout => "port_a",
-	logical_ram_name => "ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1|ALTSYNCRAM",
-	mixed_port_feed_through_mode => "dont_care",
-	operation_mode => "bidir_dual_port",
-	port_a_address_clear => "none",
-	port_a_address_width => 12,
-	port_a_byte_enable_clear => "none",
-	port_a_byte_enable_clock => "none",
-	port_a_data_in_clear => "none",
-	port_a_data_out_clear => "none",
-	port_a_data_out_clock => "clock0",
-	port_a_data_width => 1,
-	port_a_first_address => 0,
-	port_a_first_bit_number => 2,
-	port_a_last_address => 4095,
-	port_a_logical_ram_depth => 4096,
-	port_a_logical_ram_width => 16,
-	port_a_write_enable_clear => "none",
-	port_b_address_clear => "none",
-	port_b_address_clock => "clock1",
-	port_b_address_width => 12,
-	port_b_byte_enable_clear => "none",
-	port_b_data_in_clear => "none",
-	port_b_data_in_clock => "clock1",
-	port_b_data_out_clear => "none",
-	port_b_data_out_clock => "none",
-	port_b_data_width => 1,
-	port_b_first_address => 0,
-	port_b_first_bit_number => 2,
-	port_b_last_address => 4095,
-	port_b_logical_ram_depth => 4096,
-	port_b_logical_ram_width => 16,
-	port_b_read_enable_write_enable_clear => "none",
-	port_b_read_enable_write_enable_clock => "clock1",
-	ram_block_type => "M4K")
--- pragma translate_on
-PORT MAP (
-	portawe => GND,
-	portbrewe => \inst2|altsyncram_component|auto_generated|mgl_prim2|enable_write~0_combout\,
-	clk0 => \pin_name1~combout\,
-	clk1 => \altera_internal_jtag~TCKUTAP\,
-	portadatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTADATAIN_bus\,
-	portbdatain => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTBDATAIN_bus\,
-	portaaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTAADDR_bus\,
-	portbaddr => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTBADDR_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	portadataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTADATAOUT_bus\,
-	portbdataout => \inst2|altsyncram_component|auto_generated|altsyncram1|ram_block3a2_PORTBDATAOUT_bus\);
-
--- Location: LC_X16_Y12_N5
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(3),
-	datac => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(2),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(2));
-
--- Location: LC_X16_Y12_N6
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f5a0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(1),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(2),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(1));
-
--- Location: LC_X16_Y12_N3
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "dd88",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~3_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|altsyncram1|q_b\(0),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(1),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(0));
-
--- Location: LC_X20_Y13_N1
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|clear_signal\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f000",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|clear_signal~combout\);
-
--- Location: LC_X20_Y13_N2
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~4\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "df20",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|sdr~0_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|clear_signal~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~4_combout\);
-
--- Location: LC_X20_Y14_N1
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "00f0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~2_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(0),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~4_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(0));
-
--- Location: LC_X20_Y14_N5
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "30c0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(1),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~2_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(0),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~4_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(1));
-
--- Location: LC_X20_Y14_N9
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~4\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0033",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(1),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~4_combout\);
-
--- Location: LC_X20_Y14_N4
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "28a0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~2_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(1),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(2),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(0),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~4_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(2));
-
--- Location: LC_X20_Y14_N2
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~2\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1333",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~4_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|clear_signal~combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(2),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(3),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~2_combout\);
-
--- Location: LC_X20_Y14_N0
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|Add0~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "cc00",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(1),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|Add0~0_combout\);
-
--- Location: LC_X20_Y14_N3
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "2a80",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~2_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|Add0~0_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(2),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(3),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[1]~4_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(3));
-
--- Location: LC_X20_Y14_N6
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "000f",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(3),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~0_combout\);
-
--- Location: LC_X20_Y14_N7
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "8008",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~0_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(1),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(2),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~1_combout\);
-
--- Location: LC_X20_Y13_N6
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]~3\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1fe0",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|sdr~0_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|clear_signal~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]~3_combout\);
-
--- Location: LC_X20_Y13_N5
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "2a00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \altera_internal_jtag~TDIUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]~3_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR\(3));
-
--- Location: LC_X20_Y13_N3
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "2a00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR\(3),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]~3_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR\(2));
-
--- Location: LC_X20_Y14_N8
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~5\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0200",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~4_combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|clear_signal~combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter\(2),
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~5_combout\);
-
--- Location: LC_X20_Y13_N8
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f4f0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|clear_signal~combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR\(2),
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~5_combout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]~3_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR\(1));
-
--- Location: LC_X20_Y13_N0
-\inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "5444",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|clear_signal~combout\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR~1_combout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR\(1),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	aclr => GND,
-	ena => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]~3_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR\(0));
-
--- Location: LC_X20_Y11_N6
-\inst2|altsyncram_component|auto_generated|mgl_prim2|tdo~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ce02",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg\(0),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~0_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|tdo~0_combout\);
-
--- Location: LC_X20_Y11_N5
-\inst2|altsyncram_component|auto_generated|mgl_prim2|bypass_reg_out\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \inst2|altsyncram_component|auto_generated|mgl_prim2|bypass_reg_out~regout\,
-	datac => \altera_internal_jtag~TDIUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0_regout\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst2|altsyncram_component|auto_generated|mgl_prim2|bypass_reg_out~regout\);
-
--- Location: LC_X20_Y11_N3
-\inst2|altsyncram_component|auto_generated|mgl_prim2|tdo~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "baaa",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|altsyncram_component|auto_generated|mgl_prim2|tdo~0_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~regout\,
-	datac => \inst2|altsyncram_component|auto_generated|mgl_prim2|process_0~0_combout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|bypass_reg_out~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|altsyncram_component|auto_generated|mgl_prim2|tdo~1_combout\);
-
--- Location: LC_X19_Y11_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "afa0",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(0),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datad => \inst2|altsyncram_component|auto_generated|mgl_prim2|tdo~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~0_combout\);
-
--- Location: LC_X22_Y12_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f000",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal~combout\);
-
--- Location: LC_X22_Y12_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~17\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "aeaa",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal~combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~17_combout\);
-
--- Location: LC_X21_Y13_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "33cc",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(0),
-	aclr => GND,
-	sclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~16_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~17_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(0),
-	cout0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[0]~7\,
-	cout1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[0]~7COUT1_24\);
-
--- Location: LC_X21_Y13_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "5a5f",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(1),
-	aclr => GND,
-	sclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~16_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~17_combout\,
-	cin0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[0]~7\,
-	cin1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[0]~7COUT1_24\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(1),
-	cout0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~13\,
-	cout1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~13COUT1_26\);
-
--- Location: LC_X21_Y13_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "a50a",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(2),
-	aclr => GND,
-	sclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~16_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~17_combout\,
-	cin0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~13\,
-	cin1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~13COUT1_26\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(2),
-	cout0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[2]~5\,
-	cout1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[2]~5COUT1_28\);
-
--- Location: LC_X21_Y13_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "3c3f",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(3),
-	aclr => GND,
-	sclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~16_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~17_combout\,
-	cin0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[2]~5\,
-	cin1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[2]~5COUT1_28\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(3),
-	cout0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[3]~9\,
-	cout1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[3]~9COUT1_30\);
-
--- Location: LC_X21_Y13_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~14\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "000f",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(3),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~14_combout\);
-
--- Location: LC_X21_Y13_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[4]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "a5a5",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(4),
-	aclr => GND,
-	sclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~16_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~17_combout\,
-	cin0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[3]~9\,
-	cin1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[3]~9COUT1_30\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(4));
-
--- Location: LC_X21_Y13_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~15\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "000f",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(2),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(1),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~15_combout\);
-
--- Location: LC_X21_Y13_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~16\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "eccc",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~14_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal~combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~15_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~16_combout\);
-
--- Location: LC_X21_Y13_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~6\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "c001",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(4),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(2),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~6_combout\);
-
--- Location: LC_X22_Y12_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~7\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0004",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(1),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~6_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~7_combout\);
-
--- Location: LC_X20_Y13_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~10\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0015",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(2),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~10_combout\);
-
--- Location: LC_X21_Y13_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~11\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "cc08",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter[1]~14_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~10_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(1),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~11_combout\);
-
--- Location: LC_X22_Y12_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~13\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0302",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(1),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(0),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(2),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~13_combout\);
-
--- Location: LC_X22_Y12_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[1]~15\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "feaa",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal~combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[1]~15_combout\);
-
--- Location: LC_X22_Y12_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "00ec",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \altera_internal_jtag~TDIUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~13_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal~combout\,
-	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[1]~15_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR\(3));
-
--- Location: LC_X22_Y12_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "aaea",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~11_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal~combout\,
-	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[1]~15_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR\(2));
-
--- Location: LC_X22_Y12_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~9\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f202",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(1),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter\(2),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR\(2),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~9_combout\);
-
--- Location: LC_X22_Y12_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0aaa",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~9_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[1]~15_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR\(1));
-
--- Location: LC_X22_Y12_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "aaea",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR~7_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR\(1),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal~combout\,
-	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR[1]~15_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR\(0));
-
--- Location: LC_X19_Y11_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~2\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "5500",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(1),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(2),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~2_combout\);
-
--- Location: LC_X19_Y11_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg~regout\,
-	datac => \altera_internal_jtag~TDIUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg~regout\);
-
--- Location: LC_X19_Y11_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~3\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "aa30",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR\(0),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~2_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|Equal3~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~3_combout\);
-
--- Location: LC_X20_Y13_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ffaa",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0_combout\);
-
--- Location: LC_X21_Y9_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "00f0",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \altera_internal_jtag~TDIUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg\(3));
-
--- Location: LC_X21_Y9_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ffcc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg\(3),
-	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg\(2));
-
--- Location: LC_X21_Y9_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "3300",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg\(2),
-	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg\(1));
-
--- Location: LC_X21_Y9_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fcfc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg\(1),
-	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg\(0));
-
--- Location: LC_X20_Y12_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~11\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "eca0",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~11_combout\);
-
--- Location: LC_X13_Y13_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "33cc",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(0),
-	datac => VCC,
-	aclr => GND,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~11_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(0),
-	cout0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~3\,
-	cout1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~3COUT1_18\);
-
--- Location: LC_X13_Y13_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "a505",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(1),
-	datac => VCC,
-	aclr => GND,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~11_combout\,
-	cin0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~3\,
-	cin1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~3COUT1_18\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(1),
-	cout0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~1\,
-	cout1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~1COUT1_20\);
-
--- Location: LC_X13_Y13_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "5aaf",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(2),
-	datac => VCC,
-	aclr => GND,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~11_combout\,
-	cin0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~1\,
-	cin1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~1COUT1_20\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(2),
-	cout0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~9\,
-	cout1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~9COUT1_22\);
-
--- Location: LC_X13_Y13_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "c303",
-	operation_mode => "arithmetic",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
-	datac => VCC,
-	aclr => GND,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~11_combout\,
-	cin0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~9\,
-	cin1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~9COUT1_22\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
-	cout0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~5\,
-	cout1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~5COUT1_24\);
-
--- Location: LC_X13_Y13_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~2\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0303",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(2),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~2_combout\);
+-- Location: LC_X32_Y2_N7
+\pchan|test[1]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|test\(1) = DFFEAS(\pchan|test\(1) $ ((((\pchan|test\(0))))), GLOBAL(\clock~combout\), VCC, , , , , , )
 
--- Location: LC_X13_Y13_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]\ : cyclone_lcell
 -- pragma translate_off
 GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
 	lut_mask => "5a5a",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "on")
+	sum_lutc_input => "datac",
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(4),
-	datac => VCC,
+	clk => \clock~combout\,
+	dataa => \pchan|test\(1),
+	datac => \pchan|test\(0),
 	aclr => GND,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~11_combout\,
-	cin0 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~5\,
-	cin1 => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~5COUT1_24\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(4));
+	regout => \pchan|test\(1));
 
--- Location: LC_X13_Y14_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~3\ : cyclone_lcell
+-- Location: LC_X33_Y2_N7
+\pchan|test[2]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|test\(2) = DFFEAS(\pchan|test\(2) $ (((\pchan|test\(1) & ((\pchan|test\(0)))))), GLOBAL(\clock~combout\), VCC, , , , , , )
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0505",
+	lut_mask => "66aa",
 	operation_mode => "normal",
-	output_mode => "comb_only",
+	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(0),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(4),
+	clk => \clock~combout\,
+	dataa => \pchan|test\(2),
+	datab => \pchan|test\(1),
+	datad => \pchan|test\(0),
+	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~3_combout\);
+	regout => \pchan|test\(2));
 
--- Location: LC_X13_Y13_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10\ : cyclone_lcell
+-- Location: LC_X33_Y2_N8
+\pchan|test[3]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|test\(3) = DFFEAS(\pchan|test\(3) $ (((\pchan|test\(2) & (\pchan|test\(0) & \pchan|test\(1))))), GLOBAL(\clock~combout\), VCC, , , , , , )
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f4f0",
+	lut_mask => "6ccc",
 	operation_mode => "normal",
-	output_mode => "comb_only",
+	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(1),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~2_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|clear_signal~combout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~3_combout\,
+	clk => \clock~combout\,
+	dataa => \pchan|test\(2),
+	datab => \pchan|test\(3),
+	datac => \pchan|test\(0),
+	datad => \pchan|test\(1),
+	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10_combout\);
+	regout => \pchan|test\(3));
 
--- Location: LC_X13_Y14_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "a0a0",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(2),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~0_combout\);
+-- Location: LC_X33_Y2_N5
+\pchan|add2|inst|inst4|half1|inst2\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst4|half1|inst2~combout\ = (\pchan|test\(2) & (\pchan|test\(0) & (\pchan|test\(3) & \pchan|test\(1))))
 
--- Location: LC_X13_Y14_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~1\ : cyclone_lcell
 -- pragma translate_off
 GENERIC MAP (
 	lut_mask => "8000",
@@ -5578,298 +358,197 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~0_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(1),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
+	dataa => \pchan|test\(2),
+	datab => \pchan|test\(0),
+	datac => \pchan|test\(3),
+	datad => \pchan|test\(1),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~1_combout\);
+	combout => \pchan|add2|inst|inst4|half1|inst2~combout\);
 
--- Location: LC_X13_Y14_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~12\ : cyclone_lcell
+-- Location: LC_X34_Y2_N5
+\pchan|test[4]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst5|half1|inst\ = (\pchan|add2|inst|inst4|half1|inst2~combout\ $ ((D1_test[4])))
+-- \pchan|test\(4) = DFFEAS(\pchan|add2|inst|inst5|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "89d1",
+	lut_mask => "3c3c",
 	operation_mode => "normal",
-	output_mode => "comb_only",
+	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
+	sum_lutc_input => "qfbk",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(2),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(1),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
+	clk => \clock~combout\,
+	datab => \pchan|add2|inst|inst4|half1|inst2~combout\,
+	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~12_combout\);
+	combout => \pchan|add2|inst|inst5|half1|inst\,
+	regout => \pchan|test\(4));
 
--- Location: LC_X13_Y14_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~13\ : cyclone_lcell
+-- Location: LC_X34_Y2_N8
+\pchan|test[5]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst6|half1|inst\ = (D1_test[5] $ (((\pchan|test\(4) & \pchan|add2|inst|inst4|half1|inst2~combout\))))
+-- \pchan|test\(5) = DFFEAS(\pchan|add2|inst|inst6|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1f00",
+	lut_mask => "3cf0",
 	operation_mode => "normal",
-	output_mode => "comb_only",
+	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
+	sum_lutc_input => "qfbk",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(0),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~12_combout\,
+	clk => \clock~combout\,
+	datab => \pchan|test\(4),
+	datad => \pchan|add2|inst|inst4|half1|inst2~combout\,
+	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~13_combout\);
+	combout => \pchan|add2|inst|inst6|half1|inst\,
+	regout => \pchan|test\(5));
 
--- Location: LC_X13_Y14_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~10\ : cyclone_lcell
+-- Location: LC_X33_Y2_N1
+\pchan|test[6]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst7|half1|inst2\ = (\pchan|test\(5) & (\pchan|test\(4) & (D1_test[6] & \pchan|add2|inst|inst4|half1|inst2~combout\)))
+-- \pchan|test\(6) = DFFEAS(\pchan|add2|inst|inst7|half1|inst2\, GLOBAL(\clock~combout\), VCC, , , \pchan|add2|inst|inst7|half1|inst~combout\, , , VCC)
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "e7cc",
+	lut_mask => "8000",
 	operation_mode => "normal",
-	output_mode => "comb_only",
+	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(2),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(1),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~10_combout\);
-
--- Location: LC_X13_Y14_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~11\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1f10",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(2),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~10_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~11_combout\);
-
--- Location: LC_X19_Y11_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~0\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0800",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(1),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg~regout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(2),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~0_combout\);
-
--- Location: LC_X21_Y11_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0c00",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~0_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1_combout\);
-
--- Location: LC_X21_Y11_N5
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
+	sum_lutc_input => "qfbk",
 	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \altera_internal_jtag~TDIUTAP\,
+	clk => \clock~combout\,
+	dataa => \pchan|test\(5),
+	datab => \pchan|test\(4),
+	datac => \pchan|add2|inst|inst7|half1|inst~combout\,
+	datad => \pchan|add2|inst|inst4|half1|inst2~combout\,
 	aclr => GND,
 	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(3));
+	combout => \pchan|add2|inst|inst7|half1|inst2\,
+	regout => \pchan|test\(6));
 
--- Location: LC_X21_Y11_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[2]\ : cyclone_lcell
+-- Location: LC_X34_Y2_N7
+\pchan|add2|inst|inst7|half1|inst\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst7|half1|inst~combout\ = \pchan|test\(6) $ (((\pchan|test\(4) & (\pchan|add2|inst|inst4|half1|inst2~combout\ & \pchan|test\(5)))))
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ff00",
+	lut_mask => "6ccc",
 	operation_mode => "normal",
-	output_mode => "reg_only",
+	output_mode => "comb_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(3),
+	dataa => \pchan|test\(4),
+	datab => \pchan|test\(6),
+	datac => \pchan|add2|inst|inst4|half1|inst2~combout\,
+	datad => \pchan|test\(5),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \pchan|add2|inst|inst7|half1|inst~combout\);
+
+-- Location: LC_X34_Y2_N2
+\pchan|test[7]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst8|half1|inst\ = ((D1_test[7] $ (\pchan|add2|inst|inst7|half1|inst2\)))
+-- \pchan|test\(7) = DFFEAS(\pchan|add2|inst|inst8|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0ff0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock~combout\,
+	datad => \pchan|add2|inst|inst7|half1|inst2\,
 	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(2));
+	combout => \pchan|add2|inst|inst8|half1|inst\,
+	regout => \pchan|test\(7));
 
--- Location: LC_X21_Y11_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0\ : cyclone_lcell
+-- Location: LC_X34_Y2_N4
+\pchan|test[8]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst16|half1|inst\ = (D1_test[8] $ (((\pchan|test\(7) & \pchan|add2|inst|inst7|half1|inst2\))))
+-- \pchan|test\(8) = DFFEAS(\pchan|add2|inst|inst16|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0008",
+	lut_mask => "5af0",
 	operation_mode => "normal",
-	output_mode => "comb_only",
+	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
+	sum_lutc_input => "qfbk",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~0_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0_combout\);
-
--- Location: LC_X21_Y11_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[2]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(2),
+	clk => \clock~combout\,
+	dataa => \pchan|test\(7),
+	datad => \pchan|add2|inst|inst7|half1|inst2\,
 	aclr => GND,
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg\(2));
+	combout => \pchan|add2|inst|inst16|half1|inst\,
+	regout => \pchan|test\(8));
 
--- Location: LC_X13_Y13_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~7\ : cyclone_lcell
+-- Location: LC_X34_Y2_N6
+\pchan|test[9]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst15|half1|inst\ = D1_test[9] $ (((\pchan|test\(7) & (\pchan|test\(8) & \pchan|add2|inst|inst7|half1|inst2\))))
+-- \pchan|test\(9) = DFFEAS(\pchan|add2|inst|inst15|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "24a6",
+	lut_mask => "78f0",
 	operation_mode => "normal",
-	output_mode => "comb_only",
+	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
+	sum_lutc_input => "qfbk",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(1),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(2),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~7_combout\);
-
--- Location: LC_X13_Y13_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~8\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "55aa",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(1),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(0),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~8_combout\);
-
--- Location: LC_X13_Y13_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~9\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "3909",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~7_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~8_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~9_combout\);
-
--- Location: LC_X21_Y11_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[3]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(3),
+	clk => \clock~combout\,
+	dataa => \pchan|test\(7),
+	datab => \pchan|test\(8),
+	datad => \pchan|add2|inst|inst7|half1|inst2\,
 	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg\(3));
+	combout => \pchan|add2|inst|inst15|half1|inst\,
+	regout => \pchan|test\(9));
 
--- Location: LC_X22_Y11_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0\ : cyclone_lcell
+-- Location: LC_X33_Y2_N2
+\pchan|add2|inst|inst15|half1|inst2\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst15|half1|inst2~combout\ = (\pchan|test\(9) & (\pchan|test\(8) & (\pchan|test\(7) & \pchan|add2|inst|inst7|half1|inst2\)))
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "3f3f",
+	lut_mask => "8000",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5877,17 +556,97 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg~regout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
+	dataa => \pchan|test\(9),
+	datab => \pchan|test\(8),
+	datac => \pchan|test\(7),
+	datad => \pchan|add2|inst|inst7|half1|inst2\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0_combout\);
+	combout => \pchan|add2|inst|inst15|half1|inst2~combout\);
 
--- Location: LC_X22_Y11_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena\ : cyclone_lcell
+-- Location: LC_X34_Y2_N9
+\pchan|test[10]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst14|half1|inst\ = ((D1_test[10] $ (\pchan|add2|inst|inst15|half1|inst2~combout\)))
+-- \pchan|test\(10) = DFFEAS(\pchan|add2|inst|inst14|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "e0e0",
+	lut_mask => "0ff0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock~combout\,
+	datad => \pchan|add2|inst|inst15|half1|inst2~combout\,
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \pchan|add2|inst|inst14|half1|inst\,
+	regout => \pchan|test\(10));
+
+-- Location: LC_X34_Y2_N0
+\pchan|test[11]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst13|half1|inst\ = (D1_test[11] $ (((\pchan|test\(10) & \pchan|add2|inst|inst15|half1|inst2~combout\))))
+-- \pchan|test\(11) = DFFEAS(\pchan|add2|inst|inst13|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "3cf0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock~combout\,
+	datab => \pchan|test\(10),
+	datad => \pchan|add2|inst|inst15|half1|inst2~combout\,
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \pchan|add2|inst|inst13|half1|inst\,
+	regout => \pchan|test\(11));
+
+-- Location: LC_X34_Y2_N3
+\pchan|test[12]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst12|half1|inst\ = D1_test[12] $ (((\pchan|test\(10) & (\pchan|test\(11) & \pchan|add2|inst|inst15|half1|inst2~combout\))))
+-- \pchan|test\(12) = DFFEAS(\pchan|add2|inst|inst12|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "78f0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock~combout\,
+	dataa => \pchan|test\(10),
+	datab => \pchan|test\(11),
+	datad => \pchan|add2|inst|inst15|half1|inst2~combout\,
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \pchan|add2|inst|inst12|half1|inst\,
+	regout => \pchan|test\(12));
+
+-- Location: LC_X33_Y2_N3
+\pchan|add2|inst|inst12|half1|inst2\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst12|half1|inst2~combout\ = (\pchan|test\(12) & (\pchan|test\(10) & (\pchan|test\(11) & \pchan|add2|inst|inst15|half1|inst2~combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "8000",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5895,42 +654,97 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(3),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg~regout\,
+	dataa => \pchan|test\(12),
+	datab => \pchan|test\(10),
+	datac => \pchan|test\(11),
+	datad => \pchan|add2|inst|inst15|half1|inst2~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~combout\);
+	combout => \pchan|add2|inst|inst12|half1|inst2~combout\);
 
--- Location: LC_X22_Y11_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]\ : cyclone_lcell
+-- Location: LC_X33_Y2_N9
+\pchan|test[13]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst11|half1|inst\ = ((D1_test[13] $ (\pchan|add2|inst|inst12|half1|inst2~combout\)))
+-- \pchan|test\(13) = DFFEAS(\pchan|add2|inst|inst11|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ee44",
+	lut_mask => "0ff0",
 	operation_mode => "normal",
-	output_mode => "reg_only",
+	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
+	sum_lutc_input => "qfbk",
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~1_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~9_combout\,
-	datac => \altera_internal_jtag~TDIUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg\(3),
+	clk => \clock~combout\,
+	datad => \pchan|add2|inst|inst12|half1|inst2~combout\,
 	aclr => GND,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg\(3));
+	combout => \pchan|add2|inst|inst11|half1|inst\,
+	regout => \pchan|test\(13));
 
--- Location: LC_X13_Y14_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~4\ : cyclone_lcell
+-- Location: LC_X33_Y2_N4
+\pchan|test[14]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst10|half1|inst\ = (D1_test[14] $ (((\pchan|test\(13) & \pchan|add2|inst|inst12|half1|inst2~combout\))))
+-- \pchan|test\(14) = DFFEAS(\pchan|add2|inst|inst10|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1a00",
+	lut_mask => "5af0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock~combout\,
+	dataa => \pchan|test\(13),
+	datad => \pchan|add2|inst|inst12|half1|inst2~combout\,
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \pchan|add2|inst|inst10|half1|inst\,
+	regout => \pchan|test\(14));
+
+-- Location: LC_X33_Y2_N6
+\pchan|test[15]\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst9|half1|inst\ = D1_test[15] $ (((\pchan|test\(13) & (\pchan|test\(14) & \pchan|add2|inst|inst12|half1|inst2~combout\))))
+-- \pchan|test\(15) = DFFEAS(\pchan|add2|inst|inst9|half1|inst\, GLOBAL(\clock~combout\), VCC, , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "78f0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock~combout\,
+	dataa => \pchan|test\(13),
+	datab => \pchan|test\(14),
+	datad => \pchan|add2|inst|inst12|half1|inst2~combout\,
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \pchan|add2|inst|inst9|half1|inst\,
+	regout => \pchan|test\(15));
+
+-- Location: LC_X33_Y3_N2
+\pchan|add2|inst|inst9|half1|inst2\ : cyclone_lcell
+-- Equation(s):
+-- \pchan|add2|inst|inst9|half1|inst2~combout\ = (\pchan|test\(13) & (\pchan|add2|inst|inst12|half1|inst2~combout\ & (\pchan|test\(14) & \pchan|test\(15))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "8000",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5938,19 +752,23 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(2),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(1),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~3_combout\,
+	dataa => \pchan|test\(13),
+	datab => \pchan|add2|inst|inst12|half1|inst2~combout\,
+	datac => \pchan|test\(14),
+	datad => \pchan|test\(15),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~4_combout\);
+	combout => \pchan|add2|inst|inst9|half1|inst2~combout\);
 
--- Location: LC_X13_Y14_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~5\ : cyclone_lcell
+-- Location: LC_X34_Y5_N6
+\4noketa|y0noor\ : cyclone_lcell
+-- Equation(s):
+-- \4noketa|y0noor~combout\ = (\pchan|add2|inst|inst9|half1|inst\) # ((\pchan|add2|inst|inst10|half1|inst\ & ((!\pchan|add2|inst|inst12|half1|inst\) # (!\pchan|add2|inst|inst11|half1|inst\))) # (!\pchan|add2|inst|inst10|half1|inst\ & 
+-- (\pchan|add2|inst|inst11|half1|inst\)))
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0f33",
+	lut_mask => "befe",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5958,18 +776,23 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(1),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(4),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(2),
+	dataa => \pchan|add2|inst|inst9|half1|inst\,
+	datab => \pchan|add2|inst|inst10|half1|inst\,
+	datac => \pchan|add2|inst|inst11|half1|inst\,
+	datad => \pchan|add2|inst|inst12|half1|inst\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~5_combout\);
+	combout => \4noketa|y0noor~combout\);
 
--- Location: LC_X13_Y14_N2
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~6\ : cyclone_lcell
+-- Location: LC_X34_Y5_N7
+\4noketa|y1noor\ : cyclone_lcell
+-- Equation(s):
+-- \4noketa|y1noor~combout\ = (\pchan|add2|inst|inst9|half1|inst\ & (((\pchan|add2|inst|inst11|half1|inst\)) # (!\pchan|add2|inst|inst10|half1|inst\))) # (!\pchan|add2|inst|inst9|half1|inst\ & ((\pchan|add2|inst|inst10|half1|inst\) # 
+-- ((!\pchan|add2|inst|inst11|half1|inst\ & !\pchan|add2|inst|inst12|half1|inst\))))
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "baaa",
+	lut_mask => "e6e7",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5977,174 +800,23 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~4_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(3),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg\(0),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~5_combout\,
+	dataa => \pchan|add2|inst|inst9|half1|inst\,
+	datab => \pchan|add2|inst|inst10|half1|inst\,
+	datac => \pchan|add2|inst|inst11|half1|inst\,
+	datad => \pchan|add2|inst|inst12|half1|inst\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~6_combout\);
+	combout => \4noketa|y1noor~combout\);
 
--- Location: LC_X22_Y11_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[2]\ : cyclone_lcell
+-- Location: LC_X34_Y5_N2
+\4noketa|y2noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \4noketa|y2noor~0_combout\ = (\pchan|add2|inst|inst11|half1|inst\ & ((\pchan|add2|inst|inst9|half1|inst\) # ((!\pchan|add2|inst|inst12|half1|inst\)))) # (!\pchan|add2|inst|inst11|half1|inst\ & ((\pchan|add2|inst|inst10|half1|inst\ & 
+-- (\pchan|add2|inst|inst9|half1|inst\)) # (!\pchan|add2|inst|inst10|half1|inst\ & ((!\pchan|add2|inst|inst12|half1|inst\)))))
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "dd88",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~1_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg\(2),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg\(3),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~6_combout\,
-	aclr => GND,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg\(2));
-
--- Location: LC_X21_Y11_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(2),
-	aclr => GND,
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(1));
-
--- Location: LC_X21_Y11_N4
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(1),
-	aclr => GND,
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg\(1));
-
--- Location: LC_X22_Y11_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ee44",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~1_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~11_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg\(2),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg\(1),
-	aclr => GND,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg\(1));
-
--- Location: LC_X21_Y11_N3
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(1),
-	aclr => GND,
-	sload => VCC,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(0));
-
--- Location: LC_X21_Y11_N7
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\(0),
-	aclr => GND,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg\(0));
-
--- Location: LC_X22_Y11_N9
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[0]\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ee44",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~1_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~13_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg\(1),
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg\(0),
-	aclr => GND,
-	sload => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0_combout\,
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg\(0));
-
--- Location: LC_X19_Y11_N1
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~1\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ae04",
+	lut_mask => "a8fb",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -6152,19 +824,23 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(0),
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg\(0),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg\(0),
+	dataa => \pchan|add2|inst|inst9|half1|inst\,
+	datab => \pchan|add2|inst|inst10|half1|inst\,
+	datac => \pchan|add2|inst|inst11|half1|inst\,
+	datad => \pchan|add2|inst|inst12|half1|inst\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~1_combout\);
+	combout => \4noketa|y2noor~0_combout\);
 
--- Location: LC_X19_Y11_N6
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~4\ : cyclone_lcell
+-- Location: LC_X34_Y5_N9
+\4noketa|y3noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \4noketa|y3noor~0_combout\ = (\pchan|add2|inst|inst11|half1|inst\ & ((\pchan|add2|inst|inst10|half1|inst\ & ((!\pchan|add2|inst|inst12|half1|inst\))) # (!\pchan|add2|inst|inst10|half1|inst\ & ((\pchan|add2|inst|inst12|half1|inst\) # 
+-- (!\pchan|add2|inst|inst9|half1|inst\))))) # (!\pchan|add2|inst|inst11|half1|inst\ & ((\pchan|add2|inst|inst9|half1|inst\) # (\pchan|add2|inst|inst10|half1|inst\ $ (!\pchan|add2|inst|inst12|half1|inst\))))
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ce0a",
+	lut_mask => "3edb",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -6172,42 +848,23 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~3_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~2_combout\,
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~1_combout\,
+	dataa => \pchan|add2|inst|inst9|half1|inst\,
+	datab => \pchan|add2|inst|inst10|half1|inst\,
+	datac => \pchan|add2|inst|inst11|half1|inst\,
+	datad => \pchan|add2|inst|inst12|half1|inst\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~4_combout\);
+	combout => \4noketa|y3noor~0_combout\);
 
--- Location: LC_X19_Y11_N8
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo\ : cyclone_lcell
+-- Location: LC_X34_Y5_N8
+\4noketa|y4noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \4noketa|y4noor~0_combout\ = (\pchan|add2|inst|inst9|half1|inst\ & (((!\pchan|add2|inst|inst11|half1|inst\ & \pchan|add2|inst|inst12|half1|inst\)) # (!\pchan|add2|inst|inst10|half1|inst\))) # (!\pchan|add2|inst|inst9|half1|inst\ & 
+-- ((\pchan|add2|inst|inst10|half1|inst\) # ((\pchan|add2|inst|inst12|half1|inst\) # (!\pchan|add2|inst|inst11|half1|inst\))))
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "4457",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \ALT_INV_altera_internal_jtag~TCKUTAP\,
-	dataa => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~0_combout\,
-	datab => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\(5),
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg~regout\,
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~4_combout\,
-	aclr => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(8),
-	ena => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~regout\);
-
--- Location: LC_X19_Y11_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~_wirecell\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0f0f",
+	lut_mask => "7f67",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -6215,60 +872,561 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~regout\,
+	dataa => \pchan|add2|inst|inst9|half1|inst\,
+	datab => \pchan|add2|inst|inst10|half1|inst\,
+	datac => \pchan|add2|inst|inst11|half1|inst\,
+	datad => \pchan|add2|inst|inst12|half1|inst\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~_wirecell_combout\);
+	combout => \4noketa|y4noor~0_combout\);
 
--- Location: LC_X12_Y15_N0
-\auto_hub|~GND\ : cyclone_lcell
+-- Location: LC_X34_Y5_N4
+\4noketa|y5noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \4noketa|y5noor~0_combout\ = (\pchan|add2|inst|inst9|half1|inst\ & ((\pchan|add2|inst|inst12|half1|inst\ & ((!\pchan|add2|inst|inst11|half1|inst\))) # (!\pchan|add2|inst|inst12|half1|inst\ & (!\pchan|add2|inst|inst10|half1|inst\)))) # 
+-- (!\pchan|add2|inst|inst9|half1|inst\ & ((\pchan|add2|inst|inst11|half1|inst\ $ (!\pchan|add2|inst|inst12|half1|inst\)) # (!\pchan|add2|inst|inst10|half1|inst\)))
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000",
+	lut_mask => "5b37",
 	operation_mode => "normal",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-;
-
--- Location: LC_X27_Y11_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~_wirecell\ : cyclone_lcell
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0f0f",
-	operation_mode => "normal",
-	output_mode => "none",
+	output_mode => "comb_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datac => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~regout\,
+	dataa => \pchan|add2|inst|inst9|half1|inst\,
+	datab => \pchan|add2|inst|inst10|half1|inst\,
+	datac => \pchan|add2|inst|inst11|half1|inst\,
+	datad => \pchan|add2|inst|inst12|half1|inst\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~_wirecell_combout\);
+	combout => \4noketa|y5noor~0_combout\);
 
--- Location: LC_X26_Y10_N0
-\auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]~_wirecell\ : cyclone_lcell
+-- Location: LC_X34_Y5_N5
+\4noketa|y6noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \4noketa|y6noor~0_combout\ = (\pchan|add2|inst|inst10|half1|inst\ & ((\pchan|add2|inst|inst11|half1|inst\) # ((!\pchan|add2|inst|inst9|half1|inst\ & \pchan|add2|inst|inst12|half1|inst\)))) # (!\pchan|add2|inst|inst10|half1|inst\ & 
+-- ((\pchan|add2|inst|inst9|half1|inst\ $ (\pchan|add2|inst|inst11|half1|inst\)) # (!\pchan|add2|inst|inst12|half1|inst\)))
+
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "00ff",
+	lut_mask => "d6f3",
 	operation_mode => "normal",
-	output_mode => "none",
+	output_mode => "comb_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datad => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(0),
+	dataa => \pchan|add2|inst|inst9|half1|inst\,
+	datab => \pchan|add2|inst|inst10|half1|inst\,
+	datac => \pchan|add2|inst|inst11|half1|inst\,
+	datad => \pchan|add2|inst|inst12|half1|inst\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]~_wirecell_combout\);
+	combout => \4noketa|y6noor~0_combout\);
 
--- Location: PIN_149,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-\altera_reserved_tdo~I\ : cyclone_io
+-- Location: LC_X34_Y3_N6
+\3noketa|y0noor\ : cyclone_lcell
+-- Equation(s):
+-- \3noketa|y0noor~combout\ = (\pchan|add2|inst|inst13|half1|inst\) # ((\pchan|add2|inst|inst14|half1|inst\ & ((!\pchan|add2|inst|inst16|half1|inst\) # (!\pchan|add2|inst|inst15|half1|inst\))) # (!\pchan|add2|inst|inst14|half1|inst\ & 
+-- (\pchan|add2|inst|inst15|half1|inst\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f6fe",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst14|half1|inst\,
+	datab => \pchan|add2|inst|inst15|half1|inst\,
+	datac => \pchan|add2|inst|inst13|half1|inst\,
+	datad => \pchan|add2|inst|inst16|half1|inst\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \3noketa|y0noor~combout\);
+
+-- Location: LC_X34_Y2_N1
+\3noketa|y1noor\ : cyclone_lcell
+-- Equation(s):
+-- \3noketa|y1noor~combout\ = (\pchan|add2|inst|inst14|half1|inst\ & (((\pchan|add2|inst|inst15|half1|inst\) # (!\pchan|add2|inst|inst13|half1|inst\)))) # (!\pchan|add2|inst|inst14|half1|inst\ & ((\pchan|add2|inst|inst13|half1|inst\) # 
+-- ((!\pchan|add2|inst|inst16|half1|inst\ & !\pchan|add2|inst|inst15|half1|inst\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cff1",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst16|half1|inst\,
+	datab => \pchan|add2|inst|inst15|half1|inst\,
+	datac => \pchan|add2|inst|inst14|half1|inst\,
+	datad => \pchan|add2|inst|inst13|half1|inst\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \3noketa|y1noor~combout\);
+
+-- Location: LC_X34_Y3_N9
+\3noketa|y2noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \3noketa|y2noor~0_combout\ = (\pchan|add2|inst|inst15|half1|inst\ & (((\pchan|add2|inst|inst13|half1|inst\) # (!\pchan|add2|inst|inst16|half1|inst\)))) # (!\pchan|add2|inst|inst15|half1|inst\ & ((\pchan|add2|inst|inst14|half1|inst\ & 
+-- (\pchan|add2|inst|inst13|half1|inst\)) # (!\pchan|add2|inst|inst14|half1|inst\ & ((!\pchan|add2|inst|inst16|half1|inst\)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "e0fd",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst14|half1|inst\,
+	datab => \pchan|add2|inst|inst15|half1|inst\,
+	datac => \pchan|add2|inst|inst13|half1|inst\,
+	datad => \pchan|add2|inst|inst16|half1|inst\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \3noketa|y2noor~0_combout\);
+
+-- Location: LC_X34_Y3_N8
+\3noketa|y3noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \3noketa|y3noor~0_combout\ = (\pchan|add2|inst|inst15|half1|inst\ & ((\pchan|add2|inst|inst14|half1|inst\ & ((!\pchan|add2|inst|inst16|half1|inst\))) # (!\pchan|add2|inst|inst14|half1|inst\ & ((\pchan|add2|inst|inst16|half1|inst\) # 
+-- (!\pchan|add2|inst|inst13|half1|inst\))))) # (!\pchan|add2|inst|inst15|half1|inst\ & ((\pchan|add2|inst|inst13|half1|inst\) # (\pchan|add2|inst|inst14|half1|inst\ $ (!\pchan|add2|inst|inst16|half1|inst\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "76bd",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst14|half1|inst\,
+	datab => \pchan|add2|inst|inst15|half1|inst\,
+	datac => \pchan|add2|inst|inst13|half1|inst\,
+	datad => \pchan|add2|inst|inst16|half1|inst\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \3noketa|y3noor~0_combout\);
+
+-- Location: LC_X34_Y3_N5
+\3noketa|y4noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \3noketa|y4noor~0_combout\ = (\pchan|add2|inst|inst14|half1|inst\ & (((!\pchan|add2|inst|inst15|half1|inst\ & \pchan|add2|inst|inst16|half1|inst\)) # (!\pchan|add2|inst|inst13|half1|inst\))) # (!\pchan|add2|inst|inst14|half1|inst\ & 
+-- (((\pchan|add2|inst|inst13|half1|inst\) # (\pchan|add2|inst|inst16|half1|inst\)) # (!\pchan|add2|inst|inst15|half1|inst\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "7f5b",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst14|half1|inst\,
+	datab => \pchan|add2|inst|inst15|half1|inst\,
+	datac => \pchan|add2|inst|inst13|half1|inst\,
+	datad => \pchan|add2|inst|inst16|half1|inst\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \3noketa|y4noor~0_combout\);
+
+-- Location: LC_X34_Y3_N4
+\3noketa|y5noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \3noketa|y5noor~0_combout\ = (\pchan|add2|inst|inst15|half1|inst\ & ((\pchan|add2|inst|inst16|half1|inst\ & ((!\pchan|add2|inst|inst13|half1|inst\))) # (!\pchan|add2|inst|inst16|half1|inst\ & (!\pchan|add2|inst|inst14|half1|inst\)))) # 
+-- (!\pchan|add2|inst|inst15|half1|inst\ & ((\pchan|add2|inst|inst13|half1|inst\ $ (!\pchan|add2|inst|inst16|half1|inst\)) # (!\pchan|add2|inst|inst14|half1|inst\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "3d57",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst14|half1|inst\,
+	datab => \pchan|add2|inst|inst15|half1|inst\,
+	datac => \pchan|add2|inst|inst13|half1|inst\,
+	datad => \pchan|add2|inst|inst16|half1|inst\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \3noketa|y5noor~0_combout\);
+
+-- Location: LC_X34_Y3_N2
+\3noketa|y6noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \3noketa|y6noor~0_combout\ = (\pchan|add2|inst|inst14|half1|inst\ & ((\pchan|add2|inst|inst15|half1|inst\) # ((!\pchan|add2|inst|inst13|half1|inst\ & \pchan|add2|inst|inst16|half1|inst\)))) # (!\pchan|add2|inst|inst14|half1|inst\ & 
+-- ((\pchan|add2|inst|inst15|half1|inst\ $ (\pchan|add2|inst|inst13|half1|inst\)) # (!\pchan|add2|inst|inst16|half1|inst\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "9edd",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst14|half1|inst\,
+	datab => \pchan|add2|inst|inst15|half1|inst\,
+	datac => \pchan|add2|inst|inst13|half1|inst\,
+	datad => \pchan|add2|inst|inst16|half1|inst\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \3noketa|y6noor~0_combout\);
+
+-- Location: LC_X34_Y1_N6
+\ninoketast4|y0noor\ : cyclone_lcell
+-- Equation(s):
+-- \ninoketast4|y0noor~combout\ = (\pchan|add2|inst|inst8|half1|inst\) # ((\pchan|add2|inst|inst6|half1|inst\ & ((!\pchan|add2|inst|inst7|half1|inst~combout\) # (!\pchan|add2|inst|inst5|half1|inst\))) # (!\pchan|add2|inst|inst6|half1|inst\ & 
+-- ((\pchan|add2|inst|inst7|half1|inst~combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "bffa",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst8|half1|inst\,
+	datab => \pchan|add2|inst|inst5|half1|inst\,
+	datac => \pchan|add2|inst|inst6|half1|inst\,
+	datad => \pchan|add2|inst|inst7|half1|inst~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \ninoketast4|y0noor~combout\);
+
+-- Location: LC_X34_Y1_N7
+\ninoketast4|y1noor\ : cyclone_lcell
+-- Equation(s):
+-- \ninoketast4|y1noor~combout\ = (\pchan|add2|inst|inst8|half1|inst\ & (((\pchan|add2|inst|inst6|half1|inst\) # (!\pchan|add2|inst|inst7|half1|inst~combout\)))) # (!\pchan|add2|inst|inst8|half1|inst\ & ((\pchan|add2|inst|inst7|half1|inst~combout\) # 
+-- ((!\pchan|add2|inst|inst5|half1|inst\ & !\pchan|add2|inst|inst6|half1|inst\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f5ab",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst8|half1|inst\,
+	datab => \pchan|add2|inst|inst5|half1|inst\,
+	datac => \pchan|add2|inst|inst6|half1|inst\,
+	datad => \pchan|add2|inst|inst7|half1|inst~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \ninoketast4|y1noor~combout\);
+
+-- Location: LC_X34_Y1_N4
+\ninoketast4|y2noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \ninoketast4|y2noor~0_combout\ = (\pchan|add2|inst|inst6|half1|inst\ & ((\pchan|add2|inst|inst8|half1|inst\) # ((!\pchan|add2|inst|inst5|half1|inst\)))) # (!\pchan|add2|inst|inst6|half1|inst\ & ((\pchan|add2|inst|inst7|half1|inst~combout\ & 
+-- (\pchan|add2|inst|inst8|half1|inst\)) # (!\pchan|add2|inst|inst7|half1|inst~combout\ & ((!\pchan|add2|inst|inst5|half1|inst\)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "bab3",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst8|half1|inst\,
+	datab => \pchan|add2|inst|inst5|half1|inst\,
+	datac => \pchan|add2|inst|inst6|half1|inst\,
+	datad => \pchan|add2|inst|inst7|half1|inst~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \ninoketast4|y2noor~0_combout\);
+
+-- Location: LC_X34_Y1_N8
+\ninoketast4|y3noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \ninoketast4|y3noor~0_combout\ = (\pchan|add2|inst|inst6|half1|inst\ & ((\pchan|add2|inst|inst5|half1|inst\ & ((!\pchan|add2|inst|inst7|half1|inst~combout\))) # (!\pchan|add2|inst|inst5|half1|inst\ & ((\pchan|add2|inst|inst7|half1|inst~combout\) # 
+-- (!\pchan|add2|inst|inst8|half1|inst\))))) # (!\pchan|add2|inst|inst6|half1|inst\ & ((\pchan|add2|inst|inst8|half1|inst\) # (\pchan|add2|inst|inst5|half1|inst\ $ (!\pchan|add2|inst|inst7|half1|inst~combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "3edb",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst8|half1|inst\,
+	datab => \pchan|add2|inst|inst5|half1|inst\,
+	datac => \pchan|add2|inst|inst6|half1|inst\,
+	datad => \pchan|add2|inst|inst7|half1|inst~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \ninoketast4|y3noor~0_combout\);
+
+-- Location: LC_X34_Y1_N9
+\ninoketast4|y4noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \ninoketast4|y4noor~0_combout\ = (\pchan|add2|inst|inst8|half1|inst\ & (((\pchan|add2|inst|inst5|half1|inst\ & !\pchan|add2|inst|inst6|half1|inst\)) # (!\pchan|add2|inst|inst7|half1|inst~combout\))) # (!\pchan|add2|inst|inst8|half1|inst\ & 
+-- ((\pchan|add2|inst|inst5|half1|inst\) # ((\pchan|add2|inst|inst7|half1|inst~combout\) # (!\pchan|add2|inst|inst6|half1|inst\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "5def",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst8|half1|inst\,
+	datab => \pchan|add2|inst|inst5|half1|inst\,
+	datac => \pchan|add2|inst|inst6|half1|inst\,
+	datad => \pchan|add2|inst|inst7|half1|inst~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \ninoketast4|y4noor~0_combout\);
+
+-- Location: LC_X34_Y1_N5
+\ninoketast4|y5noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \ninoketast4|y5noor~0_combout\ = (\pchan|add2|inst|inst8|half1|inst\ & ((\pchan|add2|inst|inst5|half1|inst\ & (!\pchan|add2|inst|inst6|half1|inst\)) # (!\pchan|add2|inst|inst5|half1|inst\ & ((!\pchan|add2|inst|inst7|half1|inst~combout\))))) # 
+-- (!\pchan|add2|inst|inst8|half1|inst\ & ((\pchan|add2|inst|inst5|half1|inst\ $ (!\pchan|add2|inst|inst6|half1|inst\)) # (!\pchan|add2|inst|inst7|half1|inst~combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "497f",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst8|half1|inst\,
+	datab => \pchan|add2|inst|inst5|half1|inst\,
+	datac => \pchan|add2|inst|inst6|half1|inst\,
+	datad => \pchan|add2|inst|inst7|half1|inst~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \ninoketast4|y5noor~0_combout\);
+
+-- Location: LC_X34_Y1_N2
+\ninoketast4|y6noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \ninoketast4|y6noor~0_combout\ = (\pchan|add2|inst|inst6|half1|inst\ & (((\pchan|add2|inst|inst7|half1|inst~combout\) # (!\pchan|add2|inst|inst5|half1|inst\)) # (!\pchan|add2|inst|inst8|half1|inst\))) # (!\pchan|add2|inst|inst6|half1|inst\ & 
+-- (\pchan|add2|inst|inst7|half1|inst~combout\ $ (((\pchan|add2|inst|inst8|half1|inst\) # (!\pchan|add2|inst|inst5|half1|inst\)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f47b",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|add2|inst|inst8|half1|inst\,
+	datab => \pchan|add2|inst|inst5|half1|inst\,
+	datac => \pchan|add2|inst|inst6|half1|inst\,
+	datad => \pchan|add2|inst|inst7|half1|inst~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \ninoketast4|y6noor~0_combout\);
+
+-- Location: LC_X32_Y2_N6
+\inoketa|y0noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \inoketa|y0noor~0_combout\ = (\pchan|test\(1) & ((\pchan|test\(0) $ (\pchan|test\(3))) # (!\pchan|test\(2)))) # (!\pchan|test\(1) & ((\pchan|test\(2)) # ((\pchan|test\(0)) # (\pchan|test\(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "7ff6",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|test\(1),
+	datab => \pchan|test\(2),
+	datac => \pchan|test\(0),
+	datad => \pchan|test\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inoketa|y0noor~0_combout\);
+
+-- Location: LC_X32_Y2_N4
+\inoketa|y1noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \inoketa|y1noor~0_combout\ = (\pchan|test\(2) & ((\pchan|test\(1)) # ((\pchan|test\(0)) # (!\pchan|test\(3))))) # (!\pchan|test\(2) & (\pchan|test\(3) $ (((\pchan|test\(1) & \pchan|test\(0))))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "dbec",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|test\(1),
+	datab => \pchan|test\(2),
+	datac => \pchan|test\(0),
+	datad => \pchan|test\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inoketa|y1noor~0_combout\);
+
+-- Location: LC_X32_Y2_N8
+\inoketa|y2noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \inoketa|y2noor~0_combout\ = (\pchan|test\(2) & (((\pchan|test\(0)) # (\pchan|test\(3))))) # (!\pchan|test\(2) & ((\pchan|test\(1) & ((\pchan|test\(3)))) # (!\pchan|test\(1) & (\pchan|test\(0)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fed0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|test\(1),
+	datab => \pchan|test\(2),
+	datac => \pchan|test\(0),
+	datad => \pchan|test\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inoketa|y2noor~0_combout\);
+
+-- Location: LC_X32_Y2_N2
+\inoketa|y3noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \inoketa|y3noor~0_combout\ = (\pchan|test\(1) & ((\pchan|test\(2) & (\pchan|test\(0))) # (!\pchan|test\(2) & ((\pchan|test\(3)) # (!\pchan|test\(0)))))) # (!\pchan|test\(1) & ((\pchan|test\(2)) # (\pchan|test\(0) $ (\pchan|test\(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "e7d6",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|test\(1),
+	datab => \pchan|test\(2),
+	datac => \pchan|test\(0),
+	datad => \pchan|test\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inoketa|y3noor~0_combout\);
+
+-- Location: LC_X32_Y2_N3
+\inoketa|y4noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \inoketa|y4noor~0_combout\ = (\pchan|test\(1) & ((\pchan|test\(2) $ (!\pchan|test\(0))) # (!\pchan|test\(3)))) # (!\pchan|test\(1) & ((\pchan|test\(2) $ (\pchan|test\(3))) # (!\pchan|test\(0))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "97ef",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|test\(1),
+	datab => \pchan|test\(2),
+	datac => \pchan|test\(0),
+	datad => \pchan|test\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inoketa|y4noor~0_combout\);
+
+-- Location: LC_X32_Y2_N9
+\inoketa|y5noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \inoketa|y5noor~0_combout\ = (\pchan|test\(2) & (\pchan|test\(1) $ (((!\pchan|test\(0) & \pchan|test\(3)))))) # (!\pchan|test\(2) & (((!\pchan|test\(3))) # (!\pchan|test\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "95bb",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|test\(1),
+	datab => \pchan|test\(2),
+	datac => \pchan|test\(0),
+	datad => \pchan|test\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inoketa|y5noor~0_combout\);
+
+-- Location: LC_X32_Y2_N5
+\inoketa|y6noor~0\ : cyclone_lcell
+-- Equation(s):
+-- \inoketa|y6noor~0_combout\ = (\pchan|test\(1) & ((\pchan|test\(2)) # ((!\pchan|test\(0) & !\pchan|test\(3))))) # (!\pchan|test\(1) & ((\pchan|test\(0)) # (\pchan|test\(2) $ (\pchan|test\(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "d9de",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pchan|test\(1),
+	datab => \pchan|test\(2),
+	datac => \pchan|test\(0),
+	datad => \pchan|test\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inoketa|y6noor~0_combout\);
+
+-- Location: PIN_133,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\over~I\ : cyclone_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -6286,12 +1444,740 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \altera_internal_jtag~TDO\,
+	datain => \pchan|add2|inst|inst9|half1|inst2~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => VCC,
-	padio => ww_altera_reserved_tdo);
+	padio => ww_over);
+
+-- Location: PIN_134,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name1~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \4noketa|y0noor~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name1);
+
+-- Location: PIN_135,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name2~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \4noketa|y1noor~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name2);
+
+-- Location: PIN_136,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name3~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \4noketa|y2noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name3);
+
+-- Location: PIN_137,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name4~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \4noketa|y3noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name4);
+
+-- Location: PIN_138,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name5~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \4noketa|y4noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name5);
+
+-- Location: PIN_139,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name6~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \4noketa|y5noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name6);
+
+-- Location: PIN_140,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name7~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \4noketa|y6noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name7);
+
+-- Location: PIN_124,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name8~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \3noketa|y0noor~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name8);
+
+-- Location: PIN_125,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name10~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \3noketa|y1noor~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name10);
+
+-- Location: PIN_126,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name11~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \3noketa|y2noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name11);
+
+-- Location: PIN_127,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name12~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \3noketa|y3noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name12);
+
+-- Location: PIN_128,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name13~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \3noketa|y4noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name13);
+
+-- Location: PIN_131,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name15~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \3noketa|y5noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name15);
+
+-- Location: PIN_132,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name16~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \3noketa|y6noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name16);
+
+-- Location: PIN_116,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name17~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \ninoketast4|y0noor~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name17);
+
+-- Location: PIN_117,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name18~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \ninoketast4|y1noor~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name18);
+
+-- Location: PIN_118,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name19~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \ninoketast4|y2noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name19);
+
+-- Location: PIN_119,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name20~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \ninoketast4|y3noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name20);
+
+-- Location: PIN_120,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name21~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \ninoketast4|y4noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name21);
+
+-- Location: PIN_121,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name22~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \ninoketast4|y5noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name22);
+
+-- Location: PIN_122,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name26~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \ninoketast4|y6noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name26);
+
+-- Location: PIN_104,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name27~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \inoketa|y0noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name27);
+
+-- Location: PIN_105,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name28~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \inoketa|y1noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name28);
+
+-- Location: PIN_106,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name29~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \inoketa|y2noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name29);
+
+-- Location: PIN_107,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name31~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \inoketa|y3noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name31);
+
+-- Location: PIN_108,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name32~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \inoketa|y4noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name32);
+
+-- Location: PIN_113,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name36~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \inoketa|y5noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name36);
+
+-- Location: PIN_114,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+\pin_name37~I\ : cyclone_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "output",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	datain => \inoketa|y6noor~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => VCC,
+	padio => ww_pin_name37);
 END structure;
 
 
