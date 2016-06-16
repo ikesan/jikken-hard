@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for jikken
-Fri Jun 10 17:39:32 2016
+Thu Jun 16 16:04:19 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -165,18 +165,20 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Unconstrained Clocks            ; 1     ; 1    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 28    ; 28   ;
-; Unconstrained Output Port Paths ; 112   ; 112  ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
 +---------------------------------+-------+------+
 
 
 +------------------------------------+
 ; TimeQuest Timing Analyzer Messages ;
 +------------------------------------+
+Warning (125092): Tcl Script File ram1.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE ram1.qip
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Jun 10 17:39:31 2016
+    Info: Processing started: Thu Jun 16 16:04:19 2016
 Info: Command: quartus_sta jikken -c jikken
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -199,10 +201,10 @@ Info (332146): Worst-case minimum pulse width slack is 97.417
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 295 megabytes
-    Info: Processing ended: Fri Jun 10 17:39:32 2016
-    Info: Elapsed time: 00:00:01
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 298 megabytes
+    Info: Processing ended: Thu Jun 16 16:04:19 2016
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
