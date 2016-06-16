@@ -129,7 +129,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 384 280 560 376)
+	(rect 512 72 688 168)
 	(text "16bitadd2" (rect 5 0 61 13)(font "Arial" (font_size 8)))
 	(text "add2" (rect 8 81 33 92)(font "Arial" ))
 	(port

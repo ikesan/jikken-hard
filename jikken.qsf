@@ -66,3 +66,8 @@ set_global_assignment -name BDF_FILE "half-add.bdf"
 set_global_assignment -name BDF_FILE "all-add.bdf"
 set_global_assignment -name BDF_FILE 16bitadd.bdf
 set_global_assignment -name BDF_FILE 16bitadd2.bdf
+set_global_assignment -name BDF_FILE phaze3.bdf
+set_global_assignment -name BDF_FILE opSelector.bdf
+set_global_assignment -name BDF_FILE output_files/regALUSelector.bdf
+set_global_assignment -name BDF_FILE output_files/16bitsub2.bdf
+set_global_assignment -name BDF_FILE output_files/16bitcmp.bdf
