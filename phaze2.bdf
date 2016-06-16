@@ -101,29 +101,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 680 296 776 448)
-	(text "38encoder" (rect 0 5 13 66)(font "Arial" (font_size 8))(vertical))
-	(text "inst0" (rect 80 7 91 31)(font "Arial" )(vertical))
-	(port
-		(pt 32 0)
-		(input)
-		(text "IN[2..0]" (rect 0 0 42 13)(font "Arial" (font_size 8)))
-		(text "IN[2..0]" (rect 27 21 40 63)(font "Arial" (font_size 8))(vertical))
-		(line (pt 32 0)(pt 32 16)(line_width 3))
-	)
-	(port
-		(pt 32 152)
-		(output)
-		(text "OUT[7..0]" (rect 0 0 56 13)(font "Arial" (font_size 8)))
-		(text "OUT[7..0]" (rect 27 75 40 131)(font "Arial" (font_size 8))(vertical))
-		(line (pt 32 152)(pt 32 136)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 80 136))
-	)
-	(flipy_rotate90)
-)
-(symbol
 	(rect 1272 464 1472 656)
 	(text "88selector" (rect 5 0 65 13)(font "Arial" (font_size 8)))
 	(text "sele0" (rect 8 177 36 188)(font "Arial" ))
@@ -410,7 +387,30 @@ applicable agreement for further details.
 (symbol
 	(rect 560 336 656 488)
 	(text "38encoder" (rect 0 5 13 66)(font "Arial" (font_size 8))(vertical))
-	(text "inst1" (rect 80 7 91 31)(font "Arial" )(vertical))
+	(text "38enc1" (rect 79 6 90 43)(font "Arial" )(vertical))
+	(port
+		(pt 32 0)
+		(input)
+		(text "IN[2..0]" (rect 0 0 42 13)(font "Arial" (font_size 8)))
+		(text "IN[2..0]" (rect 27 21 40 63)(font "Arial" (font_size 8))(vertical))
+		(line (pt 32 0)(pt 32 16)(line_width 3))
+	)
+	(port
+		(pt 32 152)
+		(output)
+		(text "OUT[7..0]" (rect 0 0 56 13)(font "Arial" (font_size 8)))
+		(text "OUT[7..0]" (rect 27 75 40 131)(font "Arial" (font_size 8))(vertical))
+		(line (pt 32 152)(pt 32 136)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 80 136))
+	)
+	(flipy_rotate90)
+)
+(symbol
+	(rect 680 296 776 448)
+	(text "38encoder" (rect 0 5 13 66)(font "Arial" (font_size 8))(vertical))
+	(text "38enc2" (rect 79 6 90 43)(font "Arial" )(vertical))
 	(port
 		(pt 32 0)
 		(input)
