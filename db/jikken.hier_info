@@ -1,8 +1,25 @@
 |jikken
-pin_name1 => ram2:inst2.clock
+IR[0] <= ram2:ram2.q[0]
+IR[1] <= ram2:ram2.q[1]
+IR[2] <= ram2:ram2.q[2]
+IR[3] <= ram2:ram2.q[3]
+IR[4] <= ram2:ram2.q[4]
+IR[5] <= ram2:ram2.q[5]
+IR[6] <= ram2:ram2.q[6]
+IR[7] <= ram2:ram2.q[7]
+IR[8] <= ram2:ram2.q[8]
+IR[9] <= ram2:ram2.q[9]
+IR[10] <= ram2:ram2.q[10]
+IR[11] <= ram2:ram2.q[11]
+IR[12] <= ram2:ram2.q[12]
+IR[13] <= ram2:ram2.q[13]
+IR[14] <= ram2:ram2.q[14]
+IR[15] <= ram2:ram2.q[15]
+clk => ram2:ram2.clock
+clk => pc2withcount:pcmawari.p5
 
 
-|jikken|ram2:inst2
+|jikken|ram2:ram2
 address[0] => altsyncram:altsyncram_component.address_a[0]
 address[1] => altsyncram:altsyncram_component.address_a[1]
 address[2] => altsyncram:altsyncram_component.address_a[2]
@@ -51,7 +68,7 @@ q[14] <= altsyncram:altsyncram_component.q_a[14]
 q[15] <= altsyncram:altsyncram_component.q_a[15]
 
 
-|jikken|ram2:inst2|altsyncram:altsyncram_component
+|jikken|ram2:ram2|altsyncram:altsyncram_component
 wren_a => altsyncram_obh1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -120,7 +137,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|jikken|ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated
+|jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated
 address_a[0] => altsyncram_rqc2:altsyncram1.address_a[0]
 address_a[1] => altsyncram_rqc2:altsyncram1.address_a[1]
 address_a[2] => altsyncram_rqc2:altsyncram1.address_a[2]
@@ -169,7 +186,7 @@ q_a[15] <= altsyncram_rqc2:altsyncram1.q_a[15]
 wren_a => altsyncram_rqc2:altsyncram1.wren_a
 
 
-|jikken|ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1
+|jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|altsyncram_rqc2:altsyncram1
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -684,7 +701,7 @@ wren_b => ram_block3a14.PORTBRE
 wren_b => ram_block3a15.PORTBRE
 
 
-|jikken|ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2
+|jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2
 tck_usr <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
 address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -831,7 +848,7 @@ ir_out[4] <= ir_loaded_address_reg[3].DB_MAX_OUTPUT_PORT_TYPE
 tdo <= tdo.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|jikken|ram2:inst2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr
+|jikken|ram2:ram2|altsyncram:altsyncram_component|altsyncram_obh1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN66
 ROM_DATA[1] => Mux2.IN66
 ROM_DATA[2] => Mux1.IN66
@@ -908,5 +925,696 @@ ENA => WORD_SR.OUTPUTSELECT
 ENA => WORD_SR.OUTPUTSELECT
 TDI => WORD_SR.DATAA
 TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari
+PCout[0] <= pc2:pc.Q[0]
+PCout[1] <= pc2:pc.Q[1]
+PCout[2] <= pc2:pc.Q[2]
+PCout[3] <= pc2:pc.Q[3]
+PCout[4] <= pc2:pc.Q[4]
+PCout[5] <= pc2:pc.Q[5]
+PCout[6] <= pc2:pc.Q[6]
+PCout[7] <= pc2:pc.Q[7]
+PCout[8] <= pc2:pc.Q[8]
+PCout[9] <= pc2:pc.Q[9]
+PCout[10] <= pc2:pc.Q[10]
+PCout[11] <= pc2:pc.Q[11]
+PCout[12] <= pc2:pc.Q[12]
+PCout[13] <= pc2:pc.Q[13]
+PCout[14] <= pc2:pc.Q[14]
+PCout[15] <= pc2:pc.Q[15]
+p5 => pc2:pc.p5
+reset => pc2:pc.reset
+branch => Mulchplexer:mul1.S
+DR[0] => Mulchplexer:mul1.1value[0]
+DR[1] => Mulchplexer:mul1.1value[1]
+DR[2] => Mulchplexer:mul1.1value[2]
+DR[3] => Mulchplexer:mul1.1value[3]
+DR[4] => Mulchplexer:mul1.1value[4]
+DR[5] => Mulchplexer:mul1.1value[5]
+DR[6] => Mulchplexer:mul1.1value[6]
+DR[7] => Mulchplexer:mul1.1value[7]
+DR[8] => Mulchplexer:mul1.1value[8]
+DR[9] => Mulchplexer:mul1.1value[9]
+DR[10] => Mulchplexer:mul1.1value[10]
+DR[11] => Mulchplexer:mul1.1value[11]
+DR[12] => Mulchplexer:mul1.1value[12]
+DR[13] => Mulchplexer:mul1.1value[13]
+DR[14] => Mulchplexer:mul1.1value[14]
+DR[15] => Mulchplexer:mul1.1value[15]
+
+
+|jikken|pc2withcount:pcmawari|pc2:pc
+Q[0] <= dd[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= dd[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= dd[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= dd[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= dd[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= dd[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= dd[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= dd[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= dd[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= dd[9].DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= dd[10].DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= dd[11].DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= dd[12].DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= dd[13].DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= dd[14].DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= dd[15].DB_MAX_OUTPUT_PORT_TYPE
+reset => dd[15].ACLR
+reset => dd[14].ACLR
+reset => dd[13].ACLR
+reset => dd[12].ACLR
+reset => dd[11].ACLR
+reset => dd[10].ACLR
+reset => dd[9].ACLR
+reset => dd[8].ACLR
+reset => dd[7].ACLR
+reset => dd[6].ACLR
+reset => dd[5].ACLR
+reset => dd[4].ACLR
+reset => dd[3].ACLR
+reset => dd[2].ACLR
+reset => dd[1].ACLR
+reset => dd[0].ACLR
+p5 => dd[15].CLK
+p5 => dd[14].CLK
+p5 => dd[13].CLK
+p5 => dd[12].CLK
+p5 => dd[11].CLK
+p5 => dd[10].CLK
+p5 => dd[9].CLK
+p5 => dd[8].CLK
+p5 => dd[7].CLK
+p5 => dd[6].CLK
+p5 => dd[5].CLK
+p5 => dd[4].CLK
+p5 => dd[3].CLK
+p5 => dd[2].CLK
+p5 => dd[1].CLK
+p5 => dd[0].CLK
+D[0] => dd[0].DATAIN
+D[1] => dd[1].DATAIN
+D[2] => dd[2].DATAIN
+D[3] => dd[3].DATAIN
+D[4] => dd[4].DATAIN
+D[5] => dd[5].DATAIN
+D[6] => dd[6].DATAIN
+D[7] => dd[7].DATAIN
+D[8] => dd[8].DATAIN
+D[9] => dd[9].DATAIN
+D[10] => dd[10].DATAIN
+D[11] => dd[11].DATAIN
+D[12] => dd[12].DATAIN
+D[13] => dd[13].DATAIN
+D[14] => dd[14].DATAIN
+D[15] => dd[15].DATAIN
+
+
+|jikken|pc2withcount:pcmawari|Mulchplexer:mul1
+out[0] <= ormp[0].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= ormp[1].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= ormp[2].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= ormp[3].DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= ormp[4].DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= ormp[5].DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= ormp[6].DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= ormp[7].DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= ormp[8].DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= ormp[9].DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= ormp[10].DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= ormp[11].DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= ormp[12].DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= ormp[13].DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= ormp[14].DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= ormp[15].DB_MAX_OUTPUT_PORT_TYPE
+S => and11[15].IN0
+S => and11[14].IN0
+S => and11[13].IN0
+S => and11[12].IN0
+S => and11[11].IN0
+S => and11[10].IN0
+S => and11[9].IN0
+S => and11[8].IN0
+S => and11[7].IN0
+S => and11[6].IN0
+S => and11[5].IN0
+S => and11[4].IN0
+S => and11[3].IN0
+S => and11[2].IN0
+S => and11[1].IN0
+S => and11[0].IN0
+S => mpnot[15].IN0
+S => mpnot[14].IN0
+S => mpnot[13].IN0
+S => mpnot[12].IN0
+S => mpnot[11].IN0
+S => mpnot[10].IN0
+S => mpnot[9].IN0
+S => mpnot[8].IN0
+S => mpnot[7].IN0
+S => mpnot[6].IN0
+S => mpnot[5].IN0
+S => mpnot[4].IN0
+S => mpnot[3].IN0
+S => mpnot[2].IN0
+S => mpnot[1].IN0
+S => mpnot[0].IN0
+1value[0] => and11[0].IN1
+1value[1] => and11[1].IN1
+1value[2] => and11[2].IN1
+1value[3] => and11[3].IN1
+1value[4] => and11[4].IN1
+1value[5] => and11[5].IN1
+1value[6] => and11[6].IN1
+1value[7] => and11[7].IN1
+1value[8] => and11[8].IN1
+1value[9] => and11[9].IN1
+1value[10] => and11[10].IN1
+1value[11] => and11[11].IN1
+1value[12] => and11[12].IN1
+1value[13] => and11[13].IN1
+1value[14] => and11[14].IN1
+1value[15] => and11[15].IN1
+0value[0] => and1[0].IN0
+0value[1] => and1[1].IN0
+0value[2] => and1[2].IN0
+0value[3] => and1[3].IN0
+0value[4] => and1[4].IN0
+0value[5] => and1[5].IN0
+0value[6] => and1[6].IN0
+0value[7] => and1[7].IN0
+0value[8] => and1[8].IN0
+0value[9] => and1[9].IN0
+0value[10] => and1[10].IN0
+0value[11] => and1[11].IN0
+0value[12] => and1[12].IN0
+0value[13] => and1[13].IN0
+0value[14] => and1[14].IN0
+0value[15] => and1[15].IN0
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout
+overflow <= 16bitadd:inst.overflow
+INa[0] => 16bitadd:inst.a1
+INa[1] => 16bitadd:inst.a2
+INa[2] => 16bitadd:inst.a3
+INa[3] => 16bitadd:inst.a4
+INa[4] => 16bitadd:inst.a5
+INa[5] => 16bitadd:inst.a6
+INa[6] => 16bitadd:inst.a7
+INa[7] => 16bitadd:inst.a8
+INa[8] => 16bitadd:inst.a9
+INa[9] => 16bitadd:inst.a10
+INa[10] => 16bitadd:inst.a11
+INa[11] => 16bitadd:inst.a12
+INa[12] => 16bitadd:inst.a13
+INa[13] => 16bitadd:inst.a14
+INa[14] => 16bitadd:inst.a15
+INa[15] => 16bitadd:inst.a16
+INb[0] => 16bitadd:inst.b1
+INb[1] => 16bitadd:inst.b2
+INb[2] => 16bitadd:inst.b3
+INb[3] => 16bitadd:inst.b4
+INb[4] => 16bitadd:inst.b5
+INb[5] => 16bitadd:inst.b6
+INb[6] => 16bitadd:inst.b7
+INb[7] => 16bitadd:inst.b8
+INb[8] => 16bitadd:inst.b9
+INb[9] => 16bitadd:inst.b10
+INb[10] => 16bitadd:inst.b11
+INb[11] => 16bitadd:inst.b12
+INb[12] => 16bitadd:inst.b13
+INb[13] => 16bitadd:inst.b14
+INb[14] => 16bitadd:inst.b15
+INb[15] => 16bitadd:inst.b16
+OUT[0] <= 16bitadd:inst.1
+OUT[1] <= 16bitadd:inst.2
+OUT[2] <= 16bitadd:inst.3
+OUT[3] <= 16bitadd:inst.4
+OUT[4] <= 16bitadd:inst.5
+OUT[5] <= 16bitadd:inst.6
+OUT[6] <= 16bitadd:inst.7
+OUT[7] <= 16bitadd:inst.8
+OUT[8] <= 16bitadd:inst.9
+OUT[9] <= 16bitadd:inst.10
+OUT[10] <= 16bitadd:inst.11
+OUT[11] <= 16bitadd:inst.12
+OUT[12] <= 16bitadd:inst.13
+OUT[13] <= 16bitadd:inst.14
+OUT[14] <= 16bitadd:inst.15
+OUT[15] <= 16bitadd:inst.16
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst
+overflow <= all-add:inst9.C
+a16 => all-add:inst9.a
+b16 => all-add:inst9.b
+a15 => all-add:inst10.a
+b15 => all-add:inst10.b
+a14 => all-add:inst11.a
+b14 => all-add:inst11.b
+a13 => all-add:inst12.a
+b13 => all-add:inst12.b
+a12 => all-add:inst13.a
+b12 => all-add:inst13.b
+a11 => all-add:inst14.a
+b11 => all-add:inst14.b
+a10 => all-add:inst15.a
+b10 => all-add:inst15.b
+b9 => all-add:inst16.a
+a9 => all-add:inst16.b
+a8 => all-add:inst8.a
+b8 => all-add:inst8.b
+a7 => all-add:inst7.a
+b7 => all-add:inst7.b
+a6 => all-add:inst6.a
+b6 => all-add:inst6.b
+a5 => all-add:inst5.a
+b5 => all-add:inst5.b
+a4 => all-add:inst4.a
+b4 => all-add:inst4.b
+a3 => all-add:inst3.a
+b3 => all-add:inst3.b
+a2 => all-add:inst2.a
+b2 => all-add:inst2.b
+a1 => half-add:inst.a
+b1 => half-add:inst.b
+16 <= all-add:inst9.S
+15 <= all-add:inst10.S
+14 <= all-add:inst11.S
+13 <= all-add:inst12.S
+12 <= all-add:inst13.S
+11 <= all-add:inst14.S
+10 <= all-add:inst15.S
+9 <= all-add:inst16.S
+8 <= all-add:inst8.S
+7 <= all-add:inst7.S
+6 <= all-add:inst6.S
+5 <= all-add:inst5.S
+4 <= all-add:inst4.S
+3 <= all-add:inst3.S
+2 <= all-add:inst2.S
+1 <= half-add:inst.S
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst9
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst9|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst9|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst10
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst10|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst10|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst11
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst11|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst11|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst12
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst12|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst12|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst13
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst13|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst13|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst14
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst14|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst14|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst15
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst15|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst15|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst16
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst16|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst16|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst8
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst8|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst8|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst7
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst7|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst7|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst6
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst6|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst6|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst5
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst5|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst5|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst4
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst4|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst4|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst3
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst3|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst3|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst2
+S <= half-add:half1.S
+a => half-add:half2.a
+b => half-add:half2.b
+x => half-add:half1.b
+C <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst2|half-add:half1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|all-add:inst2|half-add:half2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jikken|pc2withcount:pcmawari|16bitadd2:16addcout|16bitadd:inst|half-add:inst
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst2.IN1
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
