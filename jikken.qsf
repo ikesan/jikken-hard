@@ -71,3 +71,4 @@ set_global_assignment -name BDF_FILE opSelector.bdf
 set_global_assignment -name BDF_FILE output_files/regALUSelector.bdf
 set_global_assignment -name BDF_FILE output_files/16bitsub2.bdf
 set_global_assignment -name BDF_FILE output_files/16bitcmp.bdf
+set_global_assignment -name BDF_FILE output_files/ALU.bdf
